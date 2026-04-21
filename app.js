@@ -327,12 +327,14 @@ function initCartDrawer() {
     drawer.setAttribute('aria-hidden', 'false');
     if (overlay) overlay.classList.add('is-open');
     document.body.style.overflow = 'hidden';
+    document.body.classList.add('cart-open');  // oculta el WA float
   };
   const close = () => {
     drawer.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
     if (overlay) overlay.classList.remove('is-open');
     document.body.style.overflow = '';
+    document.body.classList.remove('cart-open');  // muestra el WA float
   };
 
   cartBtn?.addEventListener('click', open);
