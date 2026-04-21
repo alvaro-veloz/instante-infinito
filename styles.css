@@ -1227,8 +1227,9 @@ p { line-height: 1.75; }
 }
 .modal__main-img {
   width: 100%; height: 100%;
-  object-fit: cover;
-  object-position: center top;  /* foto vertical: el perfume queda arriba */
+  object-fit: contain;        /* foto completa sin recorte */
+  object-position: center;
+  padding: 12px;              /* respiro alrededor */
   transition:
     transform 0.4s var(--ease),
     opacity var(--dur-base),
@@ -1333,7 +1334,6 @@ p { line-height: 1.75; }
   border: 1px solid var(--border-soft);
   /* 4 items en 2x2 */
 }
-.modal__meta-item {}
 .modal__meta-label {
   display: block;
   font-size: 0.5625rem; font-weight: 700;
@@ -1448,10 +1448,17 @@ p { line-height: 1.75; }
 .modal__desc-wrap { display: flex; flex-direction: column; gap: 8px; }
 .modal__desc {
   font-size: 0.875rem; line-height: 1.75; color: var(--text-muted);
-  overflow: hidden; display: -webkit-box;
-  -webkit-line-clamp: 3; -webkit-box-orient: vertical;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
 }
-.modal__desc.is-expanded { display: block; -webkit-line-clamp: unset; }
+.modal__desc.is-expanded {
+  display: block;
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+}
 .modal__desc-toggle {
   font-size: 0.6875rem; font-weight: 600; color: var(--accent);
   text-decoration: underline; text-underline-offset: 2px;
@@ -1481,13 +1488,10 @@ p { line-height: 1.75; }
    14. EDITORIAL BAND
    ============================================================ */
 /* Editorial band eliminada */
-  to   { transform: translateX(-50%); }
-}
 
 /* ============================================================
    15. CTA SECTION
    ============================================================ */
-.cta-section { }
 .cta-section__inner {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -2384,6 +2388,7 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
     cursor: default;
     overflow: hidden;
     border-radius: 0;
+    background: #f5f0ea;
   }
   .modal__main-img-wrap:hover .modal__main-img { transform: none; }
   .modal__thumbs {
