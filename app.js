@@ -39,6 +39,25 @@ const modalCache = new Map();
 /* ─────────────────────────────────────────────────
    PUNTO DE ENTRADA — carga el JSON y arranca todo
 ───────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────
+   SCROLL LOCK — funciona en todos los navegadores
+   incluido Safari iOS que ignora overflow:hidden en body
+───────────────────────────────────────────── */
+function lockScroll() {
+  const scrollY = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollY}px`;
+  document.body.style.width = '100%';
+  document.body.dataset.scrollY = scrollY;
+}
+function unlockScroll() {
+  const scrollY = parseInt(document.body.dataset.scrollY || '0');
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollY);
+}
+
 async function init() {
   try {
     const res  = await fetch('productos.json');
@@ -326,14 +345,14 @@ function initCartDrawer() {
     drawer.classList.add('is-open');
     drawer.setAttribute('aria-hidden', 'false');
     if (overlay) overlay.classList.add('is-open');
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     document.body.classList.add('cart-open');  // oculta el WA float
   };
   const close = () => {
     drawer.classList.remove('is-open');
     drawer.setAttribute('aria-hidden', 'true');
     if (overlay) overlay.classList.remove('is-open');
-    document.body.style.overflow = '';
+    unlockScroll();
     document.body.classList.remove('cart-open');  // muestra el WA float
   };
 
@@ -420,18 +439,35 @@ async function populateGrids() {
   if (featuredGrid) {
     featuredGrid.innerHTML = ''; /* quita skeletons */
     const hot   = PRODUCTOS.filter(p => p.estado === 'hot');
-    const list  = hot.length >= 4 ? hot.slice(0, 4)
-                : [...hot, ...PRODUCTOS.filter(p => p.estado !== 'hot')].slice(0, 4);
+    const list  = hot.length >= 7 ? hot.slice(0, 7)
+                : [...hot, ...PRODUCTOS.filter(p => p.estado !== 'hot')].slice(0, 7);
 
     list.forEach((p, i) => featuredGrid.appendChild(buildCard(p, i)));
 
-    /* Dots para carrusel móvil */
+    // Card CTA — invita a ver la colección completa
+    const ctaCard = document.createElement('div');
+    ctaCard.className = 'featured-cta-card reveal-up';
+    ctaCard.dataset.count = PRODUCTOS.length;
+    ctaCard.innerHTML = `
+      <div class="featured-cta-card__inner">
+        <p class="featured-cta-card__eyebrow">Colección completa</p>
+        <h3 class="featured-cta-card__title">¿Ya encontraste<br>tu fragancia?</h3>
+        <p class="featured-cta-card__text">Tenemos más de ${PRODUCTOS.length} fragancias originales esperándote.</p>
+        <a href="catalogo.html" class="btn btn--dark featured-cta-card__btn">
+          Ver toda la colección
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>`;
+    featuredGrid.appendChild(ctaCard);
+
+    /* Dots para carrusel móvil — 7 productos + 1 CTA */
     const dotsWrap = document.getElementById('featuredDots');
     if (dotsWrap) {
-      list.forEach((_, i) => {
+      const totalItems = list.length + 1; // +1 por la card CTA
+      Array.from({ length: totalItems }).forEach((_, i) => {
         const dot = document.createElement('button');
         dot.className = `featured__dot${i === 0 ? ' featured__dot--on' : ''}`;
-        dot.setAttribute('aria-label', `Producto ${i + 1}`);
+        dot.setAttribute('aria-label', i < list.length ? `Producto ${i + 1}` : 'Ver colección');
         dot.addEventListener('click', () => {
           const w = featuredGrid.firstElementChild?.offsetWidth || 1;
           featuredGrid.scrollTo({ left: i * (w + 12), behavior: 'smooth' });
@@ -622,10 +658,18 @@ function buildModal(p) {
           <span class="modal__meta-label">Género</span>
           <span class="modal__meta-val">${catLabel}</span>
         </div>
+        <div class="modal__meta-item">
+          <span class="modal__meta-label">Contenido</span>
+          <span class="modal__meta-val">${p.ml ? p.ml + ' ml' : '—'}</span>
+        </div>
+        <div class="modal__meta-item">
+          <span class="modal__meta-label">Tipo</span>
+          <span class="modal__meta-val">${p.concentracion || 'Eau de Parfum'}</span>
+        </div>
       </div>
 
+      <span class="modal__section-label">Pirámide olfativa</span>
       <div class="modal__pyramid">
-        <span class="modal__section-label">Pirámide olfativa</span>
         <div class="modal__pyramid-row">
           <span class="modal__pyramid-stage">Salida</span>
           <div class="modal__notes">${noteChips(p.notas?.salida)}</div>
@@ -677,7 +721,7 @@ function openModal(id) {
   }
   const overlay = modalCache.get(numId);
   overlay.classList.add('is-open');
-  document.body.style.overflow = 'hidden';
+  lockScroll();
   /* Anima barras con pequeño delay */
   requestAnimationFrame(() =>
     setTimeout(() =>
@@ -688,7 +732,7 @@ function openModal(id) {
 function closeModal(overlay) {
   if (!overlay) return;
   overlay.classList.remove('is-open');
-  document.body.style.overflow = '';
+  unlockScroll();
   $$('.modal__bar-fill', overlay).forEach(b => b.classList.remove('bar-on'));
 }
 
@@ -731,12 +775,22 @@ function bindModal(overlay) {
     });
   });
 
-  /* Agregar al carrito desde modal */
+  /* Agregar al carrito desde modal — el modal se queda abierto */
   $$('.modal__add-cart', overlay).forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation(); // evita bubbling al overlay
       Cart.add({ id: btn.dataset.id, nombre: btn.dataset.nombre, precio: btn.dataset.precio, foto: btn.dataset.foto });
-      closeModal(overlay);
-      showToast(`"${btn.dataset.nombre}" agregado`);
+      // Feedback visual en el botón
+      const original = btn.textContent;
+      btn.textContent = '✓ Agregado';
+      btn.style.background = 'var(--wa)';
+      btn.style.borderColor = 'var(--wa)';
+      setTimeout(() => {
+        btn.textContent = original;
+        btn.style.background = '';
+        btn.style.borderColor = '';
+      }, 1800);
+      showToast(`"${btn.dataset.nombre}" agregado al carrito`);
     });
   });
 }
