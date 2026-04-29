@@ -2460,10 +2460,9 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
     position: relative;
   }
   .modal__main-img-wrap {
-    flex: none;
-    height: 60vw;
-    max-height: 360px;
-    min-height: 240px;
+    flex: 0 0 42%;  /* ocupa 42% del modal — fijo, sin crecer ni encoger */
+    height: auto;
+    min-height: 0;
     cursor: default;
     overflow: hidden;
     border-radius: 0;
