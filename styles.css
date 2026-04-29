@@ -1247,9 +1247,9 @@ p { line-height: 1.75; }
 }
 .modal__main-img {
   width: 100%; height: 100%;
-  object-fit: contain;        /* foto completa sin recorte */
+  object-fit: contain;
   object-position: center;
-  padding: 12px;              /* respiro alrededor */
+  padding: 12px;
   transition:
     transform 0.4s var(--ease),
     opacity var(--dur-base),
@@ -2461,9 +2461,9 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
   }
   .modal__main-img-wrap {
     flex: none;
-    height: 68vw;
-    max-height: 400px;
-    min-height: 260px;
+    height: 80vw;
+    max-height: 460px;
+    min-height: 300px;
     cursor: default;
     overflow: hidden;
     border-radius: 0;
@@ -2648,4 +2648,9 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
     color: var(--text-muted);
     background: transparent;
   }
+}
+
+/* Padding reducido en móvil para ver la imagen completa */
+@media (max-width: 768px) {
+  .modal__main-img { padding: 6px; }
 }
