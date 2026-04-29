@@ -2668,8 +2668,8 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
   /* Imagen — altura fija proporcional */
   .modal__main-img-wrap {
     flex: none !important;
-    height: 45vw !important;
-    max-height: 280px !important;
-    min-height: 180px !important;
+    height: 65vw !important;
+    max-height: 380px !important;
+    min-height: 260px !important;
   }
 }
