@@ -2177,6 +2177,7 @@ body.cart-open .wa-float {
 
 .cart-drawer {
   position: fixed; top: 0; right: 0; bottom: 0; z-index: 160;
+  height: 100dvh;
   width: 390px; max-width: 96vw;
   background: var(--bg-card);
   border-left: 1px solid var(--border);
@@ -2258,6 +2259,7 @@ body.cart-open .wa-float {
 .cart-item__remove:hover { color: var(--badge-hot); }
 
 .cart-drawer__foot {
+  flex-shrink: 0;  /* nunca se encoge — siempre visible */
   padding: var(--space-xs) var(--space-sm) var(--space-sm);
   border-top: 1px solid var(--border-soft);
 }
@@ -2627,5 +2629,19 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
     background: rgba(255,255,255,0.95) !important;
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+}
+
+/* Fix filtros VS — evitar hover pegado en táctil */
+@media (hover: none) {
+  .vs-filter-bar .fpill:hover {
+    border-color: var(--border);
+    color: var(--text-muted);
+    background: transparent;
+  }
+  .vs-filter-bar .fpill--on:hover {
+    background: var(--vs-pink-dark);
+    border-color: var(--vs-pink-dark);
+    color: #fff;
   }
 }

@@ -465,7 +465,7 @@
   }
   .splash-modal__img-wrap {
     grid-area: unset;
-    height: 92vw; max-height: 500px; min-height: 320px; background: #ffffff;
+    height: 75vw; max-height: 440px; min-height: 300px; background: #ffffff;
     flex-shrink: 0;
   }
   .splash-modal__info {
@@ -473,7 +473,7 @@
     padding: var(--space-sm); gap: var(--space-xs);
     overflow-y: auto;
   }
-  .splash-modal__img { padding: 8px; }
+  .splash-modal__img { padding: 4px; object-fit: contain; }
   .splash-modal__name { font-size: 1.3rem; padding-right: var(--space-lg); }
   .splash-modal__actions {
     grid-area: unset; flex-shrink: 0;
