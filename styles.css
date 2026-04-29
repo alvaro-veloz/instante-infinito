@@ -2461,9 +2461,9 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
   }
   .modal__main-img-wrap {
     flex: none;
-    height: 80vw;
-    max-height: 460px;
-    min-height: 300px;
+    height: 60vw;
+    max-height: 360px;
+    min-height: 240px;
     cursor: default;
     overflow: hidden;
     border-radius: 0;
