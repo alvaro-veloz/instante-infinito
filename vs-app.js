@@ -172,14 +172,16 @@ function initVsFilters() {
     if (countEl)   countEl.textContent = visible;
     if (noResults) noResults.style.display = visible === 0 ? 'block' : 'none';
 
-    $$vs('.fpill').forEach(pill => {
+    const filterBar = document.getElementById('filterBar');
+    $$vs('.fpill', filterBar || document).forEach(pill => {
       const on = pill.dataset.filter === filter;
       pill.classList.toggle('fpill--on', on);
       pill.setAttribute('aria-pressed', String(on));
     });
   }
 
-  $$vs('.fpill').forEach(pill =>
+  const filterBar = document.getElementById('filterBar');
+  $$vs('.fpill', filterBar || document).forEach(pill =>
     pill.addEventListener('click', () => apply(pill.dataset.filter))
   );
   clearBtn?.addEventListener('click', () => apply('todos'));
