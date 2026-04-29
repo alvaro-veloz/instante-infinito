@@ -292,7 +292,7 @@
   grid-template-areas: "img info" "img actions";
   width: 100%;
   max-width: 900px;
-  max-height: 88vh;
+  max-height: 88dvh;
   background: var(--bg-card);
   border-radius: 0;
   overflow: hidden;
@@ -460,7 +460,7 @@
 
   .splash-modal {
     display: flex; flex-direction: column;
-    max-width: 100%; width: 100%; max-height: 92vh;
+    max-width: 100%; width: 100%; max-height: 88dvh;
     border-radius: var(--r-xl) var(--r-xl) 0 0;
   }
   .splash-modal__img-wrap {
@@ -591,3 +591,16 @@
 /* Quitar línea fina debajo de la imagen del modal VS */
 .splash-modal__img-wrap { box-shadow: none; border: none; }
 .splash-modal { border: none; box-shadow: var(--shadow-xl); }
+
+/* Botón X splash modal — siempre visible en móvil Chrome */
+@media (max-width: 768px) {
+  .splash-modal .modal__close {
+    position: fixed !important;
+    top: 12px !important;
+    right: 12px !important;
+    z-index: 9999 !important;
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  }
+}
