@@ -2653,3 +2653,23 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
 @media (max-width: 768px) {
   .modal__main-img { padding: 6px; }
 }
+
+/* ── Modal perfumes móvil — mismo comportamiento que splash ── */
+@media (max-width: 768px) {
+  /* Overlay alinea el modal al fondo de la pantalla */
+  .modal-overlay {
+    align-items: flex-end !important;
+  }
+  /* Modal sale desde abajo */
+  .modal {
+    max-height: 88dvh !important;
+    border-radius: var(--r-xl) var(--r-xl) 0 0 !important;
+  }
+  /* Imagen — altura fija proporcional */
+  .modal__main-img-wrap {
+    flex: none !important;
+    height: 45vw !important;
+    max-height: 280px !important;
+    min-height: 180px !important;
+  }
+}
