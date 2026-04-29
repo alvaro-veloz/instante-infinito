@@ -922,4 +922,5 @@ function showToast(msg, type = 'success') {
 /* ─────────────────────────────────────────────────
    ARRANQUE
 ───────────────────────────────────────────── */
+window.Cart = Cart;
 init();

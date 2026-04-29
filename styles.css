@@ -523,9 +523,9 @@ p { line-height: 1.75; }
    ============================================================ */
 .hero {
   position: relative;
-  height: 92vh;
+  height: 88vh;
   min-height: 520px;
-  max-height: 980px;
+  max-height: 900px;
   overflow: hidden;
   background: var(--bg-dark);
 }
@@ -2608,3 +2608,11 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
   position: relative;
   z-index: 1;
 }
+
+/* Miniaturas — ocultar si no hay fotos extra */
+.modal__thumbs:empty { display: none; }
+.modal__gallery {
+  display: flex;
+  flex-direction: column;
+}
+.modal__main-img-wrap { flex: 1; min-height: 0; }

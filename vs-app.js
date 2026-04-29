@@ -210,9 +210,21 @@ function buildSplashModal(s) {
         </svg>
       </button>
 
-      <div class="splash-modal__img-wrap">
-        <img class="splash-modal__img" src="${foto}" alt="${s.nombre}"
-             onerror="this.onerror=null;this.src='${fbVs(0)}'" />
+      <div class="splash-modal__gallery">
+        <div class="splash-modal__img-wrap">
+          <img class="splash-modal__img" src="${foto}" alt="${s.nombre}"
+               onerror="this.onerror=null;this.src='${fbVs(0)}'" />
+        </div>
+        <div class="splash-modal__thumbs">
+          <button class="splash-modal__thumb splash-modal__thumb--on" data-src="${s.fotos[0] || foto}">
+            <img src="${s.fotos[0] || foto}" alt="Foto 1"
+                 onerror="this.onerror=null;this.src='${fbVs(0)}'" />
+          </button>
+          ${s.fotos && s.fotos[1] ? `<button class="splash-modal__thumb" data-src="${s.fotos[1]}">
+            <img src="${s.fotos[1]}" alt="Foto 2"
+                 onerror="this.onerror=null;this.src='${fbVs(1)}'" />
+          </button>` : ''}
+        </div>
       </div>
 
       <div class="splash-modal__info">
@@ -254,6 +266,21 @@ function buildSplashModal(s) {
       </div>
     </div>`;
 
+  // Miniaturas — cambiar imagen principal
+  $$vs('.splash-modal__thumb', overlay).forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const src  = thumb.dataset.src;
+      const img  = $vs('.splash-modal__img', overlay);
+      const wrap = $vs('.splash-modal__img-wrap', overlay);
+      if (img && src) {
+        wrap.style.opacity = '0';
+        setTimeout(() => { img.src = src; wrap.style.opacity = '1'; }, 150);
+      }
+      $$vs('.splash-modal__thumb--on', overlay).forEach(t => t.classList.remove('splash-modal__thumb--on'));
+      thumb.classList.add('splash-modal__thumb--on');
+    });
+  });
+
   // Zoom con mouse en desktop
   const imgWrap = $vs('.splash-modal__img-wrap', overlay);
   if (imgWrap) {
@@ -273,8 +300,8 @@ function buildSplashModal(s) {
     e.stopPropagation();
     const btn = e.currentTarget;
     // Usar el Cart del app.js principal
-    if (typeof Cart !== 'undefined') {
-      Cart.add({ id: btn.dataset.id, nombre: btn.dataset.nombre, precio: btn.dataset.precio, foto: btn.dataset.foto });
+    if (window.Cart) {
+      window.Cart.add({ id: btn.dataset.id, nombre: btn.dataset.nombre, precio: btn.dataset.precio, foto: btn.dataset.foto });
     }
     const orig = btn.textContent;
     btn.textContent = '✓ Agregado';
@@ -324,8 +351,8 @@ document.addEventListener('click', e => {
   }
   const cartBtn = e.target.closest('.splash-card__btn-cart');
   if (cartBtn) {
-    if (typeof Cart !== 'undefined') {
-      Cart.add({ id: cartBtn.dataset.id, nombre: cartBtn.dataset.nombre, precio: cartBtn.dataset.precio, foto: cartBtn.dataset.foto });
+    if (window.Cart) {
+      window.Cart.add({ id: cartBtn.dataset.id, nombre: cartBtn.dataset.nombre, precio: cartBtn.dataset.precio, foto: cartBtn.dataset.foto });
     }
     showVsToast(`"${cartBtn.dataset.nombre}" agregado`);
     return;

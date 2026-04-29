@@ -465,7 +465,7 @@
   }
   .splash-modal__img-wrap {
     grid-area: unset;
-    height: 80vw; max-height: 420px; min-height: 280px; background: #ffffff;
+    height: 92vw; max-height: 500px; min-height: 320px; background: #ffffff;
     flex-shrink: 0;
   }
   .splash-modal__info {
@@ -580,3 +580,14 @@
 @media (max-width: 768px) {
   .splash-modal__img { padding: 12px; }
 }
+
+/* Ocultar miniaturas vacías en modal de perfumes cuando no hay fotos extra */
+.modal__thumbs:empty { display: none; }
+.modal__gallery:has(.modal__thumbs:empty) .modal__main-img-wrap { 
+  border-radius: 0;
+  height: 100%;
+}
+
+/* Quitar línea fina debajo de la imagen del modal VS */
+.splash-modal__img-wrap { box-shadow: none; border: none; }
+.splash-modal { border: none; box-shadow: var(--shadow-xl); }
