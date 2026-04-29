@@ -1,0 +1,506 @@
+/* ============================================================
+   INSTANTE INFINITO — vs-styles.css
+   Estilos exclusivos Victoria's Secret
+   Paleta: rosa suave + crema + tostado dorado
+   ============================================================ */
+
+/* Variables VS */
+:root {
+  --vs-pink:       #e8a0b0;
+  --vs-pink-dark:  #c4758a;
+  --vs-pink-pale:  rgba(232, 160, 176, 0.1);
+  --vs-pink-mid:   rgba(232, 160, 176, 0.2);
+  --vs-cream:      #fdf5f7;
+  --vs-cream-dark: #f7e8ec;
+}
+
+/* ── VS HERO ── */
+.vs-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  max-height: 700px;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #3d1a28 0%,
+    #1a0d12 40%,
+    #2d1020 70%,
+    #4a1e30 100%
+  );
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Patrón de puntos decorativo */
+.vs-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(232,160,176,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(232,160,176,0.1) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(196,117,138,0.1) 0%, transparent 40%);
+}
+
+.vs-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(26,13,18,0.9) 0%,
+    rgba(26,13,18,0.4) 60%,
+    transparent 100%
+  );
+}
+
+.vs-hero__content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: var(--space-xl);
+  padding-top: var(--space-xl);
+}
+
+.vs-hero__eyebrow {
+  display: inline-block;
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--vs-pink);
+  margin-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--vs-pink);
+  padding-bottom: 4px;
+  opacity: 0.9;
+}
+
+.vs-hero__title {
+  font-family: var(--font-hero);
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: var(--space-md);
+}
+.vs-hero__title em {
+  color: var(--vs-pink);
+  font-style: normal;
+  display: block;
+}
+
+.vs-hero__subtitle {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 440px;
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+  font-weight: 300;
+}
+
+.vs-hero__pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.vs-hero__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 14px;
+  border: 1px solid rgba(232,160,176,0.4);
+  color: rgba(255,255,255,0.65);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 0;
+  background: rgba(232,160,176,0.08);
+}
+
+/* ── FILTROS VS — pills en rosa ── */
+.vs-filter-bar .fpill--on {
+  background: var(--vs-pink-dark);
+  border-color: var(--vs-pink-dark);
+  color: #fff;
+}
+.vs-filter-bar .fpill:hover {
+  border-color: var(--vs-pink);
+  color: var(--vs-pink-dark);
+}
+
+/* ── SPLASH CARD — versión simplificada ── */
+.splash-card {
+  background: var(--bg-card);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow:
+    0 1px 3px rgba(0,0,0,0.06),
+    0 0 0 1px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  transition:
+    box-shadow var(--dur-base) var(--ease),
+    transform var(--dur-slow) var(--expo);
+  animation: cardIn 0.5s var(--expo) both;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .splash-card:hover {
+    box-shadow:
+      0 20px 48px rgba(232,160,176,0.18),
+      0 0 0 1px rgba(232,160,176,0.35);
+    transform: translateY(-4px);
+  }
+  .splash-card:hover .splash-card__img {
+    transform: scale(1.06);
+  }
+}
+
+@media (hover: none) {
+  .splash-card:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 16px rgba(232,160,176,0.2);
+  }
+}
+
+/* Imagen splash */
+.splash-card__img-wrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--vs-cream);
+  cursor: pointer;
+  user-select: none;
+}
+.splash-card__img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--expo);
+}
+
+/* Badge */
+.splash-card__badge {
+  position: absolute;
+  top: var(--space-xs); left: var(--space-xs);
+  z-index: 2;
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 2px;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+/* Top VS — rosa a fucsia */
+.splash-card__badge--hot {
+  background: linear-gradient(135deg, #e8a0b0 0%, #c4758a 60%, #a0405a 100%);
+  color: #fff;
+}
+/* Nuevo VS — vino a rosa */
+.splash-card__badge--new {
+  background: linear-gradient(135deg, #7c3a5a 0%, #b0527a 100%);
+  color: #fff;
+}
+
+/* Info */
+.splash-card__info {
+  padding: var(--space-sm) var(--space-sm) 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 3px;
+}
+.splash-card__type {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--vs-pink);
+}
+.splash-card__name {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  margin-top: 2px;
+  text-transform: uppercase;
+}
+.splash-card__ml {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+.splash-card__price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  margin-top: var(--space-sm);
+}
+.splash-card__price {
+  font-family: var(--font-ui);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.splash-card__price-old {
+  font-size: 0.875rem;
+  color: var(--text-dim);
+  text-decoration: line-through;
+}
+
+/* Botones splash card */
+.splash-card__actions {
+  display: grid;
+  grid-template-columns: 1fr 42px;
+  gap: 4px;
+  padding: var(--space-sm);
+  border-top: 1px solid rgba(0,0,0,0.05);
+  margin-top: var(--space-sm);
+}
+.splash-card__actions .btn {
+  font-size: 0.5625rem;
+  padding: 10px 8px;
+  letter-spacing: 0.08em;
+}
+.splash-card__btn-cart {
+  background: var(--vs-pink-dark);
+  color: #fff;
+  border: 1.5px solid var(--vs-pink-dark);
+  font-weight: 700;
+}
+.splash-card__btn-cart:hover {
+  background: #a85e77;
+  border-color: #a85e77;
+}
+.splash-card__btn-wa {
+  background: var(--wa);
+  color: #fff;
+  border: 1.5px solid var(--wa);
+  padding: 10px;
+}
+.splash-card__btn-wa:hover { background: var(--wa-dark); border-color: var(--wa-dark); }
+
+/* ── MODAL SPLASH — simple ── */
+.splash-modal {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: 1fr auto;
+  grid-template-areas: "img info" "img actions";
+  width: 100%;
+  max-width: 900px;
+  max-height: 88vh;
+  background: var(--bg-card);
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-soft);
+  transform: translateY(28px) scale(0.96);
+  transition: transform var(--dur-slow) var(--expo);
+}
+.modal-overlay.is-open .splash-modal {
+  transform: translateY(0) scale(1);
+}
+
+.splash-modal__img-wrap {
+  grid-area: img;
+  background: var(--vs-cream);
+  overflow: hidden;
+  cursor: zoom-in;
+}
+.splash-modal__img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 16px;
+  transition: transform 0.4s var(--ease);
+  transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
+}
+@media (hover: hover) and (pointer: fine) {
+  .splash-modal__img-wrap:hover .splash-modal__img {
+    transform: scale(1.65);
+  }
+}
+
+.splash-modal__info {
+  grid-area: info;
+  padding: var(--space-lg);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.splash-modal__type {
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--vs-pink);
+}
+.splash-modal__name {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1.1;
+  padding-right: var(--space-lg);
+}
+.splash-modal__brand {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+.splash-modal__price {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--vs-pink-dark);
+  letter-spacing: -0.02em;
+}
+.splash-modal__meta {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.splash-modal__meta-pill {
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  background: var(--vs-pink-pale);
+  border: 1px solid var(--vs-pink-mid);
+  color: var(--vs-pink-dark);
+}
+.splash-modal__desc {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--text-muted);
+}
+.splash-modal__ocasiones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.splash-modal__actions {
+  grid-area: actions;
+  padding: var(--space-sm) var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.splash-modal__actions .btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 0.6875rem;
+}
+
+/* ── VS SECTION EN INICIO ── */
+.vs-featured {
+  padding: var(--space-2xl) 0;
+  background: var(--vs-cream);
+  border-top: 1px solid rgba(232,160,176,0.2);
+  border-bottom: 1px solid rgba(232,160,176,0.2);
+}
+.vs-featured .section-title { color: #2a1520; }
+.vs-featured .section-title em { color: var(--vs-pink-dark); }
+.vs-featured .eyebrow { color: var(--vs-pink-dark); }
+.vs-featured .link-arrow { color: var(--vs-pink-dark); border-color: var(--vs-pink-mid); }
+.vs-featured .link-arrow:hover { color: var(--vs-pink-dark); border-color: var(--vs-pink-dark); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .vs-hero { height: 75vh; min-height: 480px; max-height: none; }
+  .vs-hero__title { font-size: clamp(3rem, 9vw, 4.5rem); }
+  .vs-hero__subtitle { font-size: 0.875rem; }
+
+  .splash-modal {
+    display: flex; flex-direction: column;
+    max-width: 100%; width: 100%; max-height: 92vh;
+    border-radius: var(--r-xl) var(--r-xl) 0 0;
+  }
+  .splash-modal__img-wrap {
+    grid-area: unset;
+    height: 65vw; max-height: 360px; min-height: 240px; background: var(--vs-cream);
+    flex-shrink: 0;
+  }
+  .splash-modal__info {
+    grid-area: unset; flex: 1; min-height: 0;
+    padding: var(--space-sm); gap: var(--space-xs);
+    overflow-y: auto;
+  }
+  .splash-modal__img { padding: 8px; }
+  .splash-modal__name { font-size: 1.3rem; padding-right: var(--space-lg); }
+  .splash-modal__actions {
+    grid-area: unset; flex-shrink: 0;
+    padding: var(--space-xs) var(--space-sm) var(--space-sm);
+  }
+  .splash-card__actions { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .vs-hero__pills { gap: 6px; }
+  .vs-hero__pill { font-size: 0.5rem; padding: 4px 10px; }
+}
+
+/* Link arrow en color rosa para sección VS */
+.vs-link-arrow { color: var(--vs-pink-dark); border-color: var(--vs-pink-mid); }
+.vs-link-arrow:hover { color: var(--vs-pink-dark); border-color: var(--vs-pink-dark); }
+
+/* ── Grid VS en el inicio — móvil igual que perfumes ── */
+@media (max-width: 768px) {
+  /* El grid vsHomeGrid hereda products-grid--featured
+     que ya tiene scroll horizontal en móvil */
+  #vsHomeGrid .splash-card {
+    scroll-snap-align: start;
+    flex: 0 0 72vw;
+    max-width: 280px;
+  }
+  #vsHomeGrid .featured-cta-card {
+    scroll-snap-align: start;
+    flex: 0 0 72vw;
+    max-width: 280px;
+  }
+}
+@media (max-width: 480px) {
+  #vsHomeGrid .splash-card,
+  #vsHomeGrid .featured-cta-card {
+    flex: 0 0 85vw;
+  }
+}
+
+/* Imagen de fondo hero VS */
+.vs-hero__bg-img {
+  position: absolute;
+  inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.35;  /* sutil — el gradiente oscuro ya está encima */
+  mix-blend-mode: luminosity;
+}
+
+/* Grid VS catálogo — 2 columnas en móvil para no hacer scroll infinito */
+@media (max-width: 768px) {
+  .products-grid--vs {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    overflow-x: unset !important;
+    scroll-snap-type: unset !important;
+  }
+  .products-grid--vs .splash-card {
+    flex: unset !important;
+    max-width: unset !important;
+    width: 100% !important;
+  }
+}
+@media (max-width: 380px) {
+  .products-grid--vs {
+    grid-template-columns: 1fr !important;
+  }
+}

@@ -49,10 +49,10 @@
         "intensidad": 4
       },
       "ocasiones": [
-        "🌙 Noche",
-        "👔 Formal",
-        "❄️ Invierno",
-        "💼 Trabajo"
+        "Noche",
+        "Formal",
+        "Invierno",
+        "Trabajo"
       ],
       "ml": 100
     },
@@ -93,10 +93,10 @@
         "intensidad": 4
       },
       "ocasiones": [
-        "🌸 Primavera",
-        "☀️ Día",
-        "🎀 Regalo",
-        "💃 Romántico"
+        "Primavera",
+        "Día",
+        "Regalo",
+        "Romántico"
       ],
       "ml": 75
     },
@@ -137,10 +137,10 @@
         "intensidad": 4
       },
       "ocasiones": [
-        "☀️ Día",
-        "🌿 Casual",
-        "🌊 Verano",
-        "💼 Trabajo"
+        "Día",
+        "Casual",
+        "Verano",
+        "Trabajo"
       ],
       "ml": 100
     },
@@ -181,10 +181,10 @@
         "intensidad": 5
       },
       "ocasiones": [
-        "🌙 Noche",
-        "❄️ Invierno",
-        "🥂 Eventos",
-        "💃 Romántico"
+        "Noche",
+        "Invierno",
+        "Eventos",
+        "Romántico"
       ],
       "ml": 90
     },
@@ -221,8 +221,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌿 Casual",
-        "🌞 Todo el año"
+        "Casual",
+        "Todo el año"
       ],
       "ml": 100
     },
@@ -260,8 +260,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "☀️ Día",
-        "💼 Trabajo"
+        "Día",
+        "Trabajo"
       ],
       "ml": 100
     },
@@ -298,8 +298,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌸 Primavera",
-        "🎀 Regalo"
+        "Primavera",
+        "Regalo"
       ],
       "ml": 100
     },
@@ -337,8 +337,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌿 Casual",
-        "🌞 Todo el año"
+        "Casual",
+        "Todo el año"
       ],
       "ml": 100
     },
@@ -377,8 +377,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌙 Noche",
-        "🥂 Eventos"
+        "Noche",
+        "Eventos"
       ],
       "ml": 100
     },
@@ -415,8 +415,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "💐 Floral",
-        "🌸 Primavera"
+        "Floral",
+        "Primavera"
       ],
       "ml": 100
     },
@@ -453,7 +453,7 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌿 Casual"
+        "Casual"
       ],
       "ml": 100
     },
@@ -490,8 +490,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "👔 Formal",
-        "💼 Trabajo"
+        "Formal",
+        "Trabajo"
       ],
       "ml": 100
     },
@@ -528,8 +528,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "💃 Romántico",
-        "🌙 Noche"
+        "Romántico",
+        "Noche"
       ],
       "ml": 100
     },
@@ -566,8 +566,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "💎 Lujo",
-        "🥂 Eventos"
+        "Lujo",
+        "Eventos"
       ],
       "ml": 100
     },
@@ -604,8 +604,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌊 Verano",
-        "☀️ Día"
+        "Verano",
+        "Día"
       ],
       "ml": 100
     },
@@ -642,8 +642,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌸 Primavera",
-        "🎀 Regalo"
+        "Primavera",
+        "Regalo"
       ],
       "ml": 100
     },
@@ -680,8 +680,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "🌿 Casual",
-        "🌞 Todo el año"
+        "Casual",
+        "Todo el año"
       ],
       "ml": 100
     },
@@ -718,8 +718,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "👔 Formal",
-        "🌙 Noche"
+        "Formal",
+        "Noche"
       ],
       "ml": 100
     },
@@ -756,8 +756,8 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "💐 Floral",
-        "☀️ Día"
+        "Floral",
+        "Día"
       ],
       "ml": 100
     },
@@ -794,10 +794,447 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "💎 Lujo",
-        "🥂 Eventos"
+        "Lujo",
+        "Eventos"
       ],
       "ml": 100
+    }
+  ],
+  "splashes": [
+    {
+      "id": 101,
+      "nombre": "Bombshell",
+      "marca": "Victoria's Secret",
+      "familia": "Floral Frutal",
+      "precio": 28.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": "hot",
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "La fragancia icónica de Victoria's Secret. Floral, frutal y llena de vida. Un clásico que nunca pasa de moda.",
+      "fotos": [
+        "img/splashes/splash-1/1.webp"
+      ],
+      "ocasiones": [
+        "Primavera",
+        "Día",
+        "Regalo",
+        "Romántico"
+      ]
+    },
+    {
+      "id": 102,
+      "nombre": "Bombshell Seduction",
+      "marca": "Victoria's Secret",
+      "familia": "Floral Oriental",
+      "precio": 28.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": "new",
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Una versión más oscura y seductora del Bombshell clásico. Floral con toques orientales, perfecta para la noche.",
+      "fotos": [
+        "img/splashes/splash-2/1.webp"
+      ],
+      "ocasiones": [
+        "Noche",
+        "Romántico",
+        "Eventos"
+      ]
+    },
+    {
+      "id": 103,
+      "nombre": "Pure Seduction",
+      "marca": "Victoria's Secret",
+      "familia": "Frutal Floral",
+      "precio": 25.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": "hot",
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Fresca y juguetona. Notas de ciruela roja y magnolia que crean una fragancia irresistiblemente femenina.",
+      "fotos": [
+        "img/splashes/splash-3/1.webp"
+      ],
+      "ocasiones": [
+        "Día",
+        "Casual",
+        "Regalo"
+      ]
+    },
+    {
+      "id": 104,
+      "nombre": "Love Spell",
+      "marca": "Victoria's Secret",
+      "familia": "Frutal Floral",
+      "precio": 25.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Dulce y romántica. Una mezcla de cereza y durazno con un toque floral que evoca romance y feminidad.",
+      "fotos": [
+        "img/splashes/splash-4/1.webp"
+      ],
+      "ocasiones": [
+        "Romántico",
+        "Primavera",
+        "Regalo"
+      ]
+    },
+    {
+      "id": 105,
+      "nombre": "Aqua Kiss",
+      "marca": "Victoria's Secret",
+      "familia": "Acuático Floral",
+      "precio": 25.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Fresco como el agua. Notas acuáticas y florales para una sensación de limpieza y frescura todo el día.",
+      "fotos": [
+        "img/splashes/splash-5/1.webp"
+      ],
+      "ocasiones": [
+        "Verano",
+        "Día",
+        "Casual"
+      ]
+    },
+    {
+      "id": 106,
+      "nombre": "Coconut Passion",
+      "marca": "Victoria's Secret",
+      "familia": "Gourmand Tropical",
+      "precio": 25.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Tropical y adictiva. Coco y vainilla que te transportan a la playa en cada spray.",
+      "fotos": [
+        "img/splashes/splash-6/1.webp"
+      ],
+      "ocasiones": [
+        "Verano",
+        "Día",
+        "Vacaciones"
+      ]
+    },
+    {
+      "id": 107,
+      "nombre": "Secret Charm",
+      "marca": "Victoria's Secret",
+      "familia": "Floral Suave",
+      "precio": 25.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Delicada y encantadora. Una fragancia suave y femenina perfecta para el día a día.",
+      "fotos": [
+        "img/splashes/splash-7/1.webp"
+      ],
+      "ocasiones": [
+        "Día",
+        "Trabajo",
+        "Casual"
+      ]
+    },
+    {
+      "id": 108,
+      "nombre": "Velvet Petals",
+      "marca": "Victoria's Secret",
+      "familia": "Floral Amaderado",
+      "precio": 25.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Suave y aterciopelada. Pétalos florales con una base amaderada cálida que deja una estela delicada.",
+      "fotos": [
+        "img/splashes/splash-8/1.webp"
+      ],
+      "ocasiones": [
+        "Primavera",
+        "Día",
+        "Regalo"
+      ]
+    },
+    {
+      "id": 109,
+      "nombre": "[Splash 9]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-9/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 110,
+      "nombre": "[Splash 10]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-10/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 111,
+      "nombre": "[Splash 11]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-11/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 112,
+      "nombre": "[Splash 12]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-12/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 113,
+      "nombre": "[Splash 13]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-13/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 114,
+      "nombre": "[Splash 14]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-14/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 115,
+      "nombre": "[Splash 15]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-15/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 116,
+      "nombre": "[Splash 16]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-16/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 117,
+      "nombre": "[Splash 17]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-17/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 118,
+      "nombre": "[Splash 18]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-18/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 119,
+      "nombre": "[Splash 19]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-19/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 120,
+      "nombre": "[Splash 20]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-20/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 121,
+      "nombre": "[Splash 21]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-21/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
+    },
+    {
+      "id": 122,
+      "nombre": "[Splash 22]",
+      "marca": "Victoria's Secret",
+      "familia": "[Familia Olfativa]",
+      "precio": 0.0,
+      "precioAntes": null,
+      "categoria": "mujer",
+      "estado": null,
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "[Descripción del splash.]",
+      "fotos": [
+        "img/splashes/splash-22/1.webp"
+      ],
+      "ocasiones": [
+        "Día"
+      ]
     }
   ]
 }
