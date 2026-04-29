@@ -26,6 +26,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tenor+Sans&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="vs-styles.css" />
 
@@ -115,7 +117,7 @@
 
     <div class="hero__slide" data-slide="0">
       <div class="hero__slide-bg">
-        <img src="img/hero/slide-hombre.jpg" alt="Fragancias para hombre" class="hero__slide-img"
+        <img src="img/hero/slide-hombre.webp" alt="Frasgancias para hombre" class="hero__slide-img"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=1400&q=85'" />
         <div class="hero__slide-overlay"></div>
       </div>
@@ -132,7 +134,7 @@
 
     <div class="hero__slide" data-slide="1">
       <div class="hero__slide-bg">
-        <img src="img/hero/slide-mujer.jpg" alt="Fragancias para mujer" class="hero__slide-img"
+        <img src="img/hero/slide-mujer.webp" alt="Fragancias para mujer" class="hero__slide-img"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=1400&q=85'" />
         <div class="hero__slide-overlay"></div>
       </div>
@@ -149,7 +151,7 @@
 
     <div class="hero__slide" data-slide="2">
       <div class="hero__slide-bg">
-        <img src="img/hero/slide-unisex.jpg" alt="Fragancias unisex" class="hero__slide-img"
+        <img src="img/hero/slide-unisex.webp" alt="Fragancias unisex" class="hero__slide-img"
              onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1543726969-a1da85a6d334?w=1400&q=85'" />
         <div class="hero__slide-overlay"></div>
       </div>
@@ -220,7 +222,7 @@
 <section class="featured section-spacing" aria-labelledby="featuredTitle">
   <div class="container">
 
-    <header class="section-header reveal-up">
+    <header class="section-header" data-aos="fade-up">
       <div class="section-header__left">
         <p class="eyebrow">Los más pedidos</p>
         <h2 class="section-title" id="featuredTitle">Perfumes <em>destacados</em></h2>
@@ -320,7 +322,7 @@
 <section class="vs-featured section-spacing" aria-labelledby="vsHomeTitle">
   <div class="container">
 
-    <header class="section-header reveal-up">
+    <header class="section-header" data-aos="fade-up">
       <div class="section-header__left">
         <p class="eyebrow">Body Mist · Victoria's Secret</p>
         <h2 class="section-title" id="vsHomeTitle">Splashes <em>originales</em></h2>
@@ -353,7 +355,7 @@
 <section class="why-us section-spacing" aria-labelledby="whyTitle">
   <div class="container">
 
-    <header class="section-header section-header--center reveal-up">
+    <header class="section-header section-header--center" data-aos="fade-up">
       <p class="eyebrow">Nuestra promesa</p>
       <h2 class="section-title" id="whyTitle">Por qué <em>elegirnos</em></h2>
       <p class="section-subtitle">Cada perfume que vendemos pasó por nuestras manos antes de llegar a las tuyas. Sin copias, sin engaños.</p>
@@ -406,7 +408,7 @@
 <!-- ─────────────────────────────────────────────
      CTA WHATSAPP
 ───────────────────────────────────────────── -->
-<section class="cta-section section-spacing reveal-up" aria-labelledby="ctaTitle">
+<section class="cta-section section-spacing" data-aos="fade-up" aria-labelledby="ctaTitle">
   <div class="container">
     <div class="cta-section__inner">
       <div class="cta-section__copy">
@@ -549,5 +551,14 @@
 
 <script src="app.js" type="module"></script>
 <script src="vs-app.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-quart',
+      once: true,
+      offset: 40
+    });
+  </script>
 </body>
 </html>

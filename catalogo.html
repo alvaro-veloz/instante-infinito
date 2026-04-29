@@ -20,6 +20,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tenor+Sans&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -64,11 +66,11 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="page-hero__bg" aria-hidden="true">
-    <img src="img/hero/slide-catalogo.jpg" alt=""
-         onerror="this.onerror=null;this.src='img/hero/slide-unisex.jpg'" />
+    <img src="img/hero/slide-catalogo.webp" alt=""
+        onerror="this.onerror=null;this.src='img/hero/slide-unisex.jpg'" />
   </div>
   <div class="container">
-    <div class="page-hero__inner reveal-up">
+    <div class="page-hero__inner" data-aos="fade-up">
       <p class="eyebrow">Perfumes originales importados</p>
       <h1 class="page-hero__title">La <em>colección</em></h1>
       <p class="page-hero__sub" id="catalogSubtitle">Todos 100% originales · Para hombre, mujer y unisex</p>
@@ -125,7 +127,7 @@
 </section>
 
 <!-- CTA -->
-<section class="cta-section section-spacing reveal-up">
+<section class="cta-section section-spacing" data-aos="fade-up">
   <div class="container">
     <div class="cta-section__inner">
       <div class="cta-section__copy">
@@ -250,5 +252,14 @@
 <div id="modalContainer"></div>
 
 <script src="app.js" type="module"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-quart',
+      once: true,
+      offset: 40
+    });
+  </script>
 </body>
 </html>
