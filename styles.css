@@ -523,9 +523,9 @@ p { line-height: 1.75; }
    ============================================================ */
 .hero {
   position: relative;
-  height: 88vh;
+  height: 92vh;
   min-height: 520px;
-  max-height: 900px;
+  max-height: 980px;
   overflow: hidden;
   background: var(--bg-dark);
 }
