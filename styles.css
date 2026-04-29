@@ -2533,7 +2533,7 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
   /* Cart drawer */
   .cart-drawer {
     width: 100%; max-width: 100%;
-    top: auto; height: 90vh;
+    top: auto; height: 90dvh;
     border-radius: var(--r-xl) var(--r-xl) 0 0;
     border-left: none; border-top: 1px solid var(--border);
     transform: translateY(100%);
@@ -2632,16 +2632,20 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
   }
 }
 
-/* Fix filtros VS — evitar hover pegado en táctil */
+/* Filtros VS — rosa siempre, sin depender de hover */
+.vs-filter-bar .fpill--on,
+.vs-filter-bar .fpill--on:hover,
+.vs-filter-bar .fpill--on:focus,
+.vs-filter-bar .fpill--on:active {
+  background: var(--vs-pink-dark) !important;
+  border-color: var(--vs-pink-dark) !important;
+  color: #fff !important;
+}
+/* En touch — quitar hover de pills no activos */
 @media (hover: none) {
-  .vs-filter-bar .fpill:hover {
+  .vs-filter-bar .fpill:not(.fpill--on):hover {
     border-color: var(--border);
     color: var(--text-muted);
     background: transparent;
-  }
-  .vs-filter-bar .fpill--on:hover {
-    background: var(--vs-pink-dark);
-    border-color: var(--vs-pink-dark);
-    color: #fff;
   }
 }
