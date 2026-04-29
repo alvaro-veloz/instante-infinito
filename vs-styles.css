@@ -305,17 +305,56 @@
   transform: translateY(0) scale(1);
 }
 
-.splash-modal__img-wrap {
+.splash-modal__gallery {
   grid-area: img;
+  display: flex;
+  flex-direction: column;
   background: var(--vs-cream);
   overflow: hidden;
+}
+.splash-modal__img-wrap {
+  flex: 1;
+  overflow: hidden;
   cursor: zoom-in;
+  transition: opacity 0.15s;
+}
+.splash-modal__thumbs {
+  display: flex;
+  gap: 4px;
+  padding: 6px;
+  background: var(--vs-cream-dark);
+  border-top: 1px solid rgba(232,160,176,0.2);
+}
+.splash-modal__thumb {
+  width: 52px; height: 52px;
+  border-radius: 0;
+  overflow: hidden;
+  border: 1.5px solid transparent;
+  flex-shrink: 0;
+  cursor: pointer;
+  background: var(--vs-cream);
+  transition: border-color var(--dur-fast);
+}
+.splash-modal__thumb img { width: 100%; height: 100%; object-fit: cover; }
+.splash-modal__thumb:hover { border-color: var(--vs-pink); }
+.splash-modal__thumb--on { border-color: var(--vs-pink-dark) !important; }
+
+/* Móvil — galería */
+@media (max-width: 768px) {
+  .splash-modal__gallery {
+    grid-area: unset;
+    height: 65vw; max-height: 360px; min-height: 240px;
+    flex-shrink: 0;
+  }
+  .splash-modal__img-wrap { flex: 1; }
+  .splash-modal__thumbs { padding: 4px; }
+  .splash-modal__thumb { width: 44px; height: 44px; }
 }
 .splash-modal__img {
   width: 100%; height: 100%;
   object-fit: contain;
   object-position: center;
-  padding: 16px;
+  padding: 24px;
   transition: transform 0.4s var(--ease);
   transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
 }
@@ -426,7 +465,7 @@
   }
   .splash-modal__img-wrap {
     grid-area: unset;
-    height: 65vw; max-height: 360px; min-height: 240px; background: var(--vs-cream);
+    height: 80vw; max-height: 420px; min-height: 280px; background: #ffffff;
     flex-shrink: 0;
   }
   .splash-modal__info {
@@ -503,4 +542,41 @@
   .products-grid--vs {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* Tipo de fragancia y notas en el modal splash */
+.splash-modal__fragancia {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  padding: var(--space-xs) 0;
+}
+.splash-modal__dato {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-sm);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-soft);
+}
+.splash-modal__dato:last-child { border-bottom: none; }
+.splash-modal__dato-label {
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  min-width: 110px;
+  flex-shrink: 0;
+}
+.splash-modal__dato-val {
+  font-size: 0.875rem;
+  color: var(--text-soft);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .splash-modal__img { padding: 12px; }
 }

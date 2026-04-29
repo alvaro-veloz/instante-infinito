@@ -225,6 +225,16 @@ function buildSplashModal(s) {
           <span class="splash-modal__meta-pill">Original</span>
           <span class="splash-modal__meta-pill">Importado</span>
         </div>
+        <div class="splash-modal__fragancia">
+          <div class="splash-modal__dato">
+            <span class="splash-modal__dato-label">Tipo de fragancia</span>
+            <span class="splash-modal__dato-val">${s.tipo_fragancia || s.familia}</span>
+          </div>
+          <div class="splash-modal__dato">
+            <span class="splash-modal__dato-label">Notas</span>
+            <span class="splash-modal__dato-val">${s.notas_simples || '—'}</span>
+          </div>
+        </div>
         <p class="splash-modal__desc">${s.descripcion}</p>
         <div class="splash-modal__ocasiones">${chips}</div>
       </div>
