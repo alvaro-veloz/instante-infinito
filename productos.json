@@ -456,7 +456,7 @@
       "precio": 80.0,
       "precioAntes": 125.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
       "descripcion": "Descubre el encantador atractivo de Mon Premier de Lolita Lempicka, una fragancia atemporal lanzada en 1997. Este exquisito scent está diseñado exclusivamente para ladies que aprecian una mezcla de notas florales, frutales y gourmand. Mon Premier captura la esencia de la feminidad con su composición sofisticada que deja una impresión inolvidable. Mon Premier se abre con las cautivadoras notas de salida de hiedra y semilla de anís, creando un comienzo fresco e intrigante. El corazón de la fragancia florece con los delicados y dulces aromas de violeta, amarise, regaliz y amarena, envolviéndote en un rico y lujoso bouquet. A medida que el aroma se asienta, las notas de fondo de vetiver, tonka, vainilla y almizcle proporcionan un final cálido y reconfortante, haciendo de Mon Premier una experiencia verdaderamente fascinante. Creada por la reconocida casa de moda Lolita Lempicka, Mon Premier es más que una fragancia, es una declaración de elegancia y sofisticación. El spray EDP de 100 ml es perfecto para aquellos que quieren disfrutar de un aroma que es a la vez atemporal y moderno. Ya sea que te vistas para una ocasión special o simplemente quieras añadir un toque de magia a tu vida diaria, Mon Premier es la elección perfecta. Abraza el atractivo de Lolita Lempicka Ladies Mon Premier EDP Spray. Con su única mezcla de notas florales, frutales y gourmand, esta fragancia seguramente se convertirá en una adición preciada a tu colección.",
       "fotos": [
@@ -503,76 +503,106 @@
     },
     {
       "id": 11,
-      "nombre": "[Nombre del Perfume 11]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "nombre": "Sakeena",
+      "marca": "Lattafa",
+      "familia": "Floral Frutal Gourmand",
+      "precio": 80.0,
+      "precioAntes": 100.0,
       "categoria": "unisex",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Descubre el encantador atractivo de Sakeena de Lattafa, un Eau de Parfum unisex que captura la mezcla perfecta de elegancia y calidez. Lanzado en 2022, este perfume de 100 ml es una cautivadora mezcla de notas florales, frutales y gourmand, diseñado para aquellos que aprecian una fragancia refinada que deja una impresión duradera. Elaborado en los Emiratos Árabes Unidos por la casa de fragancias de Medio Oriente Lattafa, Sakeena es una adición destacada a cualquier colección de fragancias. Desde la primera pulverización, Sakeena envuelve tus sentidos en una refrescante explosión de mandarina, maracuyá y un acorde ozónico aireado. Estas notas de salida crean una apertura brillante y jugosa que instantáneamente mejora tu estado de ánimo. A medida que la fragancia se desarrolla, el corazón revela un ramo romántico de flor de naranjo y rosa, realzado por el toque único de sal marina y frambuesa madura, añadiendo profundidad y carácter al aroma. Las notas de fondo traen un final suave e indulgente, con vainilla cremosa, almizcle suave, praliné dulce y rico toffee. Esta deliciosa mezcla deja una estela acogedora e irresistible que permanece maravillosamente en la piel. Ya sea que salgas para una velada especial o quieras elevar tu presencia diaria, Sakeena ofrece una fragancia versátil que se adapta a cada ocasión. Envasado en un elegante frasco spray EDP de 100 ml, Sakeena de Lattafa es un regalo pensado o un lujoso capricho para ti mismo. Con su atractivo unisex, es perfecto para cualquiera que ame las fragancias sofisticadas y modernas con un toque dulce. Experimenta la magia de Sakeena, donde la belleza floral se encuentra con el deleite frutal y la calidez gourmand.",
       "fotos": [
-        "img/products/product-11/1.jpg"
+        "img/products/product-11/1.webp",
+        "img/products/product-11/2.webp",
+        "img/products/product-11/3.webp",
+        "img/products/product-11/4.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Mandarina",
+          "Acorde ozónico",
+          "Fruta de la pasión"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Flor de naranjo",
+          "Rosa",
+          "Sal marina",
+          "Frambuesa"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Almizcle",
+          "Vainilla",
+          "Praliné",
+          "Toffee"
         ]
       },
       "barras": {
-        "longevidad": 3,
+        "longevidad": 4,
         "proyeccion": 3,
-        "intensidad": 3
+        "intensidad": 4
       },
       "ocasiones": [
-        "Casual"
+        "Uso diario",
+        "Trabajo",
+        "Salidas casuales",
+        "Perfume dulce y moderno"
       ],
       "ml": 100
     },
     {
       "id": 12,
-      "nombre": "[Nombre del Perfume 12]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "hombre",
-      "estado": null,
+      "nombre": "Khamrah",
+      "marca": "Lattafa",
+      "familia": "Aromático Especiado",
+      "precio": 70.0,
+      "precioAntes": 100.0,
+      "categoria": "unisex",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Descubre la magia de Oriente con Lattafa Khamrah Eau de Parfum en Spray, una fragancia unisex diseñada para encantar e inspirar. Creada por la reconocida casa de diseño de Oriente Medio Lattafa, esta fragancia especiada aromática combina la tradición con la elegancia moderna. Ya sea que asistas a un evento diurno o a una reunión nocturna, el aroma cálido y cautivador de Khamrah es perfecto para cualquier ocasión. Lanzado en 2022, Lattafa Khamrah se abre con una explosión audaz de canela, nuez moscada y bergamota, un trío energizante que capta instantáneamente la atención. A medida que la fragancia se despliega, el corazón revela una rica mezcla de dátiles, praliné, nardo y Mahonial, creando una armonía dulce pero equilibrada. La base permanece con lujosas notas de vainilla, haba tonka, benjuí, mirra, amberwood y Akigalawood, asegurando una impresión duradera desde el día hasta la noche. Este spray Eau de Parfum de 100 ml es más que una fragancia, es un viaje sensorial al corazón de la perfumería oriental. Con sus notas expertamente estratificadas y su presencia de larga duración, Lattafa Khamrah es la fragancia insignia perfecta para aquellos que aprecian la profundidad, la calidez y el atractivo. Deja que tu fragancia hable por sí sola con esta mezcla inolvidable.",
       "fotos": [
-        "img/products/product-12/1.jpg"
+        "img/products/product-12/1.webp",
+        "img/products/product-12/2.webp",
+        "img/products/product-12/3.webp",
+        "img/products/product-12/4.webp",
+        "img/products/product-12/5.webp",
+        "img/products/product-12/6.webp",
+        "img/products/product-12/7.webp",
+        "img/products/product-12/8.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Canela",
+          "Nuez moscada",
+          "Bergamota"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Dátiles",
+          "Praliné",
+          "Nardo",
+          "Mahonial"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Vainilla",
+          "Haba tonka",
+          "Benjuí",
+          "Mirra",
+          "Amberwood",
+          "Akigalawood"
         ]
       },
       "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
+        "longevidad": 5,
+        "proyeccion": 5,
+        "intensidad": 5
       },
       "ocasiones": [
-        "Formal",
-        "Trabajo"
+        "Noches frías",
+        "Citas intensas",
+        "Eventos elegantes",
+        "Salidas nocturnas",
+        "Oler especiado y dominante"
       ],
       "ml": 100
     },
