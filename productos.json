@@ -14,13 +14,13 @@
       "id": 1,
       "nombre": "Spicebomb Extreme",
       "marca": "Viktor&Rolf",
-      "familia": "Amaderado especiado",
+      "familia": "Amaderada especiada",
       "precio": 99.99,
       "precioAntes": 140.0,
       "categoria": "hombre",
-      "estado": "hot",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "Spicebomb Extreme es una fragancia amaderada y aromática para el hombre moderno. Fresca y elegante a la vez, ideal para el día a día y ocasiones formales.",
+      "descripcion": "Desata tu lado más audaz con Spicebomb Extreme de Viktor & Rolf, una poderosa fragancia masculina que exige atención. Lanzada en 2015, esta Eau de Parfum de 90 ml pertenece a la familia Ámbar Especiada. Esta versión es más profunda e intensa que la Spicebomb original, creada para el hombre moderno que busca intensidad y confianza. Spicebomb Extreme se abre con un estallido vibrante de toronja, pimiento y pimienta negra. A medida que evoluciona, las notas de corazón de canela, comino y azafrán aportan calidez y misterio. Finalmente, las notas de fondo de tabaco, ámbar, vainilla y cistus crean un acabado suave, masculino y duradero. Más que un aroma, es una declaración. Perfecta para la noche o para ocasiones especiales, ofrece un rendimiento duradero con solo unas pocas atomizaciones. Su frasco en forma de granada refleja la naturaleza explosiva de la fragancia. Ideal para quienes disfrutan aromas fuertes, especiados y sofisticados. Este artículo solo puede enviarse dentro de los Estados Unidos Continentales y Canadá.",
       "fotos": [
         "img/products/product-1/1.webp",
         "img/products/product-1/2.webp",
@@ -31,151 +31,261 @@
       ],
       "notas": {
         "salida": [
-          "Pimienta Rosa",
-          "Pomelo",
-          "Menta"
+          "Toronja",
+          "Pimiento",
+          "Pimienta negra"
         ],
         "corazon": [
-          "Jengibre",
-          "Nuez Moscada",
-          "Jazmín"
+          "Canela",
+          "Comino",
+          "Azafrán"
         ],
         "fondo": [
-          "Incienso",
-          "Cedro",
-          "Sándalo"
+          "Tabaco",
+          "Ámbar",
+          "Vainilla",
+          "Cistus"
         ]
       },
       "barras": {
-        "longevidad": 4,
+        "longevidad": 5,
         "proyeccion": 5,
-        "intensidad": 4
+        "intensidad": 5
       },
       "ocasiones": [
         "Noche",
         "Formal",
-        "Invierno",
-        "Trabajo"
+        "Invierno o templado",
+        "Citas o fiestas"
       ],
-      "ml": 100
+      "ml": 90
     },
     {
       "id": 2,
-      "nombre": "La Vie Est Belle",
-      "marca": "Lancôme",
-      "familia": "Floral Gourmand",
-      "precio": 75.0,
+      "nombre": "Odyssey Revolution Ultra Edition",
+      "marca": "Armaf",
+      "familia": "Amaderada Especiada",
+      "precio": 80.0,
       "precioAntes": 99.0,
-      "categoria": "mujer",
+      "categoria": "unisex",
       "estado": "offer",
       "agotado": false,
-      "descripcion": "La Vie Est Belle es un manifiesto de felicidad. Su corazón de iris se combina con notas gourmand que crean una fragancia adictiva y única.",
+      "descripcion": "Descubre la esencia audaz de Armaf Odyssey Revolution Ultra Edition Eau de Parfum, una fragancia de 100 ml que combina confianza y sofisticación. Creada por la casa de perfumería de Medio Oriente Armaf, esta esencia está diseñada para quienes buscan proyectar presencia sin esfuerzo. Perteneciente a la familia Amaderada Especiada, abre con un estallido fresco de cítricos que aporta energía vibrante. En el corazón, las hojas de violeta y los acordes marinos equilibran el aroma con una frescura limpia y moderna. Versátil y adecuada para uso diario, ya sea en la oficina, en una salida casual o durante actividades diurnas, ofrece buena longevidad y una proyección notoria que se mantiene de la mañana a la noche. Presentada en un frasco elegante de 100 ml, esta creación de Armaf refleja la tradición perfumista de Medio Oriente y transmite estilo, fuerza y sofisticación.",
       "fotos": [
-        "img/products/product-2/1.jpg",
-        "img/products/product-2/2.jpg"
+        "img/products/product-2/1.webp",
+        "img/products/product-2/2.webp",
+        "img/products/product-2/3.webp"
       ],
       "notas": {
         "salida": [
-          "Grosella negra",
-          "Pera"
+          "Piña",
+          "Grosella negra"
         ],
         "corazon": [
-          "Iris",
-          "Jazmín",
-          "Rosa"
+          "Praliné",
+          "Haba tonka"
         ],
         "fondo": [
-          "Praliné",
           "Vainilla",
           "Pachulí"
         ]
       },
       "barras": {
-        "longevidad": 5,
+        "longevidad": 4,
         "proyeccion": 4,
-        "intensidad": 4
+        "intensidad": 3
       },
       "ocasiones": [
-        "Primavera",
-        "Día",
+        "Clima frío o templado",
+        "Casual",
         "Regalo",
-        "Romántico"
+        "Uso diario"
       ],
-      "ml": 75
+      "ml": 100
     },
     {
       "id": 3,
-      "nombre": "Sauvage",
-      "marca": "Dior",
-      "familia": "Aromático Fresco",
-      "precio": 95.0,
-      "precioAntes": null,
-      "categoria": "hombre",
-      "estado": "hot",
+      "nombre": "Odyssey Dubai Chocolat Gourmand",
+      "marca": "Armaf",
+      "familia": "Ámbar Vainilla",
+      "precio": 80.0,
+      "precioAntes": 99.99,
+      "categoria": "unisex",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "Sauvage evoca los paisajes salvajes al atardecer. Fresco, poderoso e inconfundible. Su proyección es extraordinaria y deja una estela imposible de ignorar.",
+      "descripcion": "Odyssey Dubai Chocolat Gourmand de Armaf es una fragancia lujosa que captura la opulencia de la perfumería de Medio Oriente. Lanzada en 2025, pertenece a la familia Ámbar Vainilla y destaca por su calidez, dulzura y profundidad. Su salida combina café, pistacho, praliné, avellana y knafeh, creando un inicio intenso y gourmand. En el corazón, la vainilla, el cardamomo y el chocolate aportan cremosidad y un toque especiado. Finalmente, el caramelo, la haba tonka y el amberwood dejan una estela suave, cálida y envolvente. Diseñada por Armaf, esta fragancia refleja la riqueza y sofisticación de los Emiratos Árabes Unidos, ideal para noches, eventos especiales o para quienes desean proyectar un estilo dulce, cálido y elegante.",
       "fotos": [
-        "img/products/product-3/1.jpg",
-        "img/products/product-3/2.jpg"
+        "img/products/product-3/1.webp",
+        "img/products/product-3/2.webp",
+        "img/products/product-3/3.webp",
+        "img/products/product-3/4.webp",
+        "img/products/product-3/5.webp"
       ],
       "notas": {
         "salida": [
-          "Bergamota",
-          "Pimienta"
+          "Café",
+          "Pistacho",
+          "Avellana",
+          "Praliné",   
+          "Knafeh"
         ],
         "corazon": [
-          "Lavanda",
-          "Geranio",
-          "Vetiver"
+          "Vainilla",
+          "Cardamomo",
+          "Chocolate"
         ],
         "fondo": [
-          "Ambroxan",
-          "Cedro",
-          "Labdano"
+          "Caramelo",
+          "Haba tonka",
+          "Amberwood"
         ]
       },
       "barras": {
-        "longevidad": 5,
+        "longevidad": 4,
         "proyeccion": 5,
-        "intensidad": 4
+        "intensidad": 5
       },
       "ocasiones": [
-        "Día",
-        "Casual",
-        "Verano",
-        "Trabajo"
+        "Noche",
+        "Citas",
+        "Salidas especiales",
+        "Clima frío",
+        "Eventos",
+        "Ocasiones donde quieras destacar"
       ],
       "ml": 100
     },
     {
       "id": 4,
-      "nombre": "Black Opium",
-      "marca": "Yves Saint Laurent",
-      "familia": "Oriental Floral",
-      "precio": 105.0,
-      "precioAntes": null,
-      "categoria": "mujer",
-      "estado": "new",
+      "nombre": "Khamrah Dukhan",
+      "marca": "Lattafa",
+      "familia": "Ámbar",
+      "precio": 90.0,
+      "precioAntes": 120.0,
+      "categoria": "unisex",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "Black Opium es oscuro, adictivo e irresistible. La combinación de café negro con flores blancas crea un contraste único que atrapa desde el primer instante.",
+      "descripcion": "Adéntrate en un mundo de elegancia audaz con Khamrah Dukhan Eau de Parfum en Spray de Lattafa. Lanzado en 2025, este perfume de 100 ml fusiona la rica tradición con un toque moderno, convirtiéndolo en la fragancia insignia perfecta para quien busca seguridad y estilo. Elaborado en el corazón de los Emiratos Árabes Unidos, Khamrah Dukhan captura la esencia del lujo y el estilo de Oriente Medio.\n\nLa fragancia se abre con una cautivadora mezcla de especias, pimiento y mandarina, ofreciendo una introducción cálida y cítrica que atrapa la atención. En el corazón, revela una mezcla ahumada de ládano, incienso, flor de naranjo y pachulí, creando una vibra profunda y misteriosa, a la vez refinada e intrigante. Finalmente, las notas de fondo de tabaco, praliné, ámbar, benjuí y haba tonka dejan una impresión duradera de dulzura rica y sofisticación.\n\nDiseñado por la reconocida casa Lattafa, Khamrah Dukhan es un spray EDP premium que ofrece un rendimiento de larga duración con solo unas cuantas atomizaciones. Ya sea para asistir a un evento especial o para hacer una declaración de estilo diaria, esta fragancia ofrece una presencia poderosa pero suave que te distingue.\n\nKhamrah Dukhan Eau de Parfum de Lattafa es más que una fragancia: es un viaje a través del aroma que evoca fuerza, encanto y atractivo atemporal. Disponible en un elegante frasco de 100 ml, es ideal para regalar o para añadir a tu colección personal.",
       "fotos": [
-        "img/products/product-4/1.jpg",
-        "img/products/product-4/2.jpg"
+        "img/products/product-4/1.webp",
+        "img/products/product-4/2.webp",
+        "img/products/product-4/3.webp",
+        "img/products/product-4/4.webp",
+        "img/products/product-4/5.webp"
       ],
       "notas": {
         "salida": [
-          "Pera",
-          "Pomelo Rosa"
+          "Especias",
+          "Pimiento",
+          "Mandarina"
         ],
         "corazon": [
-          "Café Negro",
+          "Labdanum",
+          "Incienso",
+          "Flor de azahar",
+          "Pachulí"
+        ],
+        "fondo": [
+          "Tabaco",
+          "Praliné",
+          "Ámbar",
+          "Benjuí",
+          "Haba tonka"
+        ]
+      },
+      "barras": {
+        "longevidad": 5,
+        "proyeccion": 5,
+        "intensidad": 5
+      },
+      "ocasiones": [
+        "Noches especiales",
+        "Citas memorables",
+        "Clima frío",
+        "Eventos elegantes"
+      ],
+      "ml": 100
+    },
+    {
+      "id": 5,
+      "nombre": "Club De Nuit Intense",
+      "marca": "Armaf",
+      "familia": "Amaderado Especiado",
+      "precio": 100.0,
+      "precioAntes": 160.0,
+      "categoria": "hombre",
+      "estado": "offer",
+      "agotado": false,
+      "descripcion": "Experimenta la esencia audaz y cautivadora de Club De Nuit Intense de Armaf, una fragancia para hombres que redefine la confianza. Lanzado en 2015, este Eau de Parfum en spray viene en un generoso tamaño de 200 ml, lo que lo hace perfecto para uso diario. Diseñado por la reconocida casa Armaf, esta fragancia es parte de la prestigiosa colección Club De Nuit, conocida por sus aromas poderosos y memorables. Club De Nuit Intense se abre con una explosión fresca de limón, grosella negra y manzana, creando un comienzo brillante y energizante. A medida que la fragancia se asienta, las notas de corazón de jazmín y abedul añaden una profundidad suave y sofisticada. Finalmente, las ricas notas de fondo de vainilla, ámbar gris, almizcle y pachulí dejan una impresión cálida y duradera que permanece durante todo el día. Esta fragancia amaderada y especiada es recomendada para uso casual, lo que la convierte en una excelente opción para cualquier ocasión, ya sea para una reunión relajada con amigos o para salir a divertirse por la noche. Con su mezcla dinámica de tonos cítricos y terrosos, Club De Nuit Intense es la fragancia perfecta para el hombre moderno que quiere destacar con estilo y carisma. Eleva tu colección de fragancias con Club De Nuit Intense de Armaf. Su poderoso aroma, fórmula de larga duración y diseño elegante lo convierten en un elemento imprescindible para aquellos que aprecian la elegancia atemporal y la expresión audaz.",
+      "fotos": [
+        "img/products/product-5/1.webp",
+        "img/products/product-5/2.webp",
+        "img/products/product-5/3.webp",
+        "img/products/product-5/4.webp",
+        "img/products/product-5/5.webp"
+      ],
+      "notas": {
+        "salida": [
+          "Limón",
+          "Grosella negra",
+          "Manzana"
+        ],
+        "corazon": [
           "Jazmín",
-          "Naranja"
+          "Abedul"
         ],
         "fondo": [
           "Vainilla",
+          "Ambergris",
+          "Almizcle",
+          "Pachulí"
+        ]
+      },
+      "barras": {
+        "longevidad": 5,
+        "proyeccion": 5,
+        "intensidad": 5
+      },
+      "ocasiones": [
+        "Noches especiales",
+        "Citas memorables",
+        "Clima frío",
+        "Eventos elegantes",
+        "Recibir cumplidos"
+      ],
+      "ml": 200
+    },
+    {
+      "id": 6,
+      "nombre": "Al Qiam Gold",
+      "marca": "Lattafa Pride",
+      "familia": "Leather",
+      "precio": 80.0,
+      "precioAntes": 100.0,
+      "categoria": "unisex",
+      "estado": "offer",
+      "agotado": false,
+      "descripcion": "Desata la esencia de la elegancia con Pride Al Qiam Gold de Lattafa, una fragancia que exuda un encanto sin etiquetas. Lanzado en 2022, este perfume es una adición reciente a la ilustre línea de Lattafa, trayendo una nueva ola de deleite aromático. Comienza tu viaje olfativo con las tentadoras notas de salida de frambuesa y azafrán. El aroma tentador de frambuesas jugosas y maduras se complementa perfectamente con el toque exótico, ligeramente dulce y terroso del azafrán, creando una apertura intrigante que capta instantáneamente tu atención. A medida que la fragancia se despliega, revela notas de corazón de pachulí y cuero. Los matices terrosos y amaderados del pachulí se armonizan con el aroma rico y lujoso del cuero, añadiendo una capa de profundidad y sofisticación. Las notas de fondo de palo guayaco, benjuí, vetiver, ámbar y oud crean un final cálido y seductor. El aroma ahumado y resinoso del palo guayaco se encuentra con el dulce y balsámico aroma del benjuí, mientras que el vetiver terroso y amaderado se mezcla con la rica y sensual fragancia del ámbar y el oud. Esta combinación intoxicante permanece en la piel, dejando una impresión duradera. Diseñado por el reconocido Lattafa, Pride Al Qiam Gold es un testimonio del compromiso de la marca con la calidad y la innovación. El perfume viene en formato EDP spray, lo que facilita su aplicación y asegura que el aroma te acompañe durante todo el día. Este frasco de 100 ml, codificado con el código de barras 6291108738214, es el tamaño perfecto tanto para uso diario como para viajes. Experimenta el atractivo de Pride Al Qiam Gold EDP Spray de Lattafa. Esta fragancia es más que un perfume; es una declaración de tu estilo y personalidad únicos. ¡Eleva tu juego de fragancias con Lattafa hoy!",
+      "fotos": [
+        "img/products/product-6/1.webp",
+        "img/products/product-6/2.webp",
+        "img/products/product-6/3.webp",
+        "img/products/product-6/4.webp"
+      ],
+      "notas": {
+        "salida": [
+          "Frambuesa",
+          "Azafrán"
+        ],
+        "corazon": [
           "Pachulí",
-          "Cedro"
+          "Cuero"
+        ],
+        "fondo": [
+          "Guaiac wood",
+          "Benjuí",
+          "Vetiver",
+          "Ámbar"
         ]
       },
       "barras": {
@@ -184,242 +294,210 @@
         "intensidad": 5
       },
       "ocasiones": [
-        "Noche",
-        "Invierno",
-        "Eventos",
-        "Romántico"
-      ],
-      "ml": 90
-    },
-    {
-      "id": 5,
-      "nombre": "[Nombre del Perfume 5]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "unisex",
-      "estado": null,
-      "agotado": false,
-      "descripcion": "[Descripción del perfume. Escribe 2 a 4 oraciones que capturen la esencia y experiencia de esta fragancia.]",
-      "fotos": [
-        "img/products/product-5/1.jpg"
-      ],
-      "notas": {
-        "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
-        ],
-        "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
-        ],
-        "fondo": [
-          "[Nota 5]"
-        ]
-      },
-      "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
-      },
-      "ocasiones": [
-        "Casual",
-        "Todo el año"
-      ],
-      "ml": 100
-    },
-    {
-      "id": 6,
-      "nombre": "[Nombre del Perfume 6]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "hombre",
-      "estado": null,
-      "agotado": false,
-      "descripcion": "[Descripción del perfume. Escribe 2 a 4 oraciones que capturen la esencia y experiencia de esta fragancia.]",
-      "fotos": [
-        "img/products/product-6/1.jpg"
-      ],
-      "notas": {
-        "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
-        ],
-        "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
-        ],
-        "fondo": [
-          "[Nota 5]",
-          "[Nota 6]"
-        ]
-      },
-      "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
-      },
-      "ocasiones": [
-        "Día",
-        "Trabajo"
+        "Noches elegantes",
+        "Eventos formales",
+        "Clima frío",
+        "Oler exclusivo",
+        "Estilo dominante"
       ],
       "ml": 100
     },
     {
       "id": 7,
-      "nombre": "[Nombre del Perfume 7]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "mujer",
-      "estado": null,
+      "nombre": "Hawas Fire",
+      "marca": "Rasasi",
+      "familia": "Aromático Acuático",
+      "precio": 80.0,
+      "precioAntes": 100.0,
+      "categoria": "unisex",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume. Escribe 2 a 4 oraciones que capturen la esencia y experiencia de esta fragancia.]",
+      "descripcion": "Enciende tus sentidos con Rasasi Hawas Fire, una audaz fragancia unisex lanzada en 2025. Proveniente de la distinguida casa de fragancias de Medio Oriente Rasasi, con sede en los Emiratos Árabes Unidos, Hawas Fire es un tributo a la pasión, el poder y la elegancia. Este spray Eau de Parfum de 100 ml combina elementos acuáticos aromáticos con un espíritu ardiente, creando una fragancia que es a la vez refrescante e inolvidable. Hawas Fire se abre con la frescura terrosa de la Salvia Esclárea, estableciendo un tono limpio y vigorizante que capta instantáneamente la atención. A medida que la fragancia se despliega, un corazón de notas marinas y exuberante jazmín egipcio añade una profundidad floral y oceánica, evocando la sensación de una brisa marina fresca bajo un cielo estrellado. La base permanece con una cálida mezcla de notas minerales, ámbar gris y ámbar, dejando una estela suave y sensual que es a la vez moderna y atemporal. Creada para aquellos que se atreven a destacar, Rasasi Hawas Fire es la fragancia insignia perfecta para cualquier temporada u ocasión. Su composición unisex la convierte en una opción versátil para cualquiera que busque expresar confianza e individualidad a través de la fragancia. Ya sea que te vistas para una noche de fiesta o busques una fragancia diaria con carácter, Hawas Fire ofrece sofisticación y estilo en cada spray. Experimenta el atractivo del arte de Medio Oriente de Rasasi con Hawas Fire EDP Spray. Ahora disponible en un tamaño de 100 ml, esta fragancia es válida exclusivamente para envío dentro de los Estados Unidos contiguos y Canadá. Eleva tu colección con una fragancia que habla por sí sola: Rasasi Hawas Fire.",
       "fotos": [
-        "img/products/product-7/1.jpg"
+        "img/products/product-7/1.webp",
+        "img/products/product-7/2.webp",
+        "img/products/product-7/3.webp",
+        "img/products/product-7/4.webp",
+        "img/products/product-7/5.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Salvia"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Notas marinas",
+          "Jazmín egipcio"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Notas minerales",
+          "Ambergris",
+          "Ámbar"
         ]
       },
       "barras": {
-        "longevidad": 3,
+        "longevidad": 4,
         "proyeccion": 3,
-        "intensidad": 3
+        "intensidad": 4
       },
       "ocasiones": [
-        "Primavera",
-        "Regalo"
+        "Uso diario",
+        "Clima cálido",
+        "Oficina",
+        "Salidas casuales",
+        "Estilo moderno"
       ],
       "ml": 100
     },
     {
       "id": 8,
-      "nombre": "[Nombre del Perfume 8]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "unisex",
+      "nombre": "Creed Aventus",
+      "marca": "Creed",
+      "familia": "Chipre Afrutado",
+      "precio": 372.0,
+      "precioAntes": 495.0,
+      "categoria": "hombre",
       "estado": null,
-      "agotado": false,
-      "descripcion": "[Descripción del perfume. Escribe 2 a 4 oraciones que capturen la esencia y experiencia de esta fragancia.]",
+      "agotado": true,
+      "descripcion": "Experimenta el epítome del lujo con Creed Aventus, una fragancia para hombres que irradia poder, visión y triunfo. Creada por la reconocida casa de diseño Creed, esta fragancia se inspira en la ilustre vida del Emperador Napoleón, combinando elementos de guerra, paz y romance. Cada botella presenta un llamativo emblema plateado de un caballo y jinete, simbolizando fuerza y prestigio. Lanzada en 2010, Creed Aventus es una composición magistral desarrollada por un dinámico equipo de padre e hijo. Esta provocativa fragancia es una celebración de la masculinidad y el optimismo, hecha de los mejores ingredientes seleccionados a mano. Las notas de salida de grosella negra, bergamota italiana, manzanas francesas y piña crean una apertura vigorizante y fresca que cautiva los sentidos. El corazón de Creed Aventus revela un rico tapiz de rosa, abedul seco, jazmín marroquí y pachulí, añadiendo profundidad y complejidad a la fragancia. A medida que evoluciona, las notas de fondo de almizcle, musgo de roble, ámbar gris y vainilla proporcionan un final cálido y duradero que es a la vez sofisticado y atemporal. Creed Aventus es más que una fragancia; es una declaración de éxito para el hombre moderno. Disponible en un Eau de Parfum en spray de 100 ml, esta fragancia es perfecta para aquellos que aprecian las cosas buenas de la vida. Con su cautivador aroma y su lujosa presentación, Creed Aventus es la elección ideal para cualquier ocasión.",
       "fotos": [
-        "img/products/product-8/1.jpg"
+        "img/products/product-8/1.webp",
+        "img/products/product-8/2.webp",
+        "img/products/product-8/3.webp",
+        "img/products/product-8/4.webp",
+        "img/products/product-8/5.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Grosella negra",
+          "Bergamota italiana",
+          "Manzana francesa",
+          "Piña"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Rosa",
+          "Abedul seco",
+          "Jazmín marroquí",  
+          "Pachulí"
         ],
         "fondo": [
-          "[Nota 5]",
-          "[Nota 6]"
+          "Almizcle",
+          "Musgo de roble",
+          "Ambergris",
+          "Vainilla"
         ]
       },
       "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
+        "longevidad": 5,
+        "proyeccion": 5,
+        "intensidad": 4
       },
       "ocasiones": [
-        "Casual",
-        "Todo el año"
+        "Eventos importantes",
+        "Reuniones formales",
+        "Citas",
+        "Clima frío",
+        "Perfume para destacar"
       ],
       "ml": 100
     },
     {
       "id": 9,
-      "nombre": "[Nombre del Perfume 9]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "hombre",
-      "estado": null,
+      "nombre": "Cloud",
+      "marca": "Ariana Grande",
+      "familia": "Floral Fruity Gourmand",
+      "precio": 100.0,
+      "precioAntes": 145.0,
+      "categoria": "mujer",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume. Escribe 2 a 4 oraciones que capturen la esencia y experiencia de esta fragancia.]",
+      "descripcion": "Experimenta el aroma encantador de Cloud EDP Spray de Ariana Grande, una delicada fragancia lanzada en 2018. Este cautivador scent es parte de la familia Floral Frutal Gourmand, lo que lo convierte en una adición perfecta a tu colección de perfumes. Las notas de salida de esta fragancia incluyen una refrescante mezcla de lavanda, pera y bergamota. Estos aromas iniciales crean una introducción ligera y aireada que seguramente captará la atención. A medida que la fragancia se despliega, descubrirás notas de corazón de coco cremoso, praliné y orquídea vainilla, añadiendo un toque dulce y exótico. Finalmente, las notas de fondo de almizcle y maderas proporcionan un final cálido y duradero que permanece maravillosamente en la piel. Creada por la reconocida casa de diseño Ariana Grande, Cloud es más que una fragancia, es un reflejo de la elegancia y el encanto de una celebridad. El EDP Spray de 100 ml es perfecto para uso diario u ocasiones especiales, ofreciendo un aroma de larga duración que te mantiene fresca y segura durante todo el día. Ya sea que te des un capricho o busques un regalo pensativo, Cloud EDP Spray de Ariana Grande es una opción maravillosa. Su única mezcla de notas florales, frutales y gourmand asegura un perfil de aroma versátil y atractivo.",
       "fotos": [
-        "img/products/product-9/1.jpg"
+        "img/products/product-9/1.webp",
+        "img/products/product-9/2.webp",
+        "img/products/product-9/3.webp",
+        "img/products/product-9/4.webp",
+        "img/products/product-9/5.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]",
-          "[Nota 3]"
+          "Lavanda",
+          "Pera",
+          "Bergamota"
         ],
         "corazon": [
-          "[Nota 4]",
-          "[Nota 5]"
+          "Crema de coco",
+          "Praliné",
+          "Orquídea de vainilla"
         ],
         "fondo": [
-          "[Nota 6]",
-          "[Nota 7]"
+          "Almizcle",
+          "Maderas"
         ]
       },
       "barras": {
-        "longevidad": 3,
+        "longevidad": 4,
         "proyeccion": 3,
-        "intensidad": 3
+        "intensidad": 4
       },
       "ocasiones": [
-        "Noche",
-        "Eventos"
+        "Uso diario",
+        "Citas",
+        "Oficina",
+        "Perfume dulce y acogedor",
+        "Estilo moderno"
       ],
       "ml": 100
     },
     {
       "id": 10,
-      "nombre": "[Nombre del Perfume 10]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "nombre": "Mon Premier",
+      "marca": "Lolita Lempicka",
+      "familia": "Floral Fruity Gourmand",
+      "precio": 80.0,
+      "precioAntes": 125.0,
       "categoria": "mujer",
       "estado": null,
       "agotado": false,
-      "descripcion": "[Descripción del perfume. Escribe 2 a 4 oraciones que capturen la esencia y experiencia de esta fragancia.]",
+      "descripcion": "Descubre el encantador atractivo de Mon Premier de Lolita Lempicka, una fragancia atemporal lanzada en 1997. Este exquisito scent está diseñado exclusivamente para ladies que aprecian una mezcla de notas florales, frutales y gourmand. Mon Premier captura la esencia de la feminidad con su composición sofisticada que deja una impresión inolvidable. Mon Premier se abre con las cautivadoras notas de salida de hiedra y semilla de anís, creando un comienzo fresco e intrigante. El corazón de la fragancia florece con los delicados y dulces aromas de violeta, amarise, regaliz y amarena, envolviéndote en un rico y lujoso bouquet. A medida que el aroma se asienta, las notas de fondo de vetiver, tonka, vainilla y almizcle proporcionan un final cálido y reconfortante, haciendo de Mon Premier una experiencia verdaderamente fascinante. Creada por la reconocida casa de moda Lolita Lempicka, Mon Premier es más que una fragancia, es una declaración de elegancia y sofisticación. El spray EDP de 100 ml es perfecto para aquellos que quieren disfrutar de un aroma que es a la vez atemporal y moderno. Ya sea que te vistas para una ocasión special o simplemente quieras añadir un toque de magia a tu vida diaria, Mon Premier es la elección perfecta. Abraza el atractivo de Lolita Lempicka Ladies Mon Premier EDP Spray. Con su única mezcla de notas florales, frutales y gourmand, esta fragancia seguramente se convertirá en una adición preciada a tu colección.",
       "fotos": [
-        "img/products/product-10/1.jpg"
+        "img/products/product-10/1.webp",
+        "img/products/product-10/2.webp",
+        "img/products/product-10/3.webp",
+        "img/products/product-10/4.webp",
+        "img/products/product-10/5.webp",
+        "img/products/product-10/6.webp",
+        "img/products/product-10/7.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Cereza",
+          "Hiedra",
+          "Anís estrellado"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Regaliz",
+          "Violeta",
+          "Orris",
+          "Amarilis"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Praliné",
+          "Vainilla",
+          "Haba tonka",
+          "Almizcle",
+          "Vetiver"
         ]
       },
       "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
+        "longevidad": 4,
+        "proyeccion": 4,
+        "intensidad": 4
       },
       "ocasiones": [
-        "Floral",
-        "Primavera"
+        "Citas",
+        "Noches suaves",
+        "Uso diario elegante",
+        "Perfume dulce y femenino"
       ],
       "ml": 100
     },
