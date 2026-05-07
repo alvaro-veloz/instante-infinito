@@ -608,29 +608,36 @@
     },
     {
       "id": 13,
-      "nombre": "[Nombre del Perfume 13]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "mujer",
-      "estado": null,
+      "nombre": "First Instinct Blue",
+      "marca": "Abercrombie & Fitch",
+      "familia": "Aromático Fougère",
+      "precio": 80.0,
+      "precioAntes": 99.99,
+      "categoria": "hombre",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Presentamos la esencia de la aventura audaz y la confianza atrevida, Abercrombie and Fitch presenta \"First Instinct Blue\" para Hombres, una fragancia que captura la esencia del hombre sin miedo. Lanzado en 2018, este Eau De Toilette está diseñado para el hombre que se siente atraído a explorar lo desconocido, con un aroma tan expansivo como el cielo azul. Envuelto en una botella elegante, First Instinct Blue se abre con una refrescante explosión de Manzana, Bergamota y Cardamomo, provocando un atractivo inmediato que es difícil de ignorar. Estas notas de salida se mezclan sin esfuerzo en un corazón de Lavanda, Romero y Pimienta, creando un núcleo sofisticado pero especiado que habla de la complejidad del hombre moderno. El viaje concluye con una nota cálida y sensual con una base de Sándalo, Ámbar y Haba Tonka, cimentando la fragancia en una rica y duradera masculinidad. Con un tamaño de 100 ml, este spray EDT de la reconocida casa de diseño Abercrombie and Fitch ofrece una impresión duradera que es perfecta para el uso diario u ocasiones especiales. El SKU 85715167019 y el código de barras 085715167019 marcan su autenticidad, asegurando que obtienes una auténtica explosión de confianza con cada spray. Abercrombie Men's First Instinct Blue es más que una fragancia; es una declaración de independencia y una declaración de intenciones. Es para el hombre que confía en sus instintos y vive la vida con pasión y coraje. Haz que tu primer instinto sea duradero con este cautivador aroma.",
       "fotos": [
-        "img/products/product-13/1.jpg"
+        "img/products/product-13/1.webp",
+        "img/products/product-13/2.webp",
+        "img/products/product-13/3.webp",
+        "img/products/product-13/4.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Manzana",
+          "Bergamota",
+          "Cardamomo"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Lavanda",
+          "Romero",
+          "Pimienta"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Sándalo",
+          "Ámbar",
+          "Haba tonka"
         ]
       },
       "barras": {
@@ -639,36 +646,42 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "Romántico",
-        "Noche"
+        "Uso diario",
+        "Trabajo",
+        "Salidas casuales",
+        "Perfume fresco y moderno"
       ],
       "ml": 100
     },
     {
       "id": 14,
-      "nombre": "[Nombre del Perfume 14]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "nombre": "Hayaati Florence",
+      "marca": "Lattafa",
+      "familia": "Floral Frutal Gourmand",
+      "precio": 70.0,
+      "precioAntes": 90.0,
       "categoria": "unisex",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Presentamos Hayaati Florence de Lattafa, una cautivadora fragancia unisex que encarna elegancia y sofisticación. Este exquisito Eau de Parfum (EDP) viene en un generoso frasco de 100 ml, perfecto para aquellos que aprecian un aroma duradero que permanece durante todo el día. Hayaati Florence se abre con el refrescante zest de pomelo rosa y cítricos, proporcionando una vigorizante explosión de energía. A medida que la fragancia se despliega, emerge un corazón dulce y floral, creando una mezcla armoniosa que es a la vez encantadora y edificante. Las notas de fondo de almizcle añaden un toque de calidez y sensualidad, haciendo de este aroma una elección perfecta para cualquier ocasión. Creada por la reconocida casa de diseño Lattafa, Hayaati Florence es una fragancia versátil que trasciende las barreras de género, convirtiéndola en una opción ideal para cualquiera que disfrute de un aroma sofisticado y bien equilibrado. Su atractivo unisex asegura que pueda ser usada y apreciada por todos, añadiendo un toque de elegancia a cualquier conjunto. Ya sea que busques causar una impresión duradera o simplemente quieras disfrutar de una experiencia de fragancia lujosa, Hayaati Florence de Lattafa es la adición perfecta a tu colección de perfumes. Abraza las encantadoras notas de pomelo rosa, cítricos, flores dulces y almizcle, y deja que Hayaati Florence te transporte a un mundo de elegancia atemporal. Descubre la magia de Hayaati Florence hoy y experimenta el atractivo de la magistral artesanía de Lattafa. Con su única mezcla de notas refrescantes y cálidas, esta fragancia unisex seguramente se convertirá en una favorita apreciada.",
       "fotos": [
-        "img/products/product-14/1.jpg"
+        "img/products/product-14/1.webp",
+        "img/products/product-14/2.webp",
+        "img/products/product-14/3.webp",
+        "img/products/product-14/4.webp",
+        "img/products/product-14/5.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Cítricos",
+          "Toronja rosada"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Flores",
+          "Dulzor suave"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Almizcle"
         ]
       },
       "barras": {
@@ -677,122 +690,156 @@
         "intensidad": 3
       },
       "ocasiones": [
-        "Lujo",
-        "Eventos"
+        "Uso diario",
+        "Clima cálido",
+        "Trabajo",
+        "Salidas casuales",
+        "Perfume dulce,cítrico y juvenil"
       ],
       "ml": 100
     },
     {
       "id": 15,
-      "nombre": "[Nombre del Perfume 15]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "hombre",
-      "estado": null,
+      "nombre": "9PM Elixir",
+      "marca": "Afnan",
+      "familia": "Ámbar Especiado",
+      "precio": 80.0,
+      "precioAntes": 99.99,
+      "categoria": "unisex",
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Desata tu lado audaz con Afnan 9PM Elixir Extrait de Parfum Spray de 100 ml, una cautivadora fragancia unisex creada para aquellos que se atreven a destacar. Lanzado en 2025 por la reconocida casa de diseño de Medio Oriente Afnan, este aroma combina la tradición con un toque moderno, creando un aroma magnético que permanece mucho después de que abandonas la habitación. Pertenciente a la familia de fragancias Amaderada Especiada, 9PM Elixir se abre con una emocionante mezcla de cardamomo, elemi y nuez moscada. Estas cálidas y especiadas notas de salida preparan el escenario para un corazón que palpita con pimiento, lavanda calmante y rico cuero. A medida que la fragancia se asienta, las notas de fondo de ládano, vainilla, pachulí y jaguarzo se despliegan, dejando un rastro lujoso y de larga duración que es a la vez reconfortante e inolvidable. Expertamente elaborado en los Emiratos Árabes Unidos, este spray Extrait de Parfum de 100 ml es una fórmula concentrada diseñada para una impresionante longevidad y una presencia de aroma audaz. Ya sea para la confianza diurna o el atractivo nocturno, 9PM Elixir se adapta sin esfuerzo a cada momento, convirtiéndose en un imprescindible para los amantes de las fragancias que aprecian la complejidad y la elegancia. Experimenta el arte de Afnan, una casa de diseño conocida por su rica herencia de perfumería de Medio Oriente. 9PM Elixir es más que una fragancia; es una declaración de sofisticación y estilo.",
       "fotos": [
-        "img/products/product-15/1.jpg"
+        "img/products/product-15/1.webp",
+        "img/products/product-15/2.webp",
+        "img/products/product-15/3.webp",
+        "img/products/product-15/4.webp",
+        "img/products/product-15/5.webp",
+        "img/products/product-15/6.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Cardamomo",
+          "Elemi",
+          "Nuez moscada"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Pimento",
+          "Lavanda",
+          "Cuero"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Labdanum",
+          "Vainilla",
+          "Pachulí",
+          "Rock Rose"
         ]
       },
       "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
+        "longevidad": 5,
+        "proyeccion": 4,
+        "intensidad": 5
       },
       "ocasiones": [
-        "Verano",
-        "Día"
+        "Noches frías",
+        "Citas intensas",
+        "Eventos elegantes",
+        "Salidas nocturnas"
       ],
       "ml": 100
     },
     {
       "id": 16,
-      "nombre": "[Nombre del Perfume 16]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "nombre": "Light Blue",
+      "marca": "Dolce & Gabbana",
+      "familia": "Floral Frutal",
+      "precio": 130.0,
+      "precioAntes": 180.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Experimenta la exuberancia de la vida con Light Blue de Dolce and Gabbana, un perfume para ladies. Esta impresionante fragancia es una mezcla irresistible de notas vivaces que cautivan los sentidos y reflejan la alegría de vivir. El aroma se abre con el vivaz toque del citrón siciliano, la vigorizante acidez de la manzana Granny Smith y el espontáneo y delicado encanto de las campanillas azules. Este comienzo encantador lleva a un corazón lleno de la intensidad del jazmín, el toque refrescante del bambú y el cautivador atractivo de la rosa blanca. Pero el atractivo de Light Blue de Dolce and Gabbana no termina ahí. Las notas de fondo aportan profundidad y carácter a esta cautivadora fragancia para ladies. El robusto aroma de la madera de cedro, la cálida plenitud del ámbar y el reconfortante abrazo del almizcle se unen para crear un perfume tan duradero como atractivo. Diseñado por la reconocida casa de Dolce and Gabbana, Light Blue es un testimonio de su artesanía y creatividad. Con un generoso tamaño de 100 ml, este spray EDT es perfecto para uso diario o para crear recuerdos especiales en esos días extraordinarios. La fragancia Light Blue es una celebración de la resiliencia y la alegría femenina, cuidadosamente embotellada con estilo LIGTS33.",
       "fotos": [
-        "img/products/product-16/1.jpg"
+        "img/products/product-16/1.webp",
+        "img/products/product-16/2.webp",
+        "img/products/product-16/3.webp",
+        "img/products/product-16/4.webp",
+        "img/products/product-16/5.webp",
+        "img/products/product-16/6.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Manzana Granny Smith",
+          "Cedro siciliano",
+          "Campanillas "
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Jazmín",
+          "Rosa blanca",
+          "Bambú"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Cedro",
+          "Ámbar",
+          "Almizcle"
         ]
       },
       "barras": {
         "longevidad": 3,
         "proyeccion": 3,
-        "intensidad": 3
+        "intensidad": 2
       },
       "ocasiones": [
-        "Primavera",
-        "Regalo"
+        "Trabajo",
+        "Salidas casuales",
+        "Perfume fresco y femenino",
+        "Uso diario"
       ],
       "ml": 100
     },
     {
       "id": 17,
-      "nombre": "[Nombre del Perfume 17]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "unisex",
+      "nombre": "Men’s King",
+      "marca": "Bharara",
+      "familia": "Aromática",
+      "precio": 99.99,
+      "precioAntes": 120.0,
+      "categoria": "hombre",
       "estado": null,
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Desata tu realeza interior con Bharara Men's King EDP Spray. Lanzado en 2021, esta exquisita fragancia pertenece a la familia Aromática, ofreciendo una mezcla sofisticada de aromas vigorizantes que cautivan e inspiran. Desde la primera pulverización, serás recibido por las refrescantes notas de salida de Naranja, Bergamota y Limón, creando una apertura vibrante que energiza instantáneamente tus sentidos. A medida que la fragancia se despliega, las notas de corazón de Tuttifrutti añaden un toque juguetón y afrutado, proporcionando un aroma único y delicioso. Las notas de fondo de Almizcle Blanco, Ámbar y Vainilla permanecen en tu piel, dejando una impresión duradera y memorable. Esta armoniosa mezcla de aromas hace que Bharara Men's King EDP Spray sea la elección perfecta para cualquier ocasión, ya sea un día en la oficina o una noche de fiesta. Diseñado por la reconocida casa de diseño Bharara, King EDP Spray viene en un frasco de 100 ml, asegurando que tengas mucho de esta lujosa fragancia para disfrutar. El elegante empaque y el encantador aroma lo convierten en un excelente regalo para el distinguido caballero en tu vida.",
       "fotos": [
-        "img/products/product-17/1.jpg"
+        "img/products/product-17/1.webp",
+        "img/products/product-17/2.webp",
+        "img/products/product-17/3.webp",
+        "img/products/product-17/4.webp",
+        "img/products/product-17/5.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Naranja",
+          "Bergamota",
+          "Limón"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Tuttifrutti"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Almizcle blanco",
+          "Ámbar",
+          "Vainilla"
         ]
       },
       "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
+        "longevidad": 4,
+        "proyeccion": 4,
+        "intensidad": 4
       },
       "ocasiones": [
-        "Casual",
-        "Todo el año"
+        "Salidas nocturnas",
+        "Fiestas",
+        "Uso casual",
+        "Perfume dulce–cítrico y juvenil"
       ],
       "ml": 100
     },
