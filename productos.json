@@ -805,7 +805,7 @@
       "precio": 99.99,
       "precioAntes": 120.0,
       "categoria": "hombre",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
       "descripcion": "Desata tu realeza interior con Bharara Men's King EDP Spray. Lanzado en 2021, esta exquisita fragancia pertenece a la familia Aromática, ofreciendo una mezcla sofisticada de aromas vigorizantes que cautivan e inspiran. Desde la primera pulverización, serás recibido por las refrescantes notas de salida de Naranja, Bergamota y Limón, creando una apertura vibrante que energiza instantáneamente tus sentidos. A medida que la fragancia se despliega, las notas de corazón de Tuttifrutti añaden un toque juguetón y afrutado, proporcionando un aroma único y delicioso. Las notas de fondo de Almizcle Blanco, Ámbar y Vainilla permanecen en tu piel, dejando una impresión duradera y memorable. Esta armoniosa mezcla de aromas hace que Bharara Men's King EDP Spray sea la elección perfecta para cualquier ocasión, ya sea un día en la oficina o una noche de fiesta. Diseñado por la reconocida casa de diseño Bharara, King EDP Spray viene en un frasco de 100 ml, asegurando que tengas mucho de esta lujosa fragancia para disfrutar. El elegante empaque y el encantador aroma lo convierten en un excelente regalo para el distinguido caballero en tu vida.",
       "fotos": [
@@ -845,115 +845,147 @@
     },
     {
       "id": 18,
-      "nombre": "[Nombre del Perfume 18]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "nombre": "Eros EDP",
+      "marca": "Versace",
+      "familia": "Ámbar Amaderado",
+      "precio": 99.99,
+      "precioAntes": 118.0,
       "categoria": "hombre",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Descubre el magnético atractivo de Versace Men's Eros EDP Spray, una fragancia que encarna fuerza, pasión y confianza. Lanzado en 2020, este cautivador aroma de la reconocida casa de moda Versace está diseñado para el hombre moderno que atrae la atención dondequiera que va. Perteneciente a la familia de fragancias Amaderada Ambarina, Eros se abre con una refrescante explosión de limón italiano, mandarina italiana, menta y manzana acaramelada. Estas notas de salida crean una primera impresión vigorizante e irresistible que es a la vez fresca y afrutada. A medida que el aroma evoluciona, las notas de corazón de geranio, salvia esclárea y Ambermax toman protagonismo. Esta combinación añade una profundidad sofisticada y aromática, realzando el encanto y atractivo general de la fragancia. Las notas de fondo proporcionan una base rica y duradera con cedro del Atlas, cedro de Virginia, vetiver, pachulí, sándalo y vainilla. Estos elementos terrosos y cálidos aseguran que la fragancia permanezca en la piel, dejando una impresión duradera. Versace Men's Eros EDP Spray viene en un generoso frasco de 100 ml, lo que lo hace perfecto para uso diario u ocasiones especiales. El elegante diseño y el icónico branding de Versace añaden un toque de lujo a tu colección.",
       "fotos": [
-        "img/products/product-18/1.jpg"
+        "img/products/product-18/1.webp",
+        "img/products/product-18/2.webp",
+        "img/products/product-18/3.webp",
+        "img/products/product-18/4.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Limón italiano",
+          "Mandarina italiana",
+          "Manzana acaramelada",
+          "Menta"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Geranio",
+          "Salvia esclarea",
+          "Ambermax"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Cedro del Atlas",
+          "Cedro de Virginia",
+          "Vetiver",
+          "Pachulí"
         ]
       },
       "barras": {
-        "longevidad": 3,
-        "proyeccion": 3,
-        "intensidad": 3
+        "longevidad": 5,
+        "proyeccion": 4,
+        "intensidad": 5
       },
       "ocasiones": [
-        "Formal",
-        "Noche"
+        "Citas",
+        "Fiestas",
+        "Salidas nocturnas",
+        "Clima frío",
+        "erfume dulce–fresco con presencia"
       ],
       "ml": 100
     },
     {
       "id": 19,
-      "nombre": "[Nombre del Perfume 19]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "nombre": "Qissa Delicious",
+      "marca": "Paris Corner",
+      "familia": "Floral Frutal Gourmand",
+      "precio": 60.0,
+      "precioAntes": 80.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "offer",
       "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "descripcion": "Disfruta del encantador aroma de Qissa Delicious de Paris Corner, un lujoso Eau de Parfum diseñado exclusivamente para damas. Esta exquisita fragancia, presentada en un frasco de 100 ml, pertenece a la cautivadora familia Floral Gourmand. Qissa Delicious es una mezcla perfecta de notas irresistibles que la convierten en un aroma inolvidable. El viaje comienza con tentadoras notas de salida de chocolate oscuro, naranja y crema batida, creando una apertura deliciosa y acogedora. A medida que la fragancia evoluciona, las notas de corazón de coco, malvavisco y jazmín revelan una capa dulce pero sofisticada que encanta los sentidos. Finalmente, las notas de fondo de vainilla, maderas suaves y almizcle blanco proporcionan un final cálido y reconfortante, dejando una estela persistente de elegancia. Creada por la reconocida casa de diseño Paris Corner, Qissa Delicious es más que una fragancia, es una experiencia. Ideal para la mujer moderna que aprecia una armoniosa mezcla de notas dulces y florales, este spray EDP es perfecto para cualquier ocasión. Ya sea que te des un capricho o busques un regalo pensativo, Qissa Delicious promete cautivar y deleitar.",
       "fotos": [
-        "img/products/product-19/1.jpg"
+        "img/products/product-19/1.webp",
+        "img/products/product-19/2.webp",
+        "img/products/product-19/3.webp",
+        "img/products/product-19/4.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Chocolate oscuro",
+          "Naranja",
+          "Crema batida"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Coco",
+          "Malvavisco",
+          "Jazmín"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Vainilla",
+          "Maderas suaves",
+          "Almizcle blanco"
         ]
       },
       "barras": {
-        "longevidad": 3,
+        "longevidad": 4,
         "proyeccion": 3,
-        "intensidad": 3
+        "intensidad": 4
       },
       "ocasiones": [
-        "Floral",
-        "Día"
+        "Citas",
+        "Noches frescas",
+        "Salidas casuales",
+        "Perfume dulce–cremoso y femenino"
       ],
       "ml": 100
     },
     {
       "id": 20,
-      "nombre": "[Nombre del Perfume 20]",
-      "marca": "[Marca / Casa]",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
-      "categoria": "unisex",
+      "nombre": "Lilac Love",
+      "marca": "Amouage",
+      "familia": "Floral",
+      "precio": 380.0,
+      "precioAntes": 450.0,
+      "categoria": "mujer",
       "estado": null,
-      "agotado": false,
-      "descripcion": "[Descripción del perfume.]",
+      "agotado": true,
+      "descripcion": "Adéntrate en un mundo de elegancia y encanto con Amouage Ladies Lilac Love Eau de Parfum en Spray, una lujosa fragancia de 100 ml creada por la reconocida casa de perfumes nicho, Amouage. Lanzado en 2016, Lilac Love es parte de la familia de fragancias Florales y fue diseñado para capturar el espíritu suave y romántico de la feminidad moderna. Este aroma es perfecto para mujeres que abrazan la gracia, la confianza y un toque de sofisticación soñadora. La fragancia se abre con un delicado bouquet de jazmín, rosa, gardenia, peonía y heliotropo, una sinfonía floral fresca que instantáneamente eleva los sentidos. En su corazón, cálidas y reconfortantes notas de lirio, grano de cacao y haba tonka crean un núcleo cremoso y aterciopelado que añade profundidad y atractivo. La base se asienta en una encantadora mezcla de sándalo, pachulí y vainilla, dejando una impresión duradera que es a la vez sensual y refinada. Amouage Lilac Love es más que un perfume, es una expresión de belleza atemporal en una botella. Como fragancia nicho, ofrece una experiencia de aroma única que destaca de lo ordinario. Diseñado para la dama moderna que aprecia la calidad y la elegancia, este Eau de Parfum es perfecto tanto para uso diario como para ocasiones especiales. Envasado en un elegante frasco de 100 ml, Amouage Lilac Love EDP Spray es una adición imprescindible para cualquier colección de fragancias.",
       "fotos": [
-        "img/products/product-20/1.jpg"
+        "img/products/product-20/1.webp",
+        "img/products/product-20/2.webp",
+        "img/products/product-20/3.webp",
+        "img/products/product-20/4.webp"
       ],
       "notas": {
         "salida": [
-          "[Nota 1]",
-          "[Nota 2]"
+          "Gardenia",
+          "Jazmín",
+          "Peonía",
+          "Rosa"
         ],
         "corazon": [
-          "[Nota 3]",
-          "[Nota 4]"
+          "Iris",
+          "Cacao",
+          "Haba tonka"
         ],
         "fondo": [
-          "[Nota 5]"
+          "Sándalo",
+          "Pachulí",
+          "Vainilla"
         ]
       },
       "barras": {
-        "longevidad": 3,
+        "longevidad": 4,
         "proyeccion": 3,
         "intensidad": 3
       },
       "ocasiones": [
-        "Lujo",
-        "Eventos"
+        "Citas",
+        "Eventos elegantes",
+        "Clima frío o templado",
+        "Uso diario delicado",
+        "Perfume floral–cremoso y romántico"
       ],
       "ml": 100
     }
