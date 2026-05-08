@@ -996,8 +996,8 @@
       "nombre": "Pure Seduction",
       "marca": "Victoria's Secret",
       "familia": "Floral Frutal",
-      "precio": 28.0,
-      "precioAntes": null,
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
       "estado": "hot",
       "agotado": false,
@@ -1005,7 +1005,8 @@
       "descripcion": "Una combinación celestial de almizcle intenso y fruta madura bañada por el sol. El ámbar profundo se entrelaza con el albaricoque dorado para un cálido abrazo. Radiante y sofisticada.",
       "fotos": [
         "img/splashes/splash-1/1.webp",
-        "img/splashes/splash-1/2.webp"
+        "img/splashes/splash-1/2.webp",
+        "img/splashes/splash-1/3.webp"
       ],
       "ocasiones": [
         "Primavera",
@@ -1013,146 +1014,160 @@
         "Regalo",
         "Romántico"
       ],
-      "tipo_fragancia": "Floral Frutal",
-      "notas_simples": "peonía, fresia blanca, durazno"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "melón casaba, ciruela roja, ciclamen, fresia, almizcle"
     },
     {
       "id": 102,
-      "nombre": "Bombshell Seduction",
+      "nombre": "Bikini Shimmer",
       "marca": "Victoria's Secret",
-      "familia": "Floral Oriental",
-      "precio": 28.0,
-      "precioAntes": null,
-      "categoria": "mujer",
-      "estado": "new",
-      "agotado": false,
-      "ml": 250,
-      "descripcion": "Una versión más oscura y seductora del Bombshell clásico. Floral con toques orientales, perfecta para la noche.",
-      "fotos": [
-        "img/splashes/splash-2/1.webp"
-      ],
-      "ocasiones": [
-        "Noche",
-        "Romántico",
-        "Eventos"
-      ],
-      "tipo_fragancia": "Floral Oriental",
-      "notas_simples": "ámbar profundo, vainilla, flor de cerezo"
-    },
-    {
-      "id": 103,
-      "nombre": "Pure Seduction",
-      "marca": "Victoria's Secret",
-      "familia": "Frutal Floral",
-      "precio": 25.0,
-      "precioAntes": null,
+      "familia": "Floral Frutal Solar",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
       "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Fresca y juguetona. Notas de ciruela roja y magnolia que crean una fragancia irresistiblemente femenina.",
+      "descripcion": "Un destello tropical que ilumina la piel con brillo dorado. Notas solares y un toque cremoso evocan días de playa, mientras un fondo cálido deja una estela radiante y ligera.",
       "fotos": [
-        "img/splashes/splash-3/1.webp"
+        "img/splashes/splash-2/1.webp",
+        "img/splashes/splash-2/2.webp"
       ],
       "ocasiones": [
-        "Día",
-        "Casual",
-        "Regalo"
+        "Uso diario",
+        "Oficina",
+        "Gym",
+        "Salidas casuales"
       ],
-      "tipo_fragancia": "Frutal Floral",
-      "notas_simples": "ciruela roja, magnolia, almizcle"
+      "tipo_fragancia": "Bruma perfumada con brillo",
+      "notas_simples": "crema de coco, agua de coco, muguey​, sándalo"
+    },
+    {
+      "id": 103,
+      "nombre": "Angel Cake & Cream",
+      "marca": "Victoria's Secret",
+      "familia": "Floral Dulce Cremosa",
+      "precio": 20.0,
+      "precioAntes": 25.0,
+      "categoria": "mujer",
+      "estado": "hot",
+      "agotado": false,
+      "ml": 250,
+      "descripcion": "Indulgentemente floral y cremoso, inspirado en delicias primaverales de una casa de campo",
+      "fotos": [
+        "img/splashes/splash-3/1.webp",
+        "img/splashes/splash-3/2.webp"
+      ],
+      "ocasiones": [
+        "Uso diario",
+        "clima fresco",
+        "vibe dulce y acogedora"
+      ],
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "flores prensadas,  azahar, orquídea de vainilla, leche dulce, almizcles livianos"
     },
     {
       "id": 104,
-      "nombre": "Love Spell",
+      "nombre": "Tidal Shimmer",
       "marca": "Victoria's Secret",
-      "familia": "Frutal Floral",
-      "precio": 25.0,
-      "precioAntes": null,
+      "familia": "Floral Frutal Marina",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Dulce y romántica. Una mezcla de cereza y durazno con un toque floral que evoca romance y feminidad.",
+      "descripcion": "Chispeante y de ensueño, sigue el ritmo de una brisa marina brillante que mezcla frutas jugosas con un toque cremoso. Fresca, luminosa y con un destello sirena irresistible.",
       "fotos": [
-        "img/splashes/splash-4/1.webp"
+        "img/splashes/splash-4/1.webp",
+        "img/splashes/splash-4/2.webp"
       ],
       "ocasiones": [
-        "Romántico",
-        "Primavera",
-        "Regalo"
+        "Día",
+        "Rutina diaria",
+        "Salidas casuales",
+        "Frescura luminosa"
       ],
-      "tipo_fragancia": "Frutal Romántico",
-      "notas_simples": "cereza, durazno, jazmín"
+      "tipo_fragancia": "Bruma perfumada con brillo",
+      "notas_simples": "mango cremoso, pitaya rosada, flores de playa, loto blanco, jazmín, almizcles soleados"
     },
     {
       "id": 105,
-      "nombre": "Aqua Kiss",
+      "nombre": "Midnight Bloom Shimmer",
       "marca": "Victoria's Secret",
-      "familia": "Acuático Floral",
-      "precio": 25.0,
-      "precioAntes": null,
+      "familia": "Floral Cálida Lunar",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Fresco como el agua. Notas acuáticas y florales para una sensación de limpieza y frescura todo el día.",
+      "descripcion": "Un resplandor floral iluminado por la luna, suave y etéreo, con un brillo delicado que envuelve la piel en un aura de ensueño.",
       "fotos": [
-        "img/splashes/splash-5/1.webp"
+        "img/splashes/splash-5/1.webp",
+        "img/splashes/splash-5/2.webp"
       ],
       "ocasiones": [
-        "Verano",
-        "Día",
-        "Casual"
+        "Casual",
+        "Trabajo",
+        "Salidas casuales",
+        "Noches suaves",
+        "Aroma delicado"
       ],
-      "tipo_fragancia": "Acuático Floral",
-      "notas_simples": "agua fresca, lirio, almizcle blanco"
+      "tipo_fragancia": "Bruma perfumada con brillo",
+      "notas_simples": "fresia rosa, lirio, ramo de bayas, flor de luna, praliné batido, vainilla cremosa"
     },
     {
       "id": 106,
-      "nombre": "Coconut Passion",
+      "nombre": "Bare Vanilla",
       "marca": "Victoria's Secret",
-      "familia": "Gourmand Tropical",
-      "precio": 25.0,
-      "precioAntes": null,
+      "familia": "Gourmand Vainilla Cálida",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Tropical y adictiva. Coco y vainilla que te transportan a la playa en cada spray.",
+      "descripcion": "Cálido y reconfortante, una explosión de dulce e indulgente confort.",
       "fotos": [
-        "img/splashes/splash-6/1.webp"
+        "img/splashes/splash-6/1.webp",
+        "img/splashes/splash-6/2.webp",
+        "img/splashes/splash-6/3.webp"
       ],
       "ocasiones": [
-        "Verano",
-        "Día",
-        "Vacaciones"
+        "Uso diario",
+        "Salidas casuales",
+        "Noches suaves",
+        "Toque elegante",
+        "Aroma delicado"
       ],
-      "tipo_fragancia": "Tropical Gourmand",
+      "tipo_fragancia": "Bruma perfumada",
       "notas_simples": "coco, vainilla, flor de hibisco"
     },
     {
       "id": 107,
-      "nombre": "Secret Charm",
+      "nombre": "Gelato Oasis",
       "marca": "Victoria's Secret",
-      "familia": "Floral Suave",
-      "precio": 25.0,
-      "precioAntes": null,
+      "familia": "Gourmand Vainilla Dulce",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Delicada y encantadora. Una fragancia suave y femenina perfecta para el día a día.",
+      "descripcion": "Delicioso e indulgente, una jugosa dosis de placer que despierta los sentidos.",
       "fotos": [
-        "img/splashes/splash-7/1.webp"
+        "img/splashes/splash-7/1.webp",
+        "img/splashes/splash-7/2.webp"
       ],
       "ocasiones": [
-        "Día",
-        "Trabajo",
-        "Casual"
+        "Diario dulce",
+        "Salidas relajadas",
+        "Tardes suaves",
+        "Toque jugoso"
       ],
-      "tipo_fragancia": "Floral Suave",
-      "notas_simples": "gardenia, rosa, sándalo"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "flores costeras​, helado de vainilla, flor de orquídea, gardenia soleadas, crema de ámbar"
     },
     {
       "id": 108,
