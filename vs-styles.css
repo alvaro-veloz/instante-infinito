@@ -465,13 +465,14 @@
   }
   .splash-modal__img-wrap {
     grid-area: unset;
-    height: 75vw; max-height: 440px; min-height: 300px; background: #ffffff;
+    height: 45vw; max-height: 280px; min-height: 200px; background: #ffffff;
     flex-shrink: 0;
   }
   .splash-modal__info {
     grid-area: unset; flex: 1; min-height: 0;
     padding: var(--space-sm); gap: var(--space-xs);
-    overflow-y: auto;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
   }
   .splash-modal__img { padding: 4px; object-fit: contain; }
   .splash-modal__name { font-size: 1.3rem; padding-right: var(--space-lg); }
@@ -603,4 +604,66 @@
     backdrop-filter: blur(8px);
     box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   }
+}
+
+/* Splash modal — sale desde abajo en móvil */
+@media (max-width: 768px) {
+  .modal-overlay:has(.splash-modal) {
+    align-items: flex-end !important;
+  }
+}
+
+/* ── LIGHTBOX — imagen splash a pantalla completa ── */
+.splash-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(0,0,0,0.96);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s;
+}
+.splash-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.splash-lightbox__img {
+  max-width: 92vw;
+  max-height: 88dvh;
+  object-fit: contain;
+  border-radius: 0;
+  user-select: none;
+}
+.splash-lightbox__close {
+  position: fixed;
+  top: 16px; right: 16px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  z-index: 10000;
+  transition: background 0.2s;
+  backdrop-filter: blur(8px);
+}
+.splash-lightbox__close:hover { background: rgba(255,255,255,0.3); }
+.splash-lightbox__hint {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.6875rem;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+/* Cursor en la imagen del modal — indica que se puede expandir */
+.splash-modal__img-wrap {
+  cursor: zoom-in;
 }

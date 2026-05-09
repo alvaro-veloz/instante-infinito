@@ -435,3 +435,57 @@ function populateVsHomeGrid() {
 
 /* ── ARRANQUE ── */
 initVS();
+
+/* ── LIGHTBOX — imagen splash a pantalla completa ── */
+(function() {
+  // Crear el lightbox una sola vez
+  const lb = document.createElement('div');
+  lb.className = 'splash-lightbox';
+  lb.innerHTML = `
+    <button class="splash-lightbox__close" aria-label="Cerrar">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img class="splash-lightbox__img" alt="Imagen ampliada" />
+    <p class="splash-lightbox__hint">Toca fuera para cerrar</p>
+  `;
+  document.body.appendChild(lb);
+
+  const lbImg   = lb.querySelector('.splash-lightbox__img');
+  const lbClose = lb.querySelector('.splash-lightbox__close');
+
+  function openLightbox(src) {
+    lbImg.src = src;
+    lb.classList.add('is-open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lb.classList.remove('is-open');
+    document.body.style.overflow = '';
+  }
+
+  // Cerrar al hacer clic en el fondo o en la X
+  lb.addEventListener('click', e => {
+    if (e.target === lb || e.target === lbImg) closeLightbox();
+  });
+  lbClose.addEventListener('click', closeLightbox);
+
+  // Cerrar con Escape
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && lb.classList.contains('is-open')) closeLightbox();
+  });
+
+  // Abrir lightbox al hacer clic en la imagen del modal splash
+  document.addEventListener('click', e => {
+    const imgWrap = e.target.closest('.splash-modal__img-wrap');
+    if (imgWrap) {
+      const img = imgWrap.querySelector('.splash-modal__img');
+      if (img) {
+        e.stopPropagation();
+        openLightbox(img.src);
+      }
+    }
+  });
+})();
