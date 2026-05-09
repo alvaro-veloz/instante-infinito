@@ -1002,17 +1002,18 @@
       "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Una combinación celestial de almizcle intenso y fruta madura bañada por el sol. El ámbar profundo se entrelaza con el albaricoque dorado para un cálido abrazo. Radiante y sofisticada.",
+      "descripcion": "Atrevido y divertido, una seductora infusión frutal que combina melón casaba y ciruela roja con un corazón fresco y jugoso.",
       "fotos": [
         "img/splashes/splash-1/1.webp",
         "img/splashes/splash-1/2.webp",
         "img/splashes/splash-1/3.webp"
       ],
       "ocasiones": [
-        "Primavera",
-        "Día",
-        "Regalo",
-        "Romántico"
+        "Días atrevidos",
+        "Salidas coquetas",
+        "Momentos divertidos",
+        "Tardes jugosas",
+        "Toque frutal seductor"
       ],
       "tipo_fragancia": "Bruma perfumada",
       "notas_simples": "melón casaba, ciruela roja, ciclamen, fresia, almizcle"
@@ -1028,7 +1029,7 @@
       "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Un destello tropical que ilumina la piel con brillo dorado. Notas solares y un toque cremoso evocan días de playa, mientras un fondo cálido deja una estela radiante y ligera.",
+      "descripcion": "Luminoso y acogedor, un brillo cálido que envuelve la piel con un resplandor suave y radiante.",
       "fotos": [
         "img/splashes/splash-2/1.webp",
         "img/splashes/splash-2/2.webp"
@@ -1083,7 +1084,7 @@
         "img/splashes/splash-4/2.webp"
       ],
       "ocasiones": [
-        "Día",
+        "Días atrevidos",
         "Rutina diaria",
         "Salidas casuales",
         "Frescura luminosa"
@@ -1171,120 +1172,140 @@
     },
     {
       "id": 108,
-      "nombre": "Velvet Petals",
+      "nombre": "Isla Hibiscus",
       "marca": "Victoria's Secret",
-      "familia": "Floral Amaderado",
-      "precio": 25.0,
-      "precioAntes": null,
+      "familia": "Floral Frutal Romántica",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "Suave y aterciopelada. Pétalos florales con una base amaderada cálida que deja una estela delicada.",
+      "descripcion": "Coqueta y embriagadora, un romance floral que estalla en color con una dulzura irresistible.",
       "fotos": [
-        "img/splashes/splash-8/1.webp"
+        "img/splashes/splash-8/1.webp",
+        "img/splashes/splash-8/2.webp"
       ],
       "ocasiones": [
-        "Primavera",
-        "Día",
-        "Regalo"
+        "Tardes románticas",
+        "Salidas",
+        "Momentos coquetos",
+        "Toque dulce floral"
       ],
-      "tipo_fragancia": "Floral Amaderado",
-      "notas_simples": "pétalo de rosa, cedro, almizcle"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "neroli espumoso, coco helado, pétalos de frangipani, hibisco hawaiano​"
     },
     {
       "id": 109,
-      "nombre": "[Splash 9]",
+      "nombre": "Coconut Passion",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Coco Dulce Sensual",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Sensual y bañado por el sol, un aire embriagador y decadente con coco dulce y un toque floral suave.",
       "fotos": [
-        "img/splashes/splash-9/1.webp"
+        "img/splashes/splash-9/1.webp",
+        "img/splashes/splash-9/2.webp",
+        "img/splashes/splash-9/3.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Momentos sensuales",
+        "Tardes cálidas",
+        "Encuentros dulces",
+        "Toque cremoso"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "mora, leche de coco, flor de frambuesa, ámbar"
     },
     {
       "id": 110,
-      "nombre": "[Splash 10]",
+      "nombre": "Pitaya Paradise",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Frutal Dulce Brillante",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Exuberante y dulce, una evasión brillante y deliciosamente sublime con pitaya resplandeciente.",
       "fotos": [
-        "img/splashes/splash-10/1.webp"
+        "img/splashes/splash-10/1.webp",
+        "img/splashes/splash-10/2.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Días vibrantes",
+        "Salidas casuales",
+        "Momentos dulces",
+        "Tardes brillantes",
+        "Toque frutal"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "pitaya, madreselva silvestre,neroli, monoi tiaré, sándalo"
     },
     {
       "id": 111,
-      "nombre": "[Splash 11]",
+      "nombre": "Whipped Sugar & Milk",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Gourmand Dulce Cremosa",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Suave, dulce y absolutamente irresistible; una calidez azucarada con notas cremosas y florales que envuelven la piel en un aroma acogedor y adictivo.",
       "fotos": [
-        "img/splashes/splash-11/1.webp"
+        "img/splashes/splash-11/1.webp",
+        "img/splashes/splash-11/2.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Momentos acogedores",
+        "Tardes dulces",
+        "Encuentros suaves",
+        "Toque cremoso"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "Leche espumada, Pétalos de jazmín, Crema de vainilla, Haba tonka"
     },
     {
       "id": 112,
-      "nombre": "[Splash 12]",
+      "nombre": "Beach Shimmer",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Dulce Solar Frutal",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Resplandeciente e inolvidable, con destellos que iluminan la piel bajo el brillo cálido del atardecer.",
       "fotos": [
-        "img/splashes/splash-12/1.webp"
+        "img/splashes/splash-12/1.webp",
+        "img/splashes/splash-12/2.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Días radiantes",
+        "Salidas brillantes",
+        "Tardes frutales",
+        "Toque luminoso"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada con brillo",
+      "notas_simples": " sandía, melón, sal marina, flor de tiaré​,  almizcle"
     },
     {
       "id": 113,
       "nombre": "[Splash 13]",
       "marca": "Victoria's Secret",
       "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
       "descripcion": "[Descripción del splash.]",
