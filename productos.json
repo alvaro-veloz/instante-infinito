@@ -1299,87 +1299,104 @@
     },
     {
       "id": 113,
-      "nombre": "[Splash 13]",
+      "nombre": "Seashell Shimmer",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
+      "familia": "Floral Cálida Brillante",
       "precio": 20.0,
       "precioAntes": 25.0,
       "categoria": "mujer",
       "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Brillante y seductora, envuelve la piel en un resplandor cálido que evoca fantasías de verano y pies descalzos en la arena.",
       "fotos": [
-        "img/splashes/splash-13/1.webp"
+        "img/splashes/splash-13/1.webp",
+        "img/splashes/splash-13/2.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Días cálidos",
+        "Salidas radiantes",
+        "Momentos seductores",
+        "Tardes suaves"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada con brillo",
+      "notas_simples": "gardenia, plumería, almizcle, ámbar"
     },
     {
       "id": 114,
-      "nombre": "[Splash 14]",
+      "nombre": "Piña Tropicale",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Floral Frutal Tropical",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Deslumbrante y tentadora, un torbellino de frutas exuberantes y tentaciones de verano.",
       "fotos": [
-        "img/splashes/splash-14/1.webp"
+        "img/splashes/splash-14/1.webp",
+        "img/splashes/splash-14/2.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Días vibrantes",
+        "Salidas playeras",
+        "Momentos jugosos",
+        "Toque frutal cálido"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "Mango, piña, Néctar de melocotón, guayaba, Jazmín, Flor de jengibre, Sándalo , Ámbar, Almizcle"
     },
     {
       "id": 115,
-      "nombre": "[Splash 15]",
+      "nombre": "Love Spell",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Floral Frutal",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Vibrante y seductora. Un deslumbramiento fascinador y romántico.",
       "fotos": [
-        "img/splashes/splash-15/1.webp"
+        "img/splashes/splash-15/1.webp",
+        "img/splashes/splash-15/2.webp",
+        "img/splashes/splash-15/3.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Días coquetos",
+        "Salidas románticas",
+        "Momentos vibrantes",
+        "Toque frutal floral"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma perfumada",
+      "notas_simples": "manzana roja, flor de cerezo, lirio, melocotón, almizcle"
     },
     {
       "id": 116,
-      "nombre": "[Splash 16]",
+      "nombre": "Coconut Passion Shimmer",
       "marca": "Victoria's Secret",
-      "familia": "[Familia Olfativa]",
-      "precio": 0.0,
-      "precioAntes": null,
+      "familia": "Coco Dulce Sensual",
+      "precio": 20.0,
+      "precioAntes": 25.0,
       "categoria": "mujer",
-      "estado": null,
+      "estado": "hot",
       "agotado": false,
       "ml": 250,
-      "descripcion": "[Descripción del splash.]",
+      "descripcion": "Sensual y bañado por el sol, con un aire embriagador y lujoso acompañado de un brillo etéreo.",
       "fotos": [
-        "img/splashes/splash-16/1.webp"
+        "img/splashes/splash-16/1.webp",
+        "img/splashes/splash-16/2.webp"
       ],
       "ocasiones": [
-        "Día"
+        "Momentos sensuales",
+        "Días cálidos",
+        "Salidas brillantes",
+        "Toque cremoso luminosos"
       ],
-      "tipo_fragancia": "[Familia Olfativa]",
-      "notas_simples": "fragancia fresca y femenina"
+      "tipo_fragancia": "Bruma corporal con brillo",
+      "notas_simples": "mora, leche de coco, lirio salvaje, flor de frambuesa, ámbar azucarado, arena cálida"
     },
     {
       "id": 117,
