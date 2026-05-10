@@ -2673,3 +2673,96 @@ body:not(.js-ready) .reveal-right { opacity: 1; transform: none; }
     min-height: 260px !important;
   }
 }
+
+/* ── Banner Victoria's Secret en catálogo ── */
+.vs-catalog-banner {
+  background: linear-gradient(135deg, #3d1a28 0%, #1a0d12 50%, #4a1e30 100%);
+  padding: var(--space-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+.vs-catalog-banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 80% 50%, rgba(232,160,176,0.12) 0%, transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(196,117,138,0.08) 0%, transparent 40%);
+}
+.vs-catalog-banner__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  flex-wrap: wrap;
+}
+.vs-catalog-banner__copy { flex: 1; min-width: 240px; }
+.vs-catalog-banner__title {
+  font-family: var(--font-hero);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.0;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  margin: var(--space-xs) 0 var(--space-sm);
+}
+.vs-catalog-banner__title em {
+  color: #e8a0b0;
+  font-style: normal;
+}
+.vs-catalog-banner__text {
+  font-size: 0.9375rem;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.65;
+  max-width: 420px;
+}
+.vs-catalog-banner__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 32px;
+  background: #e8a0b0;
+  color: #2a1520;
+  font-family: var(--font-ui);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 0;
+  transition: background var(--dur-fast), transform var(--dur-fast);
+  flex-shrink: 0;
+}
+.vs-catalog-banner__btn:hover {
+  background: #c4758a;
+  color: #fff;
+  transform: translateX(4px);
+}
+@media (max-width: 768px) {
+  .vs-catalog-banner__inner { flex-direction: column; align-items: flex-start; }
+  .vs-catalog-banner__btn { width: 100%; justify-content: center; }
+}
+
+/* ── Lightbox perfumes — reutiliza clases del splash ── */
+.modal__main-img-wrap { cursor: zoom-in; }
+
+/* Lightbox oculto — sin espacio, sin visibilidad */
+.splash-lightbox {
+  position: fixed !important;
+  inset: 0 !important;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  height: 0 !important;
+  overflow: hidden;
+}
+.splash-lightbox.is-open {
+  height: 100dvh !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+}
