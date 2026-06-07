@@ -50,7 +50,7 @@ cd instante-infinito
 # Open index.html in any browser — no build step required
 ```
 
-## Live Demo
+## Live Site
 
 [instanteinfinito.andinawebstudio.com](https://instanteinfinito.andinawebstudio.com)
 
