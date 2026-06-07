@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Catálogo de Perfumes | Lumière Parfums Ecuador</title>
+  <meta name="description" content="Explora nuestro catálogo completo de perfumes originales para hombre, mujer y unisex. Filtra por categoría y compra fácilmente por WhatsApp." />
+  <meta name="keywords" content="catálogo perfumes Ecuador, perfumes hombre mujer unisex, comprar perfumes online, perfumes originales Quito" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lumiereparfums.ec/catalogo.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Catálogo de Perfumes | Lumière Parfums Ecuador" />
+  <meta property="og:description" content="Perfumes originales para hombre, mujer y unisex. Filtra y compra fácilmente por WhatsApp." />
+  <meta property="og:image" content="https://www.lumiereparfums.ec/og-image.jpg" />
+  <meta property="og:url" content="https://www.lumiereparfums.ec/catalogo.html" />
+  <meta property="og:site_name" content="Lumière Parfums" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Catálogo de Perfumes | Lumière Parfums Ecuador" />
+  <meta name="twitter:description" content="Perfumes originales para hombre, mujer y unisex. Envíos a todo Ecuador." />
+  <meta name="twitter:image" content="https://www.lumiereparfums.ec/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD: ItemList de productos -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Catálogo de Perfumes Lumière Parfums",
+    "description": "Catálogo completo de perfumes originales disponibles en Ecuador",
+    "numberOfItems": 8,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Product",
+          "name": "Oud Noir Intense",
+          "description": "Perfume masculino amaderado oriental con notas de oud, vainilla y ámbar",
+          "offers": {
+            "@type": "Offer",
+            "price": "45.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Product",
+          "name": "Velvet Rose",
+          "description": "Perfume femenino floral gourmand con notas de rosa y peonía",
+          "offers": {
+            "@type": "Offer",
+            "price": "38.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "Product",
+          "name": "Nuit Mystère",
+          "description": "Perfume unisex amaderado especiado con sándalo, cuero y ámbar gris",
+          "offers": {
+            "@type": "Offer",
+            "price": "52.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "Product",
+          "name": "Aqua Fresca",
+          "description": "Perfume masculino acuático cítrico con notas de limón y cedro",
+          "offers": {
+            "@type": "Offer",
+            "price": "32.00",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+          }
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================================
+       SECCIÓN: HEADER / NAVEGACIÓN
+  ================================= -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Lumière Parfums - Inicio">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        <span class="logo-text">Lumière <em>Parfums</em></span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="catalogo.html" class="nav-link active" aria-current="page">Catálogo</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartToggle" aria-label="Ver carrito de compras" aria-expanded="false">
+          <span class="cart-icon" aria-hidden="true">🛍</span>
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================================
+       SECCIÓN: CARRITO DESPLEGABLE
+  ================================= -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" role="complementary" hidden>
+    <div class="cart-drawer-header">
+      <h2 class="cart-title">Tu selección</h2>
+      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Aún no has agregado perfumes.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn-whatsapp-cart" id="btnWhatsappCart">
+        <span aria-hidden="true">💬</span> Comprar por WhatsApp
+      </button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+
+  <!-- ================================
+       SECCIÓN: PAGE HERO (catálogo)
+  ================================= -->
+  <main id="main-content">
+
+    <section class="page-hero" aria-labelledby="catalogoTitle">
+      <div class="container">
+        <p class="hero-eyebrow">Nuestra colección</p>
+        <h1 class="page-hero-title" id="catalogoTitle">Catálogo de perfumes</h1>
+        <p class="page-hero-subtitle">
+          Encuentra tu fragancia ideal. Hombre, mujer y unisex.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: FILTROS
+    ================================= -->
+    <section class="filters-bar" aria-label="Filtrar productos">
+      <div class="container">
+
+        <!-- Filtro por categoría -->
+        <div class="filter-group" role="group" aria-labelledby="filterCatLabel">
+          <span class="filter-label" id="filterCatLabel">Categoría:</span>
+          <div class="filter-pills">
+            <button class="filter-pill active" data-filter="all" aria-pressed="true">Todos</button>
+            <button class="filter-pill" data-filter="hombre" aria-pressed="false">Hombre</button>
+            <button class="filter-pill" data-filter="mujer" aria-pressed="false">Mujer</button>
+            <button class="filter-pill" data-filter="unisex" aria-pressed="false">Unisex</button>
+          </div>
+        </div>
+
+        <!-- Filtro por disponibilidad -->
+        <div class="filter-group" role="group" aria-labelledby="filterDispLabel">
+          <span class="filter-label" id="filterDispLabel">Mostrar:</span>
+          <div class="filter-pills">
+            <button class="filter-pill active" data-filter-disp="all" aria-pressed="true">Todos</button>
+            <button class="filter-pill" data-filter-disp="disponible" aria-pressed="false">Disponibles</button>
+            <button class="filter-pill" data-filter-disp="oferta" aria-pressed="false">En oferta</button>
+          </div>
+        </div>
+
+        <!-- Resultado del filtro -->
+        <p class="filter-result" id="filterResult" aria-live="polite" role="status">
+          Mostrando <strong id="filterCount">8</strong> perfumes
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: GRILLA DE PRODUCTOS
+    ================================= -->
+    <section class="section catalog-section" aria-labelledby="catalogGridTitle">
+      <div class="container">
+        <h2 class="sr-only" id="catalogGridTitle">Listado de perfumes</h2>
+
+        <div class="products-grid" id="catalogGrid" role="list">
+
+          <!-- ── Producto C1 ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c1"
+            data-name="Oud Noir Intense"
+            data-price="45.00"
+            data-category="hombre"
+            data-status="disponible"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop"
+                alt="Oud Noir Intense - Perfume masculino amaderado oriental"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-hot">🔥 Top ventas</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hombre</span>
+              <h3 class="product-name">Oud Noir Intense</h3>
+              <p class="product-price"><strong>$45.00</strong></p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc1">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc1" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Amaderado oriental</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Bergamota, cardamomo</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Rosa, jazmín</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Oud, vainilla, ámbar</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>8–12 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>100 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>💼 Noche · Elegante</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c1" data-name="Oud Noir Intense" data-price="45.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C2 ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c2"
+            data-name="Velvet Rose"
+            data-price="38.00"
+            data-category="mujer"
+            data-status="disponible"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&h=400&fit=crop"
+                alt="Velvet Rose - Perfume femenino floral gourmand"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-new">✨ Nuevo</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Mujer</span>
+              <h3 class="product-name">Velvet Rose</h3>
+              <p class="product-price"><strong>$38.00</strong></p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc2">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc2" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Floral gourmand</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Pera, lichi</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Rosa de Turquía, peonía</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Almizcle, cedro blanco</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>6–10 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>80 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>🌸 Día · Romántico</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c2" data-name="Velvet Rose" data-price="38.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C3 ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c3"
+            data-name="Nuit Mystère"
+            data-price="52.00"
+            data-category="unisex"
+            data-status="disponible"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400&h=400&fit=crop"
+                alt="Nuit Mystère - Perfume unisex amaderado especiado"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-hot">🌙 Noche</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Unisex</span>
+              <h3 class="product-name">Nuit Mystère</h3>
+              <p class="product-price"><strong>$52.00</strong></p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc3">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc3" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Amaderado especiado</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Pomelo, pimienta negra</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Iris, incienso</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Sándalo, cuero, ámbar gris</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>10–14 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>100 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>🌙 Noche · Misterioso</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c3" data-name="Nuit Mystère" data-price="52.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C4 (OFERTA) ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c4"
+            data-name="Aqua Fresca"
+            data-price="32.00"
+            data-category="hombre"
+            data-status="oferta"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=400&fit=crop"
+                alt="Aqua Fresca - Perfume masculino acuático cítrico"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-offer">💸 Oferta</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hombre</span>
+              <h3 class="product-name">Aqua Fresca</h3>
+              <p class="product-price">
+                <s class="price-old">$40.00</s>
+                <strong class="price-sale">$32.00</strong>
+              </p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc4">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc4" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Acuático cítrico</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Limón, menta marina</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Agua de mar, geranio</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Cedro, almizcle blanco</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>4–6 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>100 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>☀️ Día · Casual</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c4" data-name="Aqua Fresca" data-price="32.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C5 ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c5"
+            data-name="Fleur Blanche"
+            data-price="42.00"
+            data-category="mujer"
+            data-status="disponible"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1595425964072-5f4ce5a3eac4?w=400&h=400&fit=crop"
+                alt="Fleur Blanche - Perfume femenino floral blanco"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-new">💐 Floral</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Mujer</span>
+              <h3 class="product-name">Fleur Blanche</h3>
+              <p class="product-price"><strong>$42.00</strong></p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc5">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc5" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Floral blanco</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Gardenia, ylang-ylang</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Jazmín blanco, magnolia</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Almizcle, sándalo</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>6–9 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>75 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>🌸 Día · Elegante</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c5" data-name="Fleur Blanche" data-price="42.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C6 (AGOTADO) ── -->
+          <article
+            class="product-card product-card--soldout"
+            role="listitem"
+            data-id="c6"
+            data-name="Bois Sacré"
+            data-price="60.00"
+            data-category="unisex"
+            data-status="agotado"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1619994403073-2cec844b8e63?w=400&h=400&fit=crop"
+                alt="Bois Sacré - Perfume unisex amaderado sagrado (agotado)"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-soldout" aria-label="Producto agotado">⛔ Agotado</span>
+              <div class="soldout-overlay" aria-hidden="true">Agotado</div>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Unisex</span>
+              <h3 class="product-name">Bois Sacré</h3>
+              <p class="product-price"><strong>$60.00</strong></p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc6">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc6" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Amaderado sagrado</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Cardamomo, bergamota</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Cedro atlas, palo santo</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Vetiver, ámbar, musgo</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>12–16 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>100 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>💼 Noche · Premium</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-soldout" disabled aria-disabled="true">
+                Agotado — avisar cuando llegue
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C7 ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c7"
+            data-name="Homme Sport"
+            data-price="35.00"
+            data-category="hombre"
+            data-status="disponible"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=400&fit=crop"
+                alt="Homme Sport - Perfume masculino deportivo fresco"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-hot">💪 Sport</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hombre</span>
+              <h3 class="product-name">Homme Sport</h3>
+              <p class="product-price"><strong>$35.00</strong></p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc7">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc7" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Deportivo fresco</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Menta, eucalipto</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Lavanda, especias</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Vetiver, cedro</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>5–8 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>100 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>☀️ Día · Deportivo</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c7" data-name="Homme Sport" data-price="35.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- ── Producto C8 (OFERTA) ── -->
+          <article
+            class="product-card"
+            role="listitem"
+            data-id="c8"
+            data-name="Rose Dorée"
+            data-price="29.00"
+            data-category="mujer"
+            data-status="oferta"
+          >
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=400&h=400&fit=crop"
+                alt="Rose Dorée - Perfume femenino floral dorado"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-offer">💸 Oferta</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Mujer</span>
+              <h3 class="product-name">Rose Dorée</h3>
+              <p class="product-price">
+                <s class="price-old">$36.00</s>
+                <strong class="price-sale">$29.00</strong>
+              </p>
+              <div class="accordion">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="dc8">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="dc8" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row"><dt>Fragancia</dt><dd>Floral oriental</dd></div>
+                    <div class="detail-row"><dt>Notas de salida</dt><dd>Durazno, ciruela</dd></div>
+                    <div class="detail-row"><dt>Notas de corazón</dt><dd>Rosa, vainilla</dd></div>
+                    <div class="detail-row"><dt>Notas de fondo</dt><dd>Ámbar, almizcle dulce</dd></div>
+                    <div class="detail-row"><dt>Duración</dt><dd>7–10 horas</dd></div>
+                    <div class="detail-row"><dt>Contenido</dt><dd>75 ml</dd></div>
+                    <div class="detail-row"><dt>Ocasión</dt><dd>🌙 Noche · Sensual</dd></div>
+                  </dl>
+                </div>
+              </div>
+              <button class="btn btn-add-cart" data-id="c8" data-name="Rose Dorée" data-price="29.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /catalogGrid -->
+
+        <!-- Mensaje sin resultados -->
+        <p class="no-results" id="noResults" hidden role="status" aria-live="polite">
+          No se encontraron perfumes con ese filtro. <a href="catalogo.html">Ver todos</a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: BANNER CTA WHATSAPP
+    ================================= -->
+    <section class="cta-banner" aria-labelledby="ctaBannerTitle">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text">
+          <h2 class="cta-banner-title" id="ctaBannerTitle">¿No encontraste lo que buscas?</h2>
+          <p>Escríbenos por WhatsApp y te ayudamos a encontrar tu fragancia ideal.</p>
+        </div>
+        <a
+          href="https://wa.me/593990000000?text=Hola%2C%20busco%20un%20perfume%20espec%C3%ADfico%20y%20quisiera%20ayuda"
+          class="btn btn-whatsapp-cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Contactar por WhatsApp para encontrar un perfume"
+        >
+          💬 Consultar por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================
+       SECCIÓN: FOOTER
+  ================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo" aria-label="Lumière Parfums - Inicio">
+          <span class="logo-icon" aria-hidden="true">✦</span>
+          <span class="logo-text">Lumière <em>Parfums</em></span>
+        </a>
+        <p class="footer-tagline">Fragancias que cuentan tu historia</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3 class="footer-nav-title">Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 class="footer-nav-title">Contáctanos</h3>
+        <ul>
+          <li><a href="https://wa.me/593990000000" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/lumiereparfums" target="_blank" rel="noopener noreferrer">📸 Instagram</a></li>
+          <li><a href="https://www.facebook.com/lumiereparfums" target="_blank" rel="noopener noreferrer">📘 Facebook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-payment">
+        <h3 class="footer-nav-title">Pagos seguros</h3>
+        <ul class="footer-payment-list">
+          <li>🏦 Transferencia bancaria</li>
+          <li>📱 Deuna</li>
+          <li>💳 PayPal</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Lumière Parfums · Todos los derechos reservados · Ecuador 🇪🇨</p>
+        <ul class="footer-social-mini" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/lumiereparfums" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a></li>
+          <li><a href="https://www.facebook.com/lumiereparfums" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a></li>
+          <li><a href="https://wa.me/593990000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <a
+    href="https://wa.me/593990000000?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20perfumes"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contáctanos por WhatsApp"
+  >
+    <span aria-hidden="true">💬</span>
+    <span class="whatsapp-float-label">¿Necesitas ayuda?</span>
+  </a>
+
+  <script src="app.js" defer></script>
+
+</body>
+</html>

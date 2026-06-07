@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Lumière Parfums | Perfumes Originales en Ecuador</title>
+  <meta name="description" content="Descubre nuestra colección de perfumes originales para hombre, mujer y unisex. Envíos a todo Ecuador. Atención personalizada por WhatsApp." />
+  <meta name="keywords" content="perfumes originales Ecuador, perfumes importados, perfumes hombre mujer, comprar perfumes online Ecuador" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lumiereparfums.ec/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Lumière Parfums | Perfumes Originales en Ecuador" />
+  <meta property="og:description" content="Perfumes originales con envío a todo Ecuador. Hombre, mujer y unisex. Cómpralos fácilmente por WhatsApp." />
+  <meta property="og:image" content="https://www.lumiereparfums.ec/og-image.jpg" />
+  <meta property="og:url" content="https://www.lumiereparfums.ec/" />
+  <meta property="og:site_name" content="Lumière Parfums" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Lumière Parfums | Perfumes Originales en Ecuador" />
+  <meta name="twitter:description" content="Perfumes originales con envío a todo Ecuador." />
+  <meta name="twitter:image" content="https://www.lumiereparfums.ec/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD: Organización -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Lumière Parfums",
+    "url": "https://www.lumiereparfums.ec",
+    "logo": "https://www.lumiereparfums.ec/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+593-99-000-0000",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "https://www.instagram.com/lumiereparfums",
+      "https://www.facebook.com/lumiereparfums"
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Lumière Parfums",
+    "url": "https://www.lumiereparfums.ec",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.lumiereparfums.ec/catalogo.html?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================================
+       SECCIÓN: HEADER / NAVEGACIÓN
+  ================================= -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="logo" aria-label="Lumière Parfums - Inicio">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        <span class="logo-text">Lumière <em>Parfums</em></span>
+      </a>
+
+      <!-- Navegación principal -->
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Acciones del header -->
+      <div class="header-actions">
+        <!-- Carrito -->
+        <button class="cart-btn" id="cartToggle" aria-label="Ver carrito de compras" aria-expanded="false">
+          <span class="cart-icon" aria-hidden="true">🛍</span>
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <!-- Menú hamburguesa (mobile) -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================================
+       SECCIÓN: CARRITO DESPLEGABLE
+  ================================= -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" role="complementary" hidden>
+    <div class="cart-drawer-header">
+      <h2 class="cart-title">Tu selección</h2>
+      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Aún no has agregado perfumes.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn-whatsapp-cart" id="btnWhatsappCart">
+        <span aria-hidden="true">💬</span> Comprar por WhatsApp
+      </button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+
+  <!-- ================================
+       SECCIÓN: HERO
+  ================================= -->
+  <main id="main-content">
+
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <p class="hero-eyebrow">Colección 2025</p>
+        <h1 class="hero-title" id="heroTitle">
+          Fragancias que<br /><em>cuentan tu historia</em>
+        </h1>
+        <p class="hero-subtitle">
+          Perfumes originales para hombre, mujer y unisex.<br />
+          Envíos a todo Ecuador 🇪🇨
+        </p>
+        <div class="hero-actions">
+          <a href="catalogo.html" class="btn btn-primary">Ver catálogo completo</a>
+          <a href="#mas-vendidos" class="btn btn-secondary">Más vendidos</a>
+        </div>
+        <!-- Indicadores de confianza rápidos -->
+        <ul class="hero-trust" aria-label="Garantías">
+          <li>✓ Productos 100% originales</li>
+          <li>✓ Envíos a todo Ecuador</li>
+          <li>✓ Atención por WhatsApp</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: BENEFICIOS / CONFIANZA
+    ================================= -->
+    <section class="trust-bar" aria-label="Nuestras garantías">
+      <div class="container">
+        <ul class="trust-list">
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">📦</span>
+            <div>
+              <strong>Envíos a todo Ecuador 🇪🇨</strong>
+              <span>Entrega rápida y segura</span>
+            </div>
+          </li>
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">💯</span>
+            <div>
+              <strong>100% Originales</strong>
+              <span>Garantía de autenticidad</span>
+            </div>
+          </li>
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">💬</span>
+            <div>
+              <strong>Atención personalizada</strong>
+              <span>Respondemos por WhatsApp</span>
+            </div>
+          </li>
+          <li class="trust-item">
+            <span class="trust-icon" aria-hidden="true">🔒</span>
+            <div>
+              <strong>Pagos seguros</strong>
+              <span>Transferencia · Deuna · PayPal</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: MÁS VENDIDOS
+    ================================= -->
+    <section class="section" id="mas-vendidos" aria-labelledby="masVendidosTitle">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Los favoritos</p>
+          <h2 class="section-title" id="masVendidosTitle">Más vendidos</h2>
+          <p class="section-subtitle">Los perfumes que nuestros clientes más aman</p>
+        </header>
+
+        <div class="products-grid" role="list">
+
+          <!-- Producto 1 -->
+          <article class="product-card" role="listitem" data-id="1" data-name="Oud Noir Intense" data-price="45.00">
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&h=400&fit=crop"
+                alt="Oud Noir Intense - Perfume masculino amaderado"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-hot" aria-label="Producto más vendido">🔥 Top ventas</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hombre</span>
+              <h3 class="product-name">Oud Noir Intense</h3>
+              <p class="product-price"><strong>$45.00</strong></p>
+
+              <!-- Acordeón de detalles -->
+              <div class="accordion" aria-label="Detalles del perfume">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="details-1">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="details-1" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row">
+                      <dt>Fragancia</dt>
+                      <dd>Amaderado oriental</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de salida</dt>
+                      <dd>Bergamota, cardamomo</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de corazón</dt>
+                      <dd>Rosa, jazmín</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de fondo</dt>
+                      <dd>Oud, vainilla, ámbar</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Duración</dt>
+                      <dd>8–12 horas</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Contenido</dt>
+                      <dd>100 ml</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Ocasión</dt>
+                      <dd>💼 Noche · Elegante</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <button class="btn btn-add-cart" data-id="1" data-name="Oud Noir Intense" data-price="45.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 2 -->
+          <article class="product-card" role="listitem" data-id="2" data-name="Velvet Rose" data-price="38.00">
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&h=400&fit=crop"
+                alt="Velvet Rose - Perfume femenino floral"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-new" aria-label="Producto nuevo">✨ Nuevo</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Mujer</span>
+              <h3 class="product-name">Velvet Rose</h3>
+              <p class="product-price"><strong>$38.00</strong></p>
+
+              <div class="accordion" aria-label="Detalles del perfume">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="details-2">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="details-2" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row">
+                      <dt>Fragancia</dt>
+                      <dd>Floral gourmand</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de salida</dt>
+                      <dd>Pera, lichi</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de corazón</dt>
+                      <dd>Rosa de Turquía, peonía</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de fondo</dt>
+                      <dd>Almizcle, cedro blanco</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Duración</dt>
+                      <dd>6–10 horas</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Contenido</dt>
+                      <dd>80 ml</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Ocasión</dt>
+                      <dd>🌸 Día · Romántico</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <button class="btn btn-add-cart" data-id="2" data-name="Velvet Rose" data-price="38.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 3 -->
+          <article class="product-card" role="listitem" data-id="3" data-name="Nuit Mystère" data-price="52.00">
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400&h=400&fit=crop"
+                alt="Nuit Mystère - Perfume unisex amaderado"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-hot" aria-label="Oferta especial">🌙 Noche</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Unisex</span>
+              <h3 class="product-name">Nuit Mystère</h3>
+              <p class="product-price"><strong>$52.00</strong></p>
+
+              <div class="accordion" aria-label="Detalles del perfume">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="details-3">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="details-3" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row">
+                      <dt>Fragancia</dt>
+                      <dd>Amaderado especiado</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de salida</dt>
+                      <dd>Pomelo, pimienta negra</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de corazón</dt>
+                      <dd>Iris, incienso</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de fondo</dt>
+                      <dd>Sándalo, cuero, ámbar gris</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Duración</dt>
+                      <dd>10–14 horas</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Contenido</dt>
+                      <dd>100 ml</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Ocasión</dt>
+                      <dd>🌙 Noche · Misterioso</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <button class="btn btn-add-cart" data-id="3" data-name="Nuit Mystère" data-price="52.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+          <!-- Producto 4 -->
+          <article class="product-card" role="listitem" data-id="4" data-name="Aqua Fresca" data-price="32.00">
+            <div class="product-image-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&h=400&fit=crop"
+                alt="Aqua Fresca - Perfume masculino acuático"
+                class="product-img"
+                loading="lazy"
+                width="400"
+                height="400"
+              />
+              <span class="product-badge badge-offer" aria-label="En oferta">💸 Oferta</span>
+            </div>
+            <div class="product-info">
+              <span class="product-category">Hombre</span>
+              <h3 class="product-name">Aqua Fresca</h3>
+              <p class="product-price">
+                <s class="price-old">$40.00</s>
+                <strong class="price-sale">$32.00</strong>
+              </p>
+
+              <div class="accordion" aria-label="Detalles del perfume">
+                <button class="accordion-btn" aria-expanded="false" aria-controls="details-4">
+                  Ver detalles <span class="accordion-arrow" aria-hidden="true">›</span>
+                </button>
+                <div class="accordion-content" id="details-4" hidden>
+                  <dl class="product-details">
+                    <div class="detail-row">
+                      <dt>Fragancia</dt>
+                      <dd>Acuático cítrico</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de salida</dt>
+                      <dd>Limón, menta marina</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de corazón</dt>
+                      <dd>Agua de mar, geranio</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Notas de fondo</dt>
+                      <dd>Cedro, almizcle blanco</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Duración</dt>
+                      <dd>4–6 horas</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Contenido</dt>
+                      <dd>100 ml</dd>
+                    </div>
+                    <div class="detail-row">
+                      <dt>Ocasión</dt>
+                      <dd>☀️ Día · Casual</dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+
+              <button class="btn btn-add-cart" data-id="4" data-name="Aqua Fresca" data-price="32.00">
+                + Agregar al carrito
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /products-grid -->
+
+        <div class="section-cta">
+          <a href="catalogo.html" class="btn btn-outline">Ver catálogo completo →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: MÉTODOS DE PAGO
+    ================================= -->
+    <section class="section section-alt" aria-labelledby="pagosTitle">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="pagosTitle">Pagos seguros disponibles</h2>
+          <p class="section-subtitle">Elige el método que más te convenga</p>
+        </header>
+        <ul class="payment-methods" aria-label="Métodos de pago aceptados">
+          <li class="payment-item">
+            <span class="payment-icon" aria-hidden="true">🏦</span>
+            <span>Transferencia bancaria</span>
+          </li>
+          <li class="payment-item">
+            <span class="payment-icon" aria-hidden="true">📱</span>
+            <span>Deuna</span>
+          </li>
+          <li class="payment-item">
+            <span class="payment-icon" aria-hidden="true">💳</span>
+            <span>PayPal</span>
+          </li>
+        </ul>
+        <p class="payment-note">
+          <span aria-hidden="true">🔒</span> Todas las transacciones son seguras y verificadas
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: RESEÑAS
+    ================================= -->
+    <section class="section" aria-labelledby="resenasTitle">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Lo que dicen nuestros clientes</p>
+          <h2 class="section-title" id="resenasTitle">Opiniones reales</h2>
+        </header>
+
+        <div class="reviews-grid" role="list">
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote class="review-text">
+              "El Oud Noir Intense es increíble. Dura todo el día y recibo cumplidos en todas partes. 100% original y llegó súper rápido."
+            </blockquote>
+            <footer class="review-author">
+              <span class="review-avatar" aria-hidden="true">👤</span>
+              <cite>Andrés M. — Quito</cite>
+            </footer>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote class="review-text">
+              "Pedí el Velvet Rose y quedé enamorada. El empaque es precioso y el olor es exactamente como lo describen. ¡Volvería a comprar!"
+            </blockquote>
+            <footer class="review-author">
+              <span class="review-avatar" aria-hidden="true">👤</span>
+              <cite>Valeria T. — Guayaquil</cite>
+            </footer>
+          </article>
+
+          <article class="review-card" role="listitem">
+            <div class="review-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote class="review-text">
+              "Excelente atención por WhatsApp. Me ayudaron a elegir el perfume ideal para mi pareja. Muy recomendados."
+            </blockquote>
+            <footer class="review-author">
+              <span class="review-avatar" aria-hidden="true">👤</span>
+              <cite>Diego R. — Cuenca</cite>
+            </footer>
+          </article>
+
+        </div><!-- /reviews-grid -->
+
+        <div class="section-cta">
+          <a
+            href="https://www.instagram.com/lumiereparfums"
+            class="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver más opiniones en Instagram (abre en nueva pestaña)"
+          >
+            📸 Ver más opiniones en Instagram
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: REDES SOCIALES
+    ================================= -->
+    <section class="section section-alt" aria-labelledby="redesTitle">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="redesTitle">Síguenos</h2>
+          <p class="section-subtitle">Inspiración, novedades y descuentos exclusivos</p>
+        </header>
+        <ul class="social-list" aria-label="Redes sociales">
+          <li>
+            <a
+              href="https://www.instagram.com/lumiereparfums"
+              class="social-link social-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Lumière Parfums"
+            >
+              <span class="social-icon" aria-hidden="true">📸</span>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/lumiereparfums"
+              class="social-link social-facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook de Lumière Parfums"
+            >
+              <span class="social-icon" aria-hidden="true">📘</span>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://wa.me/593990000000"
+              class="social-link social-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp de Lumière Parfums"
+            >
+              <span class="social-icon" aria-hidden="true">💬</span>
+              <span>WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main><!-- /main-content -->
+
+  <!-- ================================
+       SECCIÓN: FOOTER
+  ================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo" aria-label="Lumière Parfums - Inicio">
+          <span class="logo-icon" aria-hidden="true">✦</span>
+          <span class="logo-text">Lumière <em>Parfums</em></span>
+        </a>
+        <p class="footer-tagline">Fragancias que cuentan tu historia</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3 class="footer-nav-title">Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 class="footer-nav-title">Contáctanos</h3>
+        <ul>
+          <li>
+            <a href="https://wa.me/593990000000" target="_blank" rel="noopener noreferrer">
+              💬 WhatsApp
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/lumiereparfums" target="_blank" rel="noopener noreferrer">
+              📸 Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/lumiereparfums" target="_blank" rel="noopener noreferrer">
+              📘 Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-payment">
+        <h3 class="footer-nav-title">Pagos seguros</h3>
+        <ul class="footer-payment-list">
+          <li>🏦 Transferencia bancaria</li>
+          <li>📱 Deuna</li>
+          <li>💳 PayPal</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Lumière Parfums · Todos los derechos reservados · Ecuador 🇪🇨</p>
+        <ul class="footer-social-mini" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/lumiereparfums" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a></li>
+          <li><a href="https://www.facebook.com/lumiereparfums" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a></li>
+          <li><a href="https://wa.me/593990000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================================
+       SECCIÓN: BOTÓN WHATSAPP FLOTANTE
+  ================================= -->
+  <a
+    href="https://wa.me/593990000000?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20perfumes"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contáctanos por WhatsApp"
+  >
+    <span aria-hidden="true">💬</span>
+    <span class="whatsapp-float-label">¿Necesitas ayuda?</span>
+  </a>
+
+  <!-- JS -->
+  <script src="app.js" defer></script>
+
+</body>
+</html>

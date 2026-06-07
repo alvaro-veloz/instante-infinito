@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Contacto | Lumière Parfums Ecuador</title>
+  <meta name="description" content="Contáctanos por WhatsApp, Instagram o Facebook. Atención personalizada para ayudarte a elegir tu perfume ideal. Envíos a todo Ecuador." />
+  <meta name="keywords" content="contacto perfumes Ecuador, WhatsApp perfumes, atención al cliente perfumes Ecuador" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lumiereparfums.ec/contacto.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Contacto | Lumière Parfums Ecuador" />
+  <meta property="og:description" content="Atención personalizada por WhatsApp. Te ayudamos a elegir tu fragancia ideal. Envíos a todo Ecuador." />
+  <meta property="og:image" content="https://www.lumiereparfums.ec/og-image.jpg" />
+  <meta property="og:url" content="https://www.lumiereparfums.ec/contacto.html" />
+  <meta property="og:site_name" content="Lumière Parfums" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contacto | Lumière Parfums Ecuador" />
+  <meta name="twitter:description" content="Atención personalizada por WhatsApp. Envíos a todo Ecuador." />
+  <meta name="twitter:image" content="https://www.lumiereparfums.ec/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Lumière Parfums",
+    "description": "Tienda de perfumes originales en Ecuador con envíos a nivel nacional",
+    "url": "https://www.lumiereparfums.ec",
+    "telephone": "+593-99-000-0000",
+    "email": "hola@lumiereparfums.ec",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "EC",
+      "addressLocality": "Quito"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "09:00",
+        "closes": "14:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/lumiereparfums",
+      "https://www.facebook.com/lumiereparfums"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ================================
+       SECCIÓN: HEADER / NAVEGACIÓN
+  ================================= -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <a href="index.html" class="logo" aria-label="Lumière Parfums - Inicio">
+        <span class="logo-icon" aria-hidden="true">✦</span>
+        <span class="logo-text">Lumière <em>Parfums</em></span>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li><a href="catalogo.html" class="nav-link">Catálogo</a></li>
+          <li><a href="contacto.html" class="nav-link active" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="cart-btn" id="cartToggle" aria-label="Ver carrito de compras" aria-expanded="false">
+          <span class="cart-icon" aria-hidden="true">🛍</span>
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ================================
+       SECCIÓN: CARRITO DESPLEGABLE
+  ================================= -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras" role="complementary" hidden>
+    <div class="cart-drawer-header">
+      <h2 class="cart-title">Tu selección</h2>
+      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Aún no has agregado perfumes.</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" hidden>
+      <div class="cart-total">
+        <span>Total:</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn-whatsapp-cart" id="btnWhatsappCart">
+        <span aria-hidden="true">💬</span> Comprar por WhatsApp
+      </button>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+
+  <!-- ================================
+       SECCIÓN: PAGE HERO (contacto)
+  ================================= -->
+  <main id="main-content">
+
+    <section class="page-hero" aria-labelledby="contactoTitle">
+      <div class="container">
+        <p class="hero-eyebrow">Estamos aquí para ti</p>
+        <h1 class="page-hero-title" id="contactoTitle">Contáctanos</h1>
+        <p class="page-hero-subtitle">
+          Te ayudamos a encontrar la fragancia perfecta.<br />
+          Respuesta rápida por WhatsApp.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: CANALES DE CONTACTO
+    ================================= -->
+    <section class="section" aria-labelledby="canalesTitle">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="canalesTitle">¿Cómo quieres contactarnos?</h2>
+          <p class="section-subtitle">Elige el canal que más te convenga</p>
+        </header>
+
+        <div class="contact-channels" role="list">
+
+          <!-- WhatsApp -->
+          <article class="contact-card contact-card--whatsapp" role="listitem">
+            <div class="contact-card-icon" aria-hidden="true">💬</div>
+            <h3 class="contact-card-title">WhatsApp</h3>
+            <p class="contact-card-desc">
+              La forma más rápida. Escríbenos y te atendemos de inmediato. Ideal para consultas, pedidos y asesoría personalizada.
+            </p>
+            <div class="contact-card-info">
+              <p><strong>+593 99 000 0000</strong></p>
+              <p class="contact-hours">Lunes a viernes: 9h–18h · Sábados: 9h–14h</p>
+            </div>
+            <a
+              href="https://wa.me/593990000000?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20perfumes"
+              class="btn btn-whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Abrir WhatsApp para contactar a Lumière Parfums"
+            >
+              💬 Escribir por WhatsApp
+            </a>
+          </article>
+
+          <!-- Instagram -->
+          <article class="contact-card contact-card--instagram" role="listitem">
+            <div class="contact-card-icon" aria-hidden="true">📸</div>
+            <h3 class="contact-card-title">Instagram</h3>
+            <p class="contact-card-desc">
+              Síguenos para ver novedades, descuentos exclusivos y las últimas fragancias disponibles. También puedes escribirnos por DM.
+            </p>
+            <div class="contact-card-info">
+              <p><strong>@lumiereparfums</strong></p>
+              <p class="contact-hours">Respondemos DMs en menos de 24h</p>
+            </div>
+            <a
+              href="https://www.instagram.com/lumiereparfums"
+              class="btn btn-instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ir al Instagram de Lumière Parfums"
+            >
+              📸 Ver Instagram
+            </a>
+          </article>
+
+          <!-- Facebook -->
+          <article class="contact-card contact-card--facebook" role="listitem">
+            <div class="contact-card-icon" aria-hidden="true">📘</div>
+            <h3 class="contact-card-title">Facebook</h3>
+            <p class="contact-card-desc">
+              Encuentra reseñas, publicaciones y promociones en nuestra página de Facebook. Envíanos un mensaje por Messenger.
+            </p>
+            <div class="contact-card-info">
+              <p><strong>Lumière Parfums</strong></p>
+              <p class="contact-hours">Respondemos en menos de 24h</p>
+            </div>
+            <a
+              href="https://www.facebook.com/lumiereparfums"
+              class="btn btn-facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Ir al Facebook de Lumière Parfums"
+            >
+              📘 Ver Facebook
+            </a>
+          </article>
+
+        </div><!-- /contact-channels -->
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: PREGUNTAS FRECUENTES
+    ================================= -->
+    <section class="section section-alt" aria-labelledby="faqTitle">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-eyebrow">Resolvemos tus dudas</p>
+          <h2 class="section-title" id="faqTitle">Preguntas frecuentes</h2>
+        </header>
+
+        <div class="faq-list" role="list">
+
+          <article class="faq-item" role="listitem">
+            <div class="accordion">
+              <button class="accordion-btn faq-btn" aria-expanded="false" aria-controls="faq1">
+                ¿Los perfumes son 100% originales?
+                <span class="accordion-arrow" aria-hidden="true">›</span>
+              </button>
+              <div class="accordion-content faq-content" id="faq1" hidden>
+                <p>Sí. Todos nuestros perfumes son originales e importados directamente. Cada producto viene con su empaque sellado de fábrica. Garantizamos la autenticidad de todos nuestros artículos.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="accordion">
+              <button class="accordion-btn faq-btn" aria-expanded="false" aria-controls="faq2">
+                ¿Hacen envíos a todo Ecuador?
+                <span class="accordion-arrow" aria-hidden="true">›</span>
+              </button>
+              <div class="accordion-content faq-content" id="faq2" hidden>
+                <p>Sí, enviamos a todo el Ecuador 🇪🇨 — Quito, Guayaquil, Cuenca, Ambato, Loja y más ciudades. El tiempo de entrega varía entre 2 y 5 días hábiles según tu ubicación. Coordinamos el envío directamente por WhatsApp.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="accordion">
+              <button class="accordion-btn faq-btn" aria-expanded="false" aria-controls="faq3">
+                ¿Qué métodos de pago aceptan?
+                <span class="accordion-arrow" aria-hidden="true">›</span>
+              </button>
+              <div class="accordion-content faq-content" id="faq3" hidden>
+                <p>Aceptamos los siguientes métodos de pago:</p>
+                <ul>
+                  <li>🏦 Transferencia bancaria</li>
+                  <li>📱 Deuna (pago móvil Ecuador)</li>
+                  <li>💳 PayPal</li>
+                </ul>
+                <p>Todas las transacciones son seguras. Te confirmamos el pago antes de enviar tu pedido.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="accordion">
+              <button class="accordion-btn faq-btn" aria-expanded="false" aria-controls="faq4">
+                ¿Cómo realizo mi pedido?
+                <span class="accordion-arrow" aria-hidden="true">›</span>
+              </button>
+              <div class="accordion-content faq-content" id="faq4" hidden>
+                <p>Hacer tu pedido es muy simple:</p>
+                <ol>
+                  <li>Elige tus perfumes en el catálogo</li>
+                  <li>Agrégalos al carrito con el botón "+ Agregar al carrito"</li>
+                  <li>Haz clic en "Comprar por WhatsApp"</li>
+                  <li>Se abrirá WhatsApp con tu pedido detallado</li>
+                  <li>Coordina el pago y envío con nosotros</li>
+                </ol>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="accordion">
+              <button class="accordion-btn faq-btn" aria-expanded="false" aria-controls="faq5">
+                ¿Puedo cambiar o devolver un producto?
+                <span class="accordion-arrow" aria-hidden="true">›</span>
+              </button>
+              <div class="accordion-content faq-content" id="faq5" hidden>
+                <p>Sí. Si recibes un producto dañado o diferente al pedido, contáctanos por WhatsApp en las primeras 24 horas. Gestionamos el cambio sin problema. El producto debe estar sellado y sin usar.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item" role="listitem">
+            <div class="accordion">
+              <button class="accordion-btn faq-btn" aria-expanded="false" aria-controls="faq6">
+                ¿Tienen perfumes como regalo?
+                <span class="accordion-arrow" aria-hidden="true">›</span>
+              </button>
+              <div class="accordion-content faq-content" id="faq6" hidden>
+                <p>¡Claro! Ofrecemos empaque especial para regalo. Si es un obsequio, indícalo en tu mensaje de WhatsApp y te damos opciones de presentación. También podemos incluir una tarjeta de dedicatoria personalizada.</p>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /faq-list -->
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: GARANTÍAS
+    ================================= -->
+    <section class="section" aria-labelledby="garantiasTitle">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-title" id="garantiasTitle">Nuestra promesa</h2>
+          <p class="section-subtitle">Lo que puedes esperar de Lumière Parfums</p>
+        </header>
+
+        <ul class="promises-list" aria-label="Promesas de la tienda">
+          <li class="promise-item">
+            <span class="promise-icon" aria-hidden="true">📦</span>
+            <div>
+              <h3>Envíos a todo Ecuador 🇪🇨</h3>
+              <p>Llegamos a todas las provincias con servicio de mensajería confiable.</p>
+            </div>
+          </li>
+          <li class="promise-item">
+            <span class="promise-icon" aria-hidden="true">💯</span>
+            <div>
+              <h3>Productos 100% originales</h3>
+              <p>Garantizamos la autenticidad de cada perfume que vendemos.</p>
+            </div>
+          </li>
+          <li class="promise-item">
+            <span class="promise-icon" aria-hidden="true">💬</span>
+            <div>
+              <h3>Atención personalizada</h3>
+              <p>Te asesoramos para encontrar la fragancia que mejor se adapta a ti.</p>
+            </div>
+          </li>
+          <li class="promise-item">
+            <span class="promise-icon" aria-hidden="true">🔒</span>
+            <div>
+              <h3>Pagos seguros</h3>
+              <p>Múltiples métodos de pago verificados y seguros disponibles.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================================
+         SECCIÓN: CTA FINAL
+    ================================= -->
+    <section class="cta-banner" aria-labelledby="ctaContactoTitle">
+      <div class="container cta-banner-inner">
+        <div class="cta-banner-text">
+          <h2 class="cta-banner-title" id="ctaContactoTitle">¿Listo para encontrar tu fragancia?</h2>
+          <p>Explora nuestro catálogo y cómpralos fácilmente por WhatsApp.</p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="catalogo.html" class="btn btn-primary">
+            Ver catálogo
+          </a>
+          <a
+            href="https://wa.me/593990000000?text=Hola%2C%20quisiera%20asesor%C3%ADa%20para%20elegir%20un%20perfume"
+            class="btn btn-whatsapp-cta"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Solicitar asesoría por WhatsApp"
+          >
+            💬 Pedir asesoría
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================================
+       SECCIÓN: FOOTER
+  ================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo footer-logo" aria-label="Lumière Parfums - Inicio">
+          <span class="logo-icon" aria-hidden="true">✦</span>
+          <span class="logo-text">Lumière <em>Parfums</em></span>
+        </a>
+        <p class="footer-tagline">Fragancias que cuentan tu historia</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Navegación del pie de página">
+        <h3 class="footer-nav-title">Páginas</h3>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 class="footer-nav-title">Contáctanos</h3>
+        <ul>
+          <li><a href="https://wa.me/593990000000" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a></li>
+          <li><a href="https://www.instagram.com/lumiereparfums" target="_blank" rel="noopener noreferrer">📸 Instagram</a></li>
+          <li><a href="https://www.facebook.com/lumiereparfums" target="_blank" rel="noopener noreferrer">📘 Facebook</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-payment">
+        <h3 class="footer-nav-title">Pagos seguros</h3>
+        <ul class="footer-payment-list">
+          <li>🏦 Transferencia bancaria</li>
+          <li>📱 Deuna</li>
+          <li>💳 PayPal</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2025 Lumière Parfums · Todos los derechos reservados · Ecuador 🇪🇨</p>
+        <ul class="footer-social-mini" aria-label="Redes sociales">
+          <li><a href="https://www.instagram.com/lumiereparfums" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a></li>
+          <li><a href="https://www.facebook.com/lumiereparfums" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a></li>
+          <li><a href="https://wa.me/593990000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">💬</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÓN WHATSAPP FLOTANTE -->
+  <a
+    href="https://wa.me/593990000000?text=Hola%2C%20me%20interesa%20conocer%20m%C3%A1s%20sobre%20sus%20perfumes"
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contáctanos por WhatsApp"
+  >
+    <span aria-hidden="true">💬</span>
+    <span class="whatsapp-float-label">¿Necesitas ayuda?</span>
+  </a>
+
+  <script src="app.js" defer></script>
+
+</body>
+</html>
