@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- ============================================================
+       META BÁSICO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- SEO -->
+  <title>Instante Infinito | Perfumes Originales en Quito, Ecuador</title>
+  <meta name="description" content="Descubre perfumes 100% originales en Quito. Hombre, mujer y unisex. Envíos a todo Ecuador. Atención personalizada por WhatsApp. La Alquimia del Momento." />
+  <meta name="keywords" content="perfumes originales quito, perfumes ecuador, comprar perfumes online, perfumes importados, instante infinito" />
+  <meta name="author" content="Instante Infinito" />
+  <link rel="canonical" href="https://instanteinfinito.com/" />
+
+  <!-- OPEN GRAPH -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Instante Infinito | Perfumes Originales en Quito" />
+  <meta property="og:description" content="Perfumes 100% originales. Envíos a todo Ecuador. La Alquimia del Momento." />
+  <meta property="og:image" content="./og-image.jpg" /><!-- REEMPLAZAR -->
+  <meta property="og:url" content="https://instanteinfinito.com/" />
+  <meta property="og:site_name" content="Instante Infinito" />
+  <meta property="og:locale" content="es_EC" />
+
+  <!-- TWITTER CARD -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Instante Infinito | Perfumes Originales" />
+  <meta name="twitter:description" content="Perfumes 100% originales. Envíos a todo Ecuador." />
+  <meta name="twitter:image" content="./og-image.jpg" /><!-- REEMPLAZAR -->
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" /><!-- REEMPLAZAR con favicon real -->
+  <link rel="icon" type="image/png" href="./favicon.png" />
+
+  <!-- FUENTES -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- JSON-LD ORGANIZACIÓN -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "Instante Infinito",
+    "description": "Perfumes 100% originales en Quito, Ecuador",
+    "url": "https://instanteinfinito.com",
+    "telephone": "+593999999999",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Quito",
+      "addressCountry": "EC"
+    },
+    "sameAs": [
+      "https://instagram.com/instanteinfinito",
+      "https://facebook.com/instanteinfinito"
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+
+      <!-- Logo -->
+      <a href="./index.html" class="logo" aria-label="Instante Infinito – Inicio">
+        <img src="./logo.png" alt="Instante Infinito logo" class="logo-img" /><!-- REEMPLAZAR -->
+        <span class="logo-text">
+          <span class="logo-name">Instante Infinito</span>
+          <span class="logo-tagline">La Alquimia del Momento</span>
+        </span>
+      </a>
+      <div class="logo-gold-line" aria-hidden="true"></div>
+
+      <!-- Navegación principal -->
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li><a href="./index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li><a href="./catalogo.html" class="nav-link">Catálogo</a></li>
+          <li><a href="./contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Carrito + menú hamburguesa -->
+      <div class="header-actions">
+        <button class="cart-btn" id="cartToggle" aria-label="Ver carrito" aria-expanded="false">
+          <!-- Icono carrito SVG -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+        </button>
+        <button class="hamburger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div><!-- /.header-inner -->
+
+    <!-- Menú móvil -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Menú móvil" hidden>
+      <ul class="mobile-nav-list">
+        <li><a href="./index.html" class="mobile-nav-link">Inicio</a></li>
+        <li><a href="./catalogo.html" class="mobile-nav-link">Catálogo</a></li>
+        <li><a href="./contacto.html" class="mobile-nav-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- FIN: HEADER -->
+
+
+  <!-- ============================================================
+       CARRITO DRAWER
+  ============================================================ -->
+  <aside class="cart-drawer" id="cartDrawer" role="complementary" aria-label="Carrito de compras" aria-hidden="true">
+    <div class="cart-drawer-inner">
+      <div class="cart-drawer-header">
+        <h2 class="cart-drawer-title">Tu selección</h2>
+        <button class="cart-close" id="cartClose" aria-label="Cerrar carrito">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <ul class="cart-items" id="cartItems" aria-live="polite">
+        <li class="cart-empty" id="cartEmpty">Tu carrito está vacío</li>
+      </ul>
+      <div class="cart-footer" id="cartFooter" hidden>
+        <p class="cart-total">Total: <strong id="cartTotal">$0.00</strong></p>
+        <button class="btn btn-whatsapp btn-full" id="checkoutBtn">
+          <!-- Icono WhatsApp SVG -->
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+          </svg>
+          Comprar por WhatsApp
+        </button>
+      </div>
+    </div>
+  </aside>
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+  <!-- FIN: CARRITO -->
+
+
+  <main id="main-content">
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="container hero-inner">
+
+        <!-- Contenido texto -->
+        <div class="hero-content">
+          <span class="hero-eyebrow">Quito, Ecuador</span>
+          <h1 class="hero-title" id="heroTitle">
+            La Alquimia<br />
+            <em>del Momento</em>
+          </h1>
+          <p class="hero-subtitle">
+            Perfumes 100% originales cuidadosamente seleccionados.<br />
+            Cada fragancia cuenta una historia que solo tú puedes vivir.
+          </p>
+          <div class="hero-cta">
+            <a href="./catalogo.html" class="btn btn-primary">Explorar Catálogo</a>
+            <a href="./contacto.html" class="btn btn-ghost">Habla con nosotros</a>
+          </div>
+          <!-- Trust mini -->
+          <ul class="hero-trust" aria-label="Garantías">
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Originales certificados
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Envíos a todo Ecuador
+            </li>
+            <li>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              Atención por WhatsApp
+            </li>
+          </ul>
+        </div>
+
+        <!-- Imagen hero -->
+        <div class="hero-visual" aria-hidden="true">
+          <div class="hero-img-frame">
+            <img
+              src="./hero-perfume.jpg"<!-- REEMPLAZAR -->
+              alt="Frasco de perfume elegante sobre superficie mármol"
+              class="hero-img"
+              loading="eager"
+              width="480"
+              height="560"
+            />
+            <div class="hero-img-accent"></div>
+          </div>
+          <div class="hero-float-badge">
+            <span class="hero-badge-num">+50</span>
+            <span class="hero-badge-text">fragancias<br/>disponibles</span>
+          </div>
+        </div>
+
+      </div><!-- /.hero-inner -->
+    </section>
+    <!-- FIN: HERO -->
+
+
+    <!-- ============================================================
+         TRUST BAR
+    ============================================================ -->
+    <section class="trust-bar" aria-label="Por qué elegirnos">
+      <div class="container">
+        <ul class="trust-list">
+          <li class="trust-item">
+            <!-- Icono escudo -->
+            <svg class="trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            <div class="trust-text">
+              <strong>100% Originales</strong>
+              <span>Garantía de autenticidad</span>
+            </div>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item">
+            <!-- Icono camión -->
+            <svg class="trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="1" y="3" width="15" height="13" rx="1"/>
+              <path d="M16 8h4l3 5v3h-7V8z"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+            <div class="trust-text">
+              <strong>Envíos Ecuador 🇪🇨</strong>
+              <span>A domicilio en todo el país</span>
+            </div>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item">
+            <!-- Icono chat -->
+            <svg class="trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+            </svg>
+            <div class="trust-text">
+              <strong>Atención Personal</strong>
+              <span>Asesoría por WhatsApp</span>
+            </div>
+          </li>
+          <li class="trust-divider" aria-hidden="true"></li>
+          <li class="trust-item">
+            <!-- Icono pago seguro -->
+            <svg class="trust-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+              <line x1="1" y1="10" x2="23" y2="10"/>
+            </svg>
+            <div class="trust-text">
+              <strong>Pagos Seguros</strong>
+              <span>Transferencia · Deuna · PayPal</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- FIN: TRUST BAR -->
+
+
+    <!-- ============================================================
+         MÁS VENDIDOS
+    ============================================================ -->
+    <section class="section bestsellers" aria-labelledby="bestsellersTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Los favoritos</span>
+          <h2 class="section-title" id="bestsellersTitle">Más Vendidos</h2>
+          <p class="section-subtitle">Los perfumes que nuestros clientes eligen una y otra vez.</p>
+        </header>
+
+        <ul class="products-grid" role="list">
+
+          <!-- ── PRODUCTO 1 ── -->
+          <li class="product-card" data-id="1" data-name="Noir Absolu" data-price="89.00">
+            <article>
+              <div class="product-img-wrap">
+                <span class="product-badge badge-hot" aria-label="Más vendido">🔥 Hot</span>
+                <img
+                  src="./prod-noir-absolu.jpg"<!-- REEMPLAZAR -->
+                  alt="Perfume Noir Absolu - fragancia masculina amaderada"
+                  class="product-img"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+                <button class="zoom-btn" aria-label="Ver imagen ampliada de Noir Absolu">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <span class="product-category">Hombre</span>
+                <h3 class="product-name">Noir Absolu</h3>
+                <p class="product-price">$89.00</p>
+
+                <!-- Acordeón de detalles -->
+                <div class="accordion" role="list">
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p1-fragancia">
+                      Fragancia
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p1-fragancia" hidden>
+                      <p>Oriental amaderada con profundidad y misterio. Ideal para la noche.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p1-notas">
+                      Notas
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p1-notas" hidden>
+                      <ul class="notes-list">
+                        <li><strong>Salida:</strong> Bergamota, Pimienta negra</li>
+                        <li><strong>Corazón:</strong> Oud, Rosa turca</li>
+                        <li><strong>Fondo:</strong> Ámbar, Sándalo, Almizcle</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p1-datos">
+                      Detalles
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p1-datos" hidden>
+                      <ul class="details-list">
+                        <li>100 ml · EDP</li>
+                        <li>Duración: 8–10 horas</li>
+                        <li>Tipo: Noche 🌙</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div><!-- /.accordion -->
+
+                <button class="btn btn-primary btn-full add-to-cart" data-id="1" data-name="Noir Absolu" data-price="89.00">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <!-- ── PRODUCTO 2 ── -->
+          <li class="product-card" data-id="2" data-name="Rose Éternelle" data-price="75.00">
+            <article>
+              <div class="product-img-wrap">
+                <span class="product-badge badge-new" aria-label="Nuevo">✨ Nuevo</span>
+                <img
+                  src="./prod-rose-eternelle.jpg"<!-- REEMPLAZAR -->
+                  alt="Perfume Rose Éternelle - fragancia femenina floral"
+                  class="product-img"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+                <button class="zoom-btn" aria-label="Ver imagen ampliada de Rose Éternelle">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <span class="product-category">Mujer</span>
+                <h3 class="product-name">Rose Éternelle</h3>
+                <p class="product-price">$75.00</p>
+                <div class="accordion" role="list">
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p2-fragancia">
+                      Fragancia
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p2-fragancia" hidden>
+                      <p>Floral romántica con un toque de frescura. Elegante para el día.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p2-notas">
+                      Notas
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p2-notas" hidden>
+                      <ul class="notes-list">
+                        <li><strong>Salida:</strong> Pera, Limón</li>
+                        <li><strong>Corazón:</strong> Rosa de Damasco, Jazmín</li>
+                        <li><strong>Fondo:</strong> Pachulí, Vainilla</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p2-datos">
+                      Detalles
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p2-datos" hidden>
+                      <ul class="details-list">
+                        <li>75 ml · EDP</li>
+                        <li>Duración: 6–8 horas</li>
+                        <li>Tipo: Día 💼</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-full add-to-cart" data-id="2" data-name="Rose Éternelle" data-price="75.00">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <!-- ── PRODUCTO 3 ── -->
+          <li class="product-card" data-id="3" data-name="Lumière Blanche" data-price="95.00">
+            <article>
+              <div class="product-img-wrap">
+                <img
+                  src="./prod-lumiere-blanche.jpg"<!-- REEMPLAZAR -->
+                  alt="Perfume Lumière Blanche - fragancia unisex amaderada"
+                  class="product-img"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+                <button class="zoom-btn" aria-label="Ver imagen ampliada de Lumière Blanche">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                    <line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/>
+                  </svg>
+                </button>
+              </div>
+              <div class="product-info">
+                <span class="product-category">Unisex</span>
+                <h3 class="product-name">Lumière Blanche</h3>
+                <p class="product-price">$95.00</p>
+                <div class="accordion" role="list">
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p3-fragancia">
+                      Fragancia
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p3-fragancia" hidden>
+                      <p>Limpia y sofisticada. Una fragancia que trasciende géneros con elegancia.</p>
+                    </div>
+                  </div>
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p3-notas">
+                      Notas
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p3-notas" hidden>
+                      <ul class="notes-list">
+                        <li><strong>Salida:</strong> Aldeído, Neroli</li>
+                        <li><strong>Corazón:</strong> Iris, Cedro</li>
+                        <li><strong>Fondo:</strong> Musgo blanco, Vetiver</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p3-datos">
+                      Detalles
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p3-datos" hidden>
+                      <ul class="details-list">
+                        <li>100 ml · EDP</li>
+                        <li>Duración: 7–9 horas</li>
+                        <li>Tipo: Elegante 💼🌙</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-primary btn-full add-to-cart" data-id="3" data-name="Lumière Blanche" data-price="95.00">
+                  Agregar al carrito
+                </button>
+              </div>
+            </article>
+          </li>
+
+          <!-- ── PRODUCTO 4 ── -->
+          <li class="product-card product-card--sold-out" data-id="4" data-name="Velours Noir" data-price="110.00">
+            <article>
+              <div class="product-img-wrap">
+                <span class="product-badge badge-sold-out" aria-label="Agotado">Agotado</span>
+                <img
+                  src="./prod-velours-noir.jpg"<!-- REEMPLAZAR -->
+                  alt="Perfume Velours Noir - fragancia masculina intensa"
+                  class="product-img"
+                  loading="lazy"
+                  width="400"
+                  height="400"
+                />
+              </div>
+              <div class="product-info">
+                <span class="product-category">Hombre</span>
+                <h3 class="product-name">Velours Noir</h3>
+                <p class="product-price">$110.00</p>
+                <div class="accordion" role="list">
+                  <div class="accordion-item" role="listitem">
+                    <button class="accordion-trigger" aria-expanded="false" aria-controls="p4-fragancia">
+                      Fragancia
+                      <svg class="accordion-arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="accordion-panel" id="p4-fragancia" hidden>
+                      <p>Intensa y aterciopelada. Presencia magnética para ocasiones especiales.</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-ghost btn-full" disabled aria-disabled="true">
+                  Agotado — Avísame
+                </button>
+              </div>
+            </article>
+          </li>
+
+        </ul><!-- /.products-grid -->
+
+        <div class="section-cta">
+          <a href="./catalogo.html" class="btn btn-primary">Ver catálogo completo</a>
+        </div>
+      </div><!-- /.container -->
+    </section>
+    <!-- FIN: MÁS VENDIDOS -->
+
+
+    <!-- ============================================================
+         MÉTODOS DE PAGO
+    ============================================================ -->
+    <section class="section payments" aria-labelledby="paymentsTitle">
+      <div class="container">
+        <h2 class="section-title" id="paymentsTitle">Pagos Seguros</h2>
+        <p class="payments-subtitle">Elige el método que más te convenga</p>
+        <ul class="payment-list" role="list">
+
+          <!-- Transferencia bancaria -->
+          <li class="payment-item">
+            <div class="payment-icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                <rect x="2" y="5" width="20" height="14" rx="2"/>
+                <line x1="2" y1="10" x2="22" y2="10"/>
+                <line x1="6" y1="15" x2="10" y2="15"/>
+                <line x1="13" y1="15" x2="17" y2="15"/>
+              </svg>
+            </div>
+            <span>Transferencia<br/>Bancaria</span>
+          </li>
+
+          <!-- Deuna! -->
+          <li class="payment-item">
+            <div class="payment-icon-wrap" aria-hidden="true">
+              <!-- Ícono Deuna! — letra D estilizada -->
+              <svg width="36" height="36" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+                <rect width="40" height="40" rx="10" fill="#FF4713"/>
+                <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="22" fill="white">D!</text>
+              </svg>
+            </div>
+            <span>Deuna!</span>
+          </li>
+
+          <!-- PayPal -->
+          <li class="payment-item">
+            <div class="payment-icon-wrap" aria-hidden="true">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="#003087" aria-hidden="true">
+                <path d="M7.076 21.337H2.47a.641.641 0 01-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 00-.607-.541c1.379 4.523-1.888 9.19-7.32 9.19h-2.1l-1.166 7.378h3.48c.458 0 .848-.333.92-.785l.04-.2.733-4.648.047-.256a.932.932 0 01.92-.785h.58c3.755 0 6.695-1.527 7.553-5.942.36-1.846.174-3.39-.88-4.41z"/>
+              </svg>
+            </div>
+            <span>PayPal</span>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <!-- FIN: MÉTODOS DE PAGO -->
+
+
+    <!-- ============================================================
+         RESEÑAS
+    ============================================================ -->
+    <section class="section reviews" aria-labelledby="reviewsTitle">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-eyebrow">Lo que dicen</span>
+          <h2 class="section-title" id="reviewsTitle">Opiniones Reales</h2>
+        </header>
+
+        <ul class="reviews-grid" role="list">
+
+          <li class="review-card">
+            <div class="review-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote>
+              <p>"La fragancia llegó perfectamente sellada. Es exactamente lo que buscaba, auténtica y duradera. ¡Volveré a comprar!"</p>
+            </blockquote>
+            <footer class="review-author">
+              <span class="review-name">Valentina M.</span>
+              <span class="review-location">Quito</span>
+            </footer>
+          </li>
+
+          <li class="review-card">
+            <div class="review-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote>
+              <p>"Excelente atención, me ayudaron a elegir el perfume ideal para mi esposo. Llegó en 2 días y es precioso."</p>
+            </blockquote>
+            <footer class="review-author">
+              <span class="review-name">Carolina P.</span>
+              <span class="review-location">Guayaquil</span>
+            </footer>
+          </li>
+
+          <li class="review-card">
+            <div class="review-stars" aria-label="5 estrellas">⭐⭐⭐⭐⭐</div>
+            <blockquote>
+              <p>"Compré por primera vez y quedé muy satisfecho. Precio justo, producto original, envío rápido. Los recomiendo."</p>
+            </blockquote>
+            <footer class="review-author">
+              <span class="review-name">Andrés T.</span>
+              <span class="review-location">Cuenca</span>
+            </footer>
+          </li>
+
+        </ul><!-- /.reviews-grid -->
+
+        <div class="section-cta">
+          <a
+            href="https://instagram.com/instanteinfinito"
+            class="btn btn-ghost"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver más opiniones en Instagram de Instante Infinito"
+          >
+            <!-- Icono Instagram -->
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+            Ver más opiniones en Instagram
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- FIN: RESEÑAS -->
+
+
+    <!-- ============================================================
+         SÍGUENOS
+    ============================================================ -->
+    <section class="section social-section" aria-labelledby="socialTitle">
+      <div class="container">
+        <h2 class="section-title" id="socialTitle">Síguenos</h2>
+        <p class="section-subtitle">Descubre novedades, inspiración y aromas únicos.</p>
+        <ul class="social-list" role="list">
+
+          <!-- Instagram -->
+          <li>
+            <a href="https://instagram.com/instanteinfinito" class="social-btn social-btn--instagram" target="_blank" rel="noopener noreferrer" aria-label="Instante Infinito en Instagram">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              <span>@instanteinfinito</span>
+            </a>
+          </li>
+
+          <!-- Facebook -->
+          <li>
+            <a href="https://facebook.com/instanteinfinito" class="social-btn social-btn--facebook" target="_blank" rel="noopener noreferrer" aria-label="Instante Infinito en Facebook">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span>instanteinfinito</span>
+            </a>
+          </li>
+
+          <!-- WhatsApp -->
+          <li>
+            <a href="https://wa.me/593999999999" class="social-btn social-btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Contactar a Instante Infinito por WhatsApp"><!-- REEMPLAZAR número -->
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              <span>Escríbenos</span>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+    <!-- FIN: SÍGUENOS -->
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+
+      <!-- Marca -->
+      <div class="footer-brand">
+        <a href="./index.html" class="footer-logo" aria-label="Instante Infinito – Inicio">
+          <img src="./logo.png" alt="Instante Infinito" class="footer-logo-img" loading="lazy" /><!-- REEMPLAZAR -->
+          <span class="footer-logo-name">Instante Infinito</span>
+        </a>
+        <p class="footer-brand-desc">
+          La Alquimia del Momento.<br />
+          Perfumes 100% originales en Quito, Ecuador.
+        </p>
+      </div>
+
+      <!-- Navegación -->
+      <nav class="footer-nav" aria-label="Pie de página – Navegación">
+        <h3 class="footer-nav-title">Navegación</h3>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li><a href="./catalogo.html">Catálogo</a></li>
+          <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <!-- Redes sociales -->
+      <div class="footer-social">
+        <h3 class="footer-nav-title">Síguenos</h3>
+        <ul class="footer-social-list">
+          <li>
+            <a href="https://instagram.com/instanteinfinito" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+              </svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com/instanteinfinito" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              Facebook
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/593999999999" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><!-- REEMPLAZAR número -->
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+              </svg>
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Métodos de pago -->
+      <div class="footer-payments">
+        <h3 class="footer-nav-title">Métodos de pago</h3>
+        <ul class="footer-payment-icons">
+          <li aria-label="Transferencia bancaria">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+              <rect x="2" y="5" width="20" height="14" rx="2"/>
+              <line x1="2" y1="10" x2="22" y2="10"/>
+              <line x1="6" y1="15" x2="10" y2="15"/>
+              <line x1="13" y1="15" x2="17" y2="15"/>
+            </svg>
+          </li>
+          <li aria-label="Deuna!">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <rect width="40" height="40" rx="8" fill="#FF4713"/>
+              <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia,serif" font-weight="700" font-size="18" fill="white">D!</text>
+            </svg>
+          </li>
+          <li aria-label="PayPal">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="#003087" aria-hidden="true">
+              <path d="M7.076 21.337H2.47a.641.641 0 01-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 00-.607-.541c1.379 4.523-1.888 9.19-7.32 9.19h-2.1l-1.166 7.378h3.48c.458 0 .848-.333.92-.785l.04-.2.733-4.648.047-.256a.932.932 0 01.92-.785h.58c3.755 0 6.695-1.527 7.553-5.942.36-1.846.174-3.39-.88-4.41z"/>
+            </svg>
+          </li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer-grid -->
+
+    <!-- Footer bottom -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>© 2026 <strong>Instante Infinito</strong>. Todos los derechos reservados.</p>
+        <p>Página diseñada por <a href="#" rel="noopener">Andina Web Studio</a></p>
+      </div>
+    </div>
+  </footer>
+  <!-- FIN: FOOTER -->
+
+
+  <!-- ============================================================
+       BOTÓN FLOTANTE WHATSAPP
+  ============================================================ -->
+  <a
+    href="https://wa.me/593999999999?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20sus%20perfumes"<!-- REEMPLAZAR número -->
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+    <span class="whatsapp-float-label">¿Necesitas ayuda?</span>
+  </a>
+
+
+  <!-- ============================================================
+       LIGHTBOX / ZOOM
+  ============================================================ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Imagen ampliada" hidden>
+    <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar imagen">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
+  <div class="lightbox-backdrop" id="lightboxBackdrop" aria-hidden="true" hidden></div>
+  <!-- FIN: LIGHTBOX -->
+
+
+  <!-- JS -->
+  <script src="./app.js" defer></script>
+
+</body>
+</html>
