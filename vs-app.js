@@ -78,8 +78,11 @@ function buildSplashCard(s, index = 0) {
   const foto = s.fotos?.[0] || fbVs(s.id);
   const waMsg = waVs(CONFIG_VS.whatsapp, `Hola, me interesa el Body Mist ${s.nombre} de Victoria's Secret. ¿Tienen disponibilidad?`);
 
-  const badgeHTML = s.estado === 'hot' ? `<span class="splash-card__badge splash-card__badge--hot">Top</span>`
-                  : s.estado === 'new' ? `<span class="splash-card__badge splash-card__badge--new">Nuevo</span>`
+  const badgeHTML = s.agotado ? `<span class="splash-card__badge splash-card__badge--soldout">Agotado</span>`
+                  : s.estado === 'hot'     ? `<span class="splash-card__badge splash-card__badge--hot">Top</span>`
+                  : s.estado === 'new'     ? `<span class="splash-card__badge splash-card__badge--new">Nuevo</span>`
+                  : s.estado === 'offer'   ? `<span class="splash-card__badge splash-card__badge--offer">Oferta</span>`
+                  : s.estado === 'soldout' ? `<span class="splash-card__badge splash-card__badge--soldout">Agotado</span>`
                   : '';
 
   const priceHTML = s.precioAntes
@@ -92,7 +95,7 @@ function buildSplashCard(s, index = 0) {
   card.style.setProperty('--d', index % 4);
   card.style.animationDelay = `${index * 60}ms`;
   card.dataset.id     = s.id;
-  card.dataset.estado = s.estado || 'disponible';
+  card.dataset.estado = s.agotado ? 'agotado' : (s.estado || 'disponible');
 
   card.innerHTML = `
     <div class="splash-card__img-wrap" role="button" tabindex="0"

@@ -202,6 +202,16 @@
   background: linear-gradient(135deg, #7c3a5a 0%, #b0527a 100%);
   color: #fff;
 }
+/* Oferta VS — rojo */
+.splash-card__badge--offer {
+  background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+  color: #fff;
+}
+/* Agotado VS — gris */
+.splash-card__badge--soldout {
+  background: linear-gradient(135deg, #6b7280 0%, #4b5563 100%);
+  color: rgba(255,255,255,0.85);
+}
 
 /* Info */
 .splash-card__info {
