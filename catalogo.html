@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colección — Instante Infinito | Perfumes Originales Ecuador</title>
+  <meta name="description" content="Explora nuestra colección completa de 20 perfumes originales importados. Hombre, mujer y unisex. Envíos a todo Ecuador." />
+  <link rel="canonical" href="https://instanteinfinito.com/catalogo.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Colección — Instante Infinito" />
+  <meta property="og:description" content="20 fragancias originales importadas. Hombre, mujer y unisex." />
+  <meta property="og:image" content="img/og-image.jpg" />
+  <meta property="og:url" content="https://instanteinfinito.com/catalogo.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ================================================
+     BANNER SUPERIOR
+================================================ -->
+<div class="top-banner" id="topBanner">
+  <div class="top-banner__text">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    Envíos a todo Ecuador &nbsp;·&nbsp; Productos 100% originales &nbsp;·&nbsp;
+    <a href="https://wa.me/593962277374?text=Hola%2C%20quisiera%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener" class="top-banner__link">Escríbenos por WhatsApp</a>
+  </div>
+  <button class="top-banner__close" id="closeBanner" aria-label="Cerrar banner">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+</div>
+
+<!-- ================================================
+     HEADER
+================================================ -->
+<header class="header" id="header">
+  <div class="header__inner container">
+    <a href="index.html" class="header__logo" aria-label="Instante Infinito — Inicio">
+      <img src="img/logo.png" alt="Instante Infinito" class="header__logo-img"
+           onerror="this.style.display='none'; document.getElementById('logoSvg').style.display='flex';" />
+      <span class="header__logo-svg" id="logoSvg" style="display:none;">
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none">
+          <path d="M16 2C16 2 12 8 8 10C8 10 14 10 16 16C18 10 24 10 24 10C20 8 16 2 16 2Z" fill="#a8894f"/>
+          <path d="M16 16C16 16 12 22 8 22C8 22 14 22 16 28C18 22 24 22 24 22C20 22 16 16 16 16Z" fill="#a8894f" opacity="0.55"/>
+        </svg>
+        <span class="header__logo-text">Instante Infinito</span>
+      </span>
+    </a>
+    <nav class="header__nav" aria-label="Navegación principal">
+      <a href="index.html"    class="header__nav-link">Inicio</a>
+      <a href="catalogo.html" class="header__nav-link header__nav-link--active">Colección</a>
+      <a href="contacto.html" class="header__nav-link">Contacto</a>
+    </nav>
+    <div class="header__actions">
+      <button class="header__cart-btn" id="cartBtn" aria-label="Abrir carrito">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 01-8 0"/>
+        </svg>
+        <span class="header__cart-badge" id="cartBadge">0</span>
+      </button>
+      <button class="header__hamburger" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="header__mobile-nav" id="mobileNav" aria-label="Menú móvil">
+    <a href="index.html"    class="header__mobile-link">Inicio</a>
+    <a href="catalogo.html" class="header__mobile-link header__mobile-link--active">Colección</a>
+    <a href="contacto.html" class="header__mobile-link">Contacto</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ================================================
+     PAGE HERO
+================================================ -->
+<section class="page-hero">
+  <div class="container">
+    <div class="page-hero__inner reveal-up">
+      <p class="eyebrow">Catálogo completo</p>
+      <h1 class="page-hero__title">Nuestra <em>colección</em></h1>
+      <p class="page-hero__sub">20 fragancias originales importadas · Hombre, Mujer &amp; Unisex</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================================================
+     BARRA DE FILTROS (sticky)
+     Los filtros leen data-category y data-status
+     de cada tarjeta — no requieren edición en JS.
+     data-category : hombre | mujer | unisex
+     data-status   : disponible | oferta | agotado
+================================================ -->
+<div class="filter-bar" id="filterBar">
+  <div class="container">
+    <div class="filter-bar__inner">
+
+      <div class="filter-bar__group">
+        <span class="filter-bar__label">Categoría</span>
+        <div class="filter-bar__pills" role="group" aria-label="Filtrar por categoría">
+          <button class="fpill fpill--on" data-filter="cat" data-val="todos">Todos</button>
+          <button class="fpill" data-filter="cat" data-val="hombre">Hombre</button>
+          <button class="fpill" data-filter="cat" data-val="mujer">Mujer</button>
+          <button class="fpill" data-filter="cat" data-val="unisex">Unisex</button>
+        </div>
+      </div>
+
+      <div class="filter-bar__group">
+        <span class="filter-bar__label">Estado</span>
+        <div class="filter-bar__pills" role="group" aria-label="Filtrar por estado">
+          <button class="fpill fpill--on" data-filter="status" data-val="todos">Todos</button>
+          <button class="fpill" data-filter="status" data-val="disponible">Disponibles</button>
+          <button class="fpill" data-filter="status" data-val="oferta">En oferta</button>
+        </div>
+      </div>
+
+      <div class="filter-bar__count">
+        <span id="filterCount">20</span> fragancias
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================================================
+     GRID DE 20 PRODUCTOS
+     · Productos 1-4  → modales definidos en index.html
+                         y también abajo en este archivo.
+     · Productos 5-20 → modales generados por app.js
+                         al primer clic (desde PRODUCTS_DATA).
+
+     CÓMO EDITAR CADA TARJETA:
+     Cambia los atributos data-* del <article>.
+     Ver guía de administración para referencia completa.
+================================================ -->
+<section class="catalog-section">
+  <div class="container">
+
+    <!-- Mensaje sin resultados -->
+    <div class="no-results" id="noResults" style="display:none;">
+      <p>No hay fragancias con estos filtros.</p>
+      <button class="btn btn--outline btn--sm" id="clearFilters">Ver todos los perfumes</button>
+    </div>
+
+    <div class="products-grid products-grid--catalog" id="catalogGrid">
+
+      <!-- ===== PRODUCTO 1 ===== -->
+      <article class="product-card reveal-up" style="--d:0"
+        data-id="1" data-name="[Nombre del Perfume 1]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-1/1.jpg,img/products/product-1/2.jpg,img/products/product-1/3.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="hot" data-badge-text="Más vendido"
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--hot">Más vendido</span>
+          <img class="product-card__img" src="img/products/product-1/1.jpg" alt="[Nombre del Perfume 1]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 1]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-1">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="1"
+                data-name="[Nombre del Perfume 1]"
+                data-price="0.00"
+                data-img="img/products/product-1/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%201%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 2 ===== -->
+      <article class="product-card reveal-up" style="--d:1"
+        data-id="2" data-name="[Nombre del Perfume 2]"
+        data-price="0.00" data-price-original=""
+        data-category="mujer"
+        data-imgs="img/products/product-2/1.jpg,img/products/product-2/2.jpg,img/products/product-2/3.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="new" data-badge-text="Nuevo"
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--new">Nuevo</span>
+          <img class="product-card__img" src="img/products/product-2/1.jpg" alt="[Nombre del Perfume 2]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 2]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-2">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="2"
+                data-name="[Nombre del Perfume 2]"
+                data-price="0.00"
+                data-img="img/products/product-2/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%202%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 3 ===== -->
+      <article class="product-card reveal-up" style="--d:2"
+        data-id="3" data-name="[Nombre del Perfume 3]"
+        data-price="0.00" data-price-original="0.00"
+        data-category="unisex"
+        data-imgs="img/products/product-3/1.jpg,img/products/product-3/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="offer" data-badge-text="Oferta"
+        data-low-stock="true" data-soldout="false" data-status="oferta">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--offer">Oferta</span>
+          <span class="product-card__low-stock">Pocas unidades</span>
+          <img class="product-card__img" src="img/products/product-3/1.jpg" alt="[Nombre del Perfume 3]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543726969-a1da85a6d334?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--unisex">Unisex</span>
+          <h3 class="product-card__name">[Nombre del Perfume 3]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row">
+            <span class="product-card__price-old">$0.00</span>
+            <span class="product-card__price">$0.00</span>
+          </div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-3">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="3"
+                data-name="[Nombre del Perfume 3]"
+                data-price="0.00"
+                data-img="img/products/product-3/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%203%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 4 ===== -->
+      <article class="product-card reveal-up" style="--d:3"
+        data-id="4" data-name="[Nombre del Perfume 4]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-4/1.jpg,img/products/product-4/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-4/1.jpg" alt="[Nombre del Perfume 4]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 4]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-4">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="4"
+                data-name="[Nombre del Perfume 4]"
+                data-price="0.00"
+                data-img="img/products/product-4/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%204%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 5 ===== -->
+      <!-- A partir de aquí los modales los genera app.js automáticamente -->
+      <article class="product-card reveal-up" style="--d:0"
+        data-id="5" data-name="[Nombre del Perfume 5]"
+        data-price="0.00" data-price-original=""
+        data-category="mujer"
+        data-imgs="img/products/product-5/1.jpg,img/products/product-5/2.jpg,img/products/product-5/3.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-5/1.jpg" alt="[Nombre del Perfume 5]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1587017539504-67cfbddac569?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 5]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-5">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="5"
+                data-name="[Nombre del Perfume 5]"
+                data-price="0.00"
+                data-img="img/products/product-5/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%205%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 6 ===== -->
+      <article class="product-card reveal-up" style="--d:1"
+        data-id="6" data-name="[Nombre del Perfume 6]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-6/1.jpg,img/products/product-6/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="new" data-badge-text="Nuevo"
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--new">Nuevo</span>
+          <img class="product-card__img" src="img/products/product-6/1.jpg" alt="[Nombre del Perfume 6]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541643600914-78b084683702?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 6]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-6">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="6"
+                data-name="[Nombre del Perfume 6]"
+                data-price="0.00"
+                data-img="img/products/product-6/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%206%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 7 ===== -->
+      <article class="product-card reveal-up" style="--d:2"
+        data-id="7" data-name="[Nombre del Perfume 7]"
+        data-price="0.00" data-price-original=""
+        data-category="unisex"
+        data-imgs="img/products/product-7/1.jpg,img/products/product-7/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="true" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <span class="product-card__low-stock">Pocas unidades</span>
+          <img class="product-card__img" src="img/products/product-7/1.jpg" alt="[Nombre del Perfume 7]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--unisex">Unisex</span>
+          <h3 class="product-card__name">[Nombre del Perfume 7]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-7">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="7"
+                data-name="[Nombre del Perfume 7]"
+                data-price="0.00"
+                data-img="img/products/product-7/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%207%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 8 ===== -->
+      <article class="product-card reveal-up" style="--d:3"
+        data-id="8" data-name="[Nombre del Perfume 8]"
+        data-price="0.00" data-price-original="0.00"
+        data-category="mujer"
+        data-imgs="img/products/product-8/1.jpg,img/products/product-8/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="offer" data-badge-text="Oferta"
+        data-low-stock="false" data-soldout="false" data-status="oferta">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--offer">Oferta</span>
+          <img class="product-card__img" src="img/products/product-8/1.jpg" alt="[Nombre del Perfume 8]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1519638399535-1b036603ac77?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 8]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row">
+            <span class="product-card__price-old">$0.00</span>
+            <span class="product-card__price">$0.00</span>
+          </div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-8">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="8"
+                data-name="[Nombre del Perfume 8]"
+                data-price="0.00"
+                data-img="img/products/product-8/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%208%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 9 ===== -->
+      <article class="product-card reveal-up" style="--d:0"
+        data-id="9" data-name="[Nombre del Perfume 9]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-9/1.jpg,img/products/product-9/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="hot" data-badge-text="Más vendido"
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--hot">Más vendido</span>
+          <img class="product-card__img" src="img/products/product-9/1.jpg" alt="[Nombre del Perfume 9]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1545579133-99bb5ab189bd?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 9]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-9">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="9"
+                data-name="[Nombre del Perfume 9]"
+                data-price="0.00"
+                data-img="img/products/product-9/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%209%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 10 ===== -->
+      <article class="product-card reveal-up" style="--d:1"
+        data-id="10" data-name="[Nombre del Perfume 10]"
+        data-price="0.00" data-price-original=""
+        data-category="unisex"
+        data-imgs="img/products/product-10/1.jpg,img/products/product-10/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-10/1.jpg" alt="[Nombre del Perfume 10]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563170351-be82bc888aa4?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--unisex">Unisex</span>
+          <h3 class="product-card__name">[Nombre del Perfume 10]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-10">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="10"
+                data-name="[Nombre del Perfume 10]"
+                data-price="0.00"
+                data-img="img/products/product-10/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2010%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 11 — EJEMPLO AGOTADO ===== -->
+      <article class="product-card reveal-up" style="--d:2"
+        data-id="11" data-name="[Nombre del Perfume 11]"
+        data-price="0.00" data-price-original=""
+        data-category="mujer"
+        data-imgs="img/products/product-11/1.jpg,img/products/product-11/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="soldout" data-badge-text="Agotado"
+        data-low-stock="false" data-soldout="true" data-status="agotado">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--soldout">Agotado</span>
+          <div class="product-card__soldout-overlay">Agotado</div>
+          <img class="product-card__img" src="img/products/product-11/1.jpg" alt="[Nombre del Perfume 11]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1599305090598-fe179d501227?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 11]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-11" style="grid-column:1/-1">Avisar disponibilidad</button>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 12 ===== -->
+      <article class="product-card reveal-up" style="--d:3"
+        data-id="12" data-name="[Nombre del Perfume 12]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-12/1.jpg,img/products/product-12/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-12/1.jpg" alt="[Nombre del Perfume 12]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1547887538-e3a2f32cb1cc?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 12]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-12">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="12"
+                data-name="[Nombre del Perfume 12]"
+                data-price="0.00"
+                data-img="img/products/product-12/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2012%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 13 ===== -->
+      <article class="product-card reveal-up" style="--d:0"
+        data-id="13" data-name="[Nombre del Perfume 13]"
+        data-price="0.00" data-price-original=""
+        data-category="unisex"
+        data-imgs="img/products/product-13/1.jpg,img/products/product-13/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-13/1.jpg" alt="[Nombre del Perfume 13]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1524638431109-93d95c9f5b11?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--unisex">Unisex</span>
+          <h3 class="product-card__name">[Nombre del Perfume 13]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-13">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="13"
+                data-name="[Nombre del Perfume 13]"
+                data-price="0.00"
+                data-img="img/products/product-13/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2013%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 14 ===== -->
+      <article class="product-card reveal-up" style="--d:1"
+        data-id="14" data-name="[Nombre del Perfume 14]"
+        data-price="0.00" data-price-original=""
+        data-category="mujer"
+        data-imgs="img/products/product-14/1.jpg,img/products/product-14/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-14/1.jpg" alt="[Nombre del Perfume 14]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 14]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-14">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="14"
+                data-name="[Nombre del Perfume 14]"
+                data-price="0.00"
+                data-img="img/products/product-14/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2014%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 15 ===== -->
+      <article class="product-card reveal-up" style="--d:2"
+        data-id="15" data-name="[Nombre del Perfume 15]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-15/1.jpg,img/products/product-15/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-15/1.jpg" alt="[Nombre del Perfume 15]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1590156562745-5d53cede9ccb?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 15]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-15">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="15"
+                data-name="[Nombre del Perfume 15]"
+                data-price="0.00"
+                data-img="img/products/product-15/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2015%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 16 ===== -->
+      <article class="product-card reveal-up" style="--d:3"
+        data-id="16" data-name="[Nombre del Perfume 16]"
+        data-price="0.00" data-price-original="0.00"
+        data-category="unisex"
+        data-imgs="img/products/product-16/1.jpg,img/products/product-16/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="offer" data-badge-text="Oferta"
+        data-low-stock="false" data-soldout="false" data-status="oferta">
+        <div class="product-card__img-wrap">
+          <span class="product-card__badge product-card__badge--offer">Oferta</span>
+          <img class="product-card__img" src="img/products/product-16/1.jpg" alt="[Nombre del Perfume 16]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1612817288484-6f916006741a?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--unisex">Unisex</span>
+          <h3 class="product-card__name">[Nombre del Perfume 16]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row">
+            <span class="product-card__price-old">$0.00</span>
+            <span class="product-card__price">$0.00</span>
+          </div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-16">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="16"
+                data-name="[Nombre del Perfume 16]"
+                data-price="0.00"
+                data-img="img/products/product-16/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2016%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 17 ===== -->
+      <article class="product-card reveal-up" style="--d:0"
+        data-id="17" data-name="[Nombre del Perfume 17]"
+        data-price="0.00" data-price-original=""
+        data-category="mujer"
+        data-imgs="img/products/product-17/1.jpg,img/products/product-17/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-17/1.jpg" alt="[Nombre del Perfume 17]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1583467875263-d50b0e4cab35?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 17]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-17">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="17"
+                data-name="[Nombre del Perfume 17]"
+                data-price="0.00"
+                data-img="img/products/product-17/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2017%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 18 ===== -->
+      <article class="product-card reveal-up" style="--d:1"
+        data-id="18" data-name="[Nombre del Perfume 18]"
+        data-price="0.00" data-price-original=""
+        data-category="hombre"
+        data-imgs="img/products/product-18/1.jpg,img/products/product-18/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-18/1.jpg" alt="[Nombre del Perfume 18]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat">Hombre</span>
+          <h3 class="product-card__name">[Nombre del Perfume 18]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-18">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="18"
+                data-name="[Nombre del Perfume 18]"
+                data-price="0.00"
+                data-img="img/products/product-18/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2018%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 19 ===== -->
+      <article class="product-card reveal-up" style="--d:2"
+        data-id="19" data-name="[Nombre del Perfume 19]"
+        data-price="0.00" data-price-original=""
+        data-category="unisex"
+        data-imgs="img/products/product-19/1.jpg,img/products/product-19/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-19/1.jpg" alt="[Nombre del Perfume 19]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1631385739901-e3d0e9c0d57e?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--unisex">Unisex</span>
+          <h3 class="product-card__name">[Nombre del Perfume 19]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-19">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="19"
+                data-name="[Nombre del Perfume 19]"
+                data-price="0.00"
+                data-img="img/products/product-19/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2019%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+      <!-- ===== PRODUCTO 20 ===== -->
+      <article class="product-card reveal-up" style="--d:3"
+        data-id="20" data-name="[Nombre del Perfume 20]"
+        data-price="0.00" data-price-original=""
+        data-category="mujer"
+        data-imgs="img/products/product-20/1.jpg,img/products/product-20/2.jpg"
+        data-family="[Familia Olfativa]"
+        data-badge="" data-badge-text=""
+        data-low-stock="false" data-soldout="false" data-status="disponible">
+        <div class="product-card__img-wrap">
+          <img class="product-card__img" src="img/products/product-20/1.jpg" alt="[Nombre del Perfume 20]" loading="lazy"
+               onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&q=80'" />
+        </div>
+        <div class="product-card__info">
+          <span class="product-card__cat product-card__cat--mujer">Mujer</span>
+          <h3 class="product-card__name">[Nombre del Perfume 20]</h3>
+          <p class="product-card__brand">[Marca / Casa]</p>
+          <p class="product-card__family"><em>[Familia Olfativa]</em></p>
+          <div class="product-card__price-row"><span class="product-card__price">$0.00</span></div>
+          <div class="product-card__actions">
+              <button class="btn product-card__btn-details" data-open="modal-20">Detalles</button>
+              <button class="btn product-card__btn-cart"
+                data-id="20"
+                data-name="[Nombre del Perfume 20]"
+                data-price="0.00"
+                data-img="img/products/product-20/1.jpg">Carrito</button>
+              <a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%2020%5D.%20%C2%BFTienen%20disponibilidad%3F" target="_blank" rel="noopener"
+                class="btn product-card__btn-wa"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+            </div>
+        </div>
+      </article>
+
+    </div><!-- /products-grid -->
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band reveal-up">
+  <div class="container">
+    <div class="cta-band__inner">
+      <div class="cta-band__copy">
+        <p class="eyebrow eyebrow--light">¿No encuentras lo que buscas?</p>
+        <h2 class="cta-band__title">Te ayudamos a elegir<br><em>tu fragancia ideal</em></h2>
+        <p class="cta-band__text">Cuéntanos tu estilo, la ocasión o un perfume que ya amabas.</p>
+      </div>
+      <div class="cta-band__action">
+        <a href="https://wa.me/593962277374?text=Hola%2C%20necesito%20ayuda%20para%20elegir%20un%20perfume" target="_blank" rel="noopener" class="btn btn--wa btn--wa-lg">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Pedir asesoría por WhatsApp
+        </a>
+        <p class="cta-band__note">(+593) 962 277 374 · Lun–Sáb 9h–19h</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================================================
+     FOOTER
+================================================ -->
+<footer class="footer">
+  <div class="footer__top container">
+    <div class="footer__grid">
+      <div class="footer__col footer__col--brand">
+        <a href="index.html" aria-label="Instante Infinito">
+          <img src="img/logo.png" alt="Instante Infinito" class="footer__logo"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+          <span class="footer__logo-text" style="display:none;">Instante Infinito</span>
+        </a>
+        <p class="footer__slogan">La Alquimia del Momento</p>
+        <p class="footer__desc">Perfumes originales importados, seleccionados para quienes entienden el poder de una fragancia.</p>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Páginas</h3>
+        <ul class="footer__links">
+          <li><a href="index.html" class="footer__link">Inicio</a></li>
+          <li><a href="catalogo.html" class="footer__link">Colección</a></li>
+          <li><a href="contacto.html" class="footer__link">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Síguenos</h3>
+        <ul class="footer__links">
+          <li><a href="#" class="footer__link footer__link--social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg> Instagram <span class="footer__soon">Próximamente</span></a></li>
+          <li><a href="#" class="footer__link footer__link--social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook <span class="footer__soon">Próximamente</span></a></li>
+          <li><a href="https://wa.me/593962277374" target="_blank" rel="noopener" class="footer__link footer__link--social"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> WhatsApp</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h3 class="footer__col-title">Pagos aceptados</h3>
+        <ul class="footer__links">
+          <li><span class="footer__payment">💳 Transferencia bancaria</span></li>
+          <li><span class="footer__payment">📱 Deuna</span></li>
+          <li><span class="footer__payment">🌐 PayPal</span></li>
+        </ul>
+        <p class="footer__payment-note">Coordinamos el pago por WhatsApp</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <div class="container footer__bottom-inner">
+      <p class="footer__copy">© 2025 Instante Infinito. Todos los derechos reservados.</p>
+      <p class="footer__credit">Diseño por <a href="https://andinawebstudio.com" target="_blank" rel="noopener" class="footer__credit-link">Andina Web Studio</a></p>
+    </div>
+  </div>
+</footer>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/593962277374?text=Hola%2C%20vi%20su%20cat%C3%A1logo%20y%20tengo%20una%20consulta"
+   target="_blank" rel="noopener" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="wa-float__text">¿Necesitas ayuda?</span>
+</a>
+
+<!-- CARRITO -->
+<div class="cart-overlay" id="cartOverlay"></div>
+<aside class="cart-drawer" id="cartDrawer" aria-label="Carrito de compras">
+  <div class="cart-drawer__head">
+    <h2 class="cart-drawer__title">Tu selección</h2>
+    <button class="cart-drawer__close" id="cartClose" aria-label="Cerrar carrito">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-drawer__body" id="cartBody">
+    <div class="cart-empty" id="cartEmpty">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      <p>Tu carrito está vacío</p>
+      <a href="catalogo.html" class="btn btn--outline btn--sm">Ver colección</a>
+    </div>
+  </div>
+  <div class="cart-drawer__foot" id="cartFoot" style="display:none;">
+    <div class="cart-total">
+      <span>Total estimado</span>
+      <span class="cart-total__val" id="cartTotal">$0.00</span>
+    </div>
+    <button class="btn btn--wa cart-wa-btn" id="cartWaBtn">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Comprar por WhatsApp
+    </button>
+    <p class="cart-note">Precios referenciales. El pedido se confirma por WhatsApp.</p>
+  </div>
+</aside>
+
+<!-- TOAST -->
+<div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+<!-- Modales 1-4 también disponibles en este archivo -->
+<!-- Los modales 5-20 los genera app.js al primer clic -->
+<div class="modal-overlay" id="modal-1" role="dialog" aria-modal="true" aria-label="Detalle de [Nombre del Perfume 1]">
+  <div class="modal">
+    <button class="modal__close" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal__gallery">
+      <div class="modal__main-img-wrap"><img class="modal__main-img" src="img/products/product-1/1.jpg" alt="[Nombre del Perfume 1]" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=600&q=80'" /></div>
+      <div class="modal__thumbs">
+        <button class="modal__thumb modal__thumb--on" data-src="img/products/product-1/1.jpg"><img src="img/products/product-1/1.jpg" alt="Vista 1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1523293182086-7651a899d37f?w=120&q=70'" /></button>
+        <button class="modal__thumb" data-src="img/products/product-1/2.jpg"><img src="img/products/product-1/2.jpg" alt="Vista 2" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=120&q=70'" /></button>
+        <button class="modal__thumb modal__thumb--auth" data-src="img/auth.jpg"><img src="img/auth.jpg" alt="Autenticidad" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=120&q=70'" /><span class="modal__thumb-auth-label">Auth.</span></button>
+      </div>
+    </div>
+    <div class="modal__info">
+      <span class="modal__cat modal__cat--hombre">Hombre</span>
+      <h2 class="modal__name">[Nombre del Perfume 1]</h2>
+      <p class="modal__brand">[Marca / Casa]</p>
+      <div class="modal__price-row"><span class="modal__price">$0.00</span></div>
+      <div class="modal__meta"><div class="modal__meta-item"><span class="modal__meta-label">Concentración</span><span class="modal__meta-val">[EDP / EDT]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Familia</span><span class="modal__meta-val">[Familia Olfativa]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Lanzamiento</span><span class="modal__meta-val">[Año]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Género</span><span class="modal__meta-val">Hombre</span></div></div>
+      <div class="modal__pyramid"><h4 class="modal__section-label">Pirámide olfativa</h4><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Salida</span><div class="modal__notes"><span class="note">[Nota 1]</span><span class="note">[Nota 2]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Corazón</span><div class="modal__notes"><span class="note">[Nota 3]</span><span class="note">[Nota 4]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Fondo</span><div class="modal__notes"><span class="note">[Nota 5]</span><span class="note">[Nota 6]</span></div></div></div>
+      <div class="modal__bars"><div class="modal__bar-row"><span class="modal__bar-label">Longevidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="4"></div></div><span class="modal__bar-num">4/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Proyección</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="3"></div></div><span class="modal__bar-num">3/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Intensidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="4"></div></div><span class="modal__bar-num">4/5</span></div></div>
+      <div class="modal__occasions"><h4 class="modal__section-label">Ideal para</h4><div class="modal__occasion-chips"><span class="chip">🌙 Noche</span><span class="chip">👔 Formal</span><span class="chip">❄️ Invierno</span></div></div>
+      <div class="modal__desc-wrap"><p class="modal__desc" id="cdesc-1">[Descripción del perfume.]</p><button class="modal__desc-toggle" data-desc="cdesc-1">Leer más</button></div>
+      <div class="modal__actions"><button class="btn btn--dark modal__add-cart" data-id="1" data-name="[Nombre del Perfume 1]" data-price="0.00" data-img="img/products/product-1/1.jpg">Agregar al carrito</button><a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%201%5D" target="_blank" rel="noopener" class="btn btn--wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultar por WhatsApp</a></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-2" role="dialog" aria-modal="true" aria-label="Detalle de [Nombre del Perfume 2]">
+  <div class="modal">
+    <button class="modal__close" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal__gallery"><div class="modal__main-img-wrap"><img class="modal__main-img" src="img/products/product-2/1.jpg" alt="[Nombre del Perfume 2]" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80'" /></div><div class="modal__thumbs"><button class="modal__thumb modal__thumb--on" data-src="img/products/product-2/1.jpg"><img src="img/products/product-2/1.jpg" alt="Vista 1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=120&q=70'" /></button><button class="modal__thumb modal__thumb--auth" data-src="img/auth.jpg"><img src="img/auth.jpg" alt="Autenticidad" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=120&q=70'" /><span class="modal__thumb-auth-label">Auth.</span></button></div></div>
+    <div class="modal__info"><span class="modal__cat modal__cat--mujer">Mujer</span><h2 class="modal__name">[Nombre del Perfume 2]</h2><p class="modal__brand">[Marca / Casa]</p><div class="modal__price-row"><span class="modal__price">$0.00</span></div><div class="modal__meta"><div class="modal__meta-item"><span class="modal__meta-label">Concentración</span><span class="modal__meta-val">[EDP / EDT]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Familia</span><span class="modal__meta-val">[Familia Olfativa]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Lanzamiento</span><span class="modal__meta-val">[Año]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Género</span><span class="modal__meta-val">Mujer</span></div></div><div class="modal__pyramid"><h4 class="modal__section-label">Pirámide olfativa</h4><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Salida</span><div class="modal__notes"><span class="note">[Nota 1]</span><span class="note">[Nota 2]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Corazón</span><div class="modal__notes"><span class="note">[Nota 3]</span><span class="note">[Nota 4]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Fondo</span><div class="modal__notes"><span class="note">[Nota 5]</span></div></div></div><div class="modal__bars"><div class="modal__bar-row"><span class="modal__bar-label">Longevidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="5"></div></div><span class="modal__bar-num">5/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Proyección</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="4"></div></div><span class="modal__bar-num">4/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Intensidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="3"></div></div><span class="modal__bar-num">3/5</span></div></div><div class="modal__occasions"><h4 class="modal__section-label">Ideal para</h4><div class="modal__occasion-chips"><span class="chip">🌸 Primavera</span><span class="chip">☀️ Día</span><span class="chip">🎀 Regalo</span></div></div><div class="modal__desc-wrap"><p class="modal__desc" id="cdesc-2">[Descripción del perfume.]</p><button class="modal__desc-toggle" data-desc="cdesc-2">Leer más</button></div><div class="modal__actions"><button class="btn btn--dark modal__add-cart" data-id="2" data-name="[Nombre del Perfume 2]" data-price="0.00" data-img="img/products/product-2/1.jpg">Agregar al carrito</button><a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%202%5D" target="_blank" rel="noopener" class="btn btn--wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultar por WhatsApp</a></div></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-3" role="dialog" aria-modal="true" aria-label="Detalle de [Nombre del Perfume 3]">
+  <div class="modal">
+    <button class="modal__close" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal__gallery"><div class="modal__main-img-wrap"><img class="modal__main-img" src="img/products/product-3/1.jpg" alt="[Nombre del Perfume 3]" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543726969-a1da85a6d334?w=600&q=80'" /></div><div class="modal__thumbs"><button class="modal__thumb modal__thumb--on" data-src="img/products/product-3/1.jpg"><img src="img/products/product-3/1.jpg" alt="Vista 1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543726969-a1da85a6d334?w=120&q=70'" /></button><button class="modal__thumb modal__thumb--auth" data-src="img/auth.jpg"><img src="img/auth.jpg" alt="Autenticidad" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=120&q=70'" /><span class="modal__thumb-auth-label">Auth.</span></button></div></div>
+    <div class="modal__info"><span class="modal__cat modal__cat--unisex">Unisex</span><h2 class="modal__name">[Nombre del Perfume 3]</h2><p class="modal__brand">[Marca / Casa]</p><div class="modal__price-row"><span class="modal__price-old">$0.00</span><span class="modal__price">$0.00</span></div><div class="modal__meta"><div class="modal__meta-item"><span class="modal__meta-label">Concentración</span><span class="modal__meta-val">[EDP / EDT]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Familia</span><span class="modal__meta-val">[Familia Olfativa]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Lanzamiento</span><span class="modal__meta-val">[Año]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Género</span><span class="modal__meta-val">Unisex</span></div></div><div class="modal__pyramid"><h4 class="modal__section-label">Pirámide olfativa</h4><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Salida</span><div class="modal__notes"><span class="note">[Nota 1]</span><span class="note">[Nota 2]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Corazón</span><div class="modal__notes"><span class="note">[Nota 3]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Fondo</span><div class="modal__notes"><span class="note">[Nota 4]</span></div></div></div><div class="modal__bars"><div class="modal__bar-row"><span class="modal__bar-label">Longevidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="3"></div></div><span class="modal__bar-num">3/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Proyección</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="3"></div></div><span class="modal__bar-num">3/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Intensidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="2"></div></div><span class="modal__bar-num">2/5</span></div></div><div class="modal__occasions"><h4 class="modal__section-label">Ideal para</h4><div class="modal__occasion-chips"><span class="chip">🌿 Casual</span><span class="chip">☀️ Día</span><span class="chip">🎁 Regalo</span></div></div><div class="modal__desc-wrap"><p class="modal__desc" id="cdesc-3">[Descripción del perfume.]</p><button class="modal__desc-toggle" data-desc="cdesc-3">Leer más</button></div><div class="modal__actions"><button class="btn btn--dark modal__add-cart" data-id="3" data-name="[Nombre del Perfume 3]" data-price="0.00" data-img="img/products/product-3/1.jpg">Agregar al carrito</button><a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%203%5D" target="_blank" rel="noopener" class="btn btn--wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultar por WhatsApp</a></div></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modal-4" role="dialog" aria-modal="true" aria-label="Detalle de [Nombre del Perfume 4]">
+  <div class="modal">
+    <button class="modal__close" aria-label="Cerrar"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+    <div class="modal__gallery"><div class="modal__main-img-wrap"><img class="modal__main-img" src="img/products/product-4/1.jpg" alt="[Nombre del Perfume 4]" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=600&q=80'" /></div><div class="modal__thumbs"><button class="modal__thumb modal__thumb--on" data-src="img/products/product-4/1.jpg"><img src="img/products/product-4/1.jpg" alt="Vista 1" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=120&q=70'" /></button><button class="modal__thumb modal__thumb--auth" data-src="img/auth.jpg"><img src="img/auth.jpg" alt="Autenticidad" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1585386959984-a4155224a1ad?w=120&q=70'" /><span class="modal__thumb-auth-label">Auth.</span></button></div></div>
+    <div class="modal__info"><span class="modal__cat modal__cat--hombre">Hombre</span><h2 class="modal__name">[Nombre del Perfume 4]</h2><p class="modal__brand">[Marca / Casa]</p><div class="modal__price-row"><span class="modal__price">$0.00</span></div><div class="modal__meta"><div class="modal__meta-item"><span class="modal__meta-label">Concentración</span><span class="modal__meta-val">[EDP / EDT]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Familia</span><span class="modal__meta-val">[Familia Olfativa]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Lanzamiento</span><span class="modal__meta-val">[Año]</span></div><div class="modal__meta-item"><span class="modal__meta-label">Género</span><span class="modal__meta-val">Hombre</span></div></div><div class="modal__pyramid"><h4 class="modal__section-label">Pirámide olfativa</h4><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Salida</span><div class="modal__notes"><span class="note">[Nota 1]</span><span class="note">[Nota 2]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Corazón</span><div class="modal__notes"><span class="note">[Nota 3]</span><span class="note">[Nota 4]</span></div></div><div class="modal__pyramid-row"><span class="modal__pyramid-stage">Fondo</span><div class="modal__notes"><span class="note">[Nota 5]</span><span class="note">[Nota 6]</span></div></div></div><div class="modal__bars"><div class="modal__bar-row"><span class="modal__bar-label">Longevidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="4"></div></div><span class="modal__bar-num">4/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Proyección</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="5"></div></div><span class="modal__bar-num">5/5</span></div><div class="modal__bar-row"><span class="modal__bar-label">Intensidad</span><div class="modal__bar-track"><div class="modal__bar-fill" data-level="4"></div></div><span class="modal__bar-num">4/5</span></div></div><div class="modal__occasions"><h4 class="modal__section-label">Ideal para</h4><div class="modal__occasion-chips"><span class="chip">🌙 Noche</span><span class="chip">🥂 Eventos</span><span class="chip">❄️ Invierno</span></div></div><div class="modal__desc-wrap"><p class="modal__desc" id="cdesc-4">[Descripción del perfume.]</p><button class="modal__desc-toggle" data-desc="cdesc-4">Leer más</button></div><div class="modal__actions"><button class="btn btn--dark modal__add-cart" data-id="4" data-name="[Nombre del Perfume 4]" data-price="0.00" data-img="img/products/product-4/1.jpg">Agregar al carrito</button><a href="https://wa.me/593962277374?text=Hola%2C%20me%20interesa%20el%20perfume%20%5BNombre%20del%20Perfume%204%5D" target="_blank" rel="noopener" class="btn btn--wa"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Consultar por WhatsApp</a></div></div>
+  </div>
+</div>
+
+<script src="app.js" defer></script>
+</body>
+</html>
