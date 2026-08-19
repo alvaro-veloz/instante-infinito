@@ -378,6 +378,7 @@ function initCartDrawer() {
 ───────────────────────────────────────────── */
 function buildCard(p, index = 0) {
   const foto = p.fotos?.[0] || fb(p.id);
+  const fotoAlt = p.fotos?.[1] || '';
   const catLabel = { hombre:'Hombre', mujer:'Mujer', unisex:'Unisex' }[p.categoria] || p.categoria;
 
   const badgeLabels = { hot:'Más vendido', new:'Nuevo', offer:'Oferta', soldout:'Agotado' };
@@ -421,9 +422,15 @@ function buildCard(p, index = 0) {
     <div class="product-card__img-wrap" role="button" aria-label="Ver detalles de ${p.nombre}" tabindex="0">
       ${badgeHTML}
       ${soldoutHTML}
+      <button type="button" class="product-card__fav" data-fav-id="${p.id}" aria-label="Guardar en favoritos" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 20.5s-7.5-4.6-10-9.3C.4 7.8 2.2 4 6 4c2.1 0 3.6 1.2 4.6 2.7.3.4.9.4 1.2 0C12.8 5.2 14.3 4 16.4 4c3.8 0 5.6 3.8 4 7.2-2.5 4.7-10 9.3-10 9.3z"/>
+        </svg>
+      </button>
       <img class="product-card__img" src="${foto}" alt="${p.nombre}"
            loading="lazy"
            onerror="this.onerror=null;this.src='${fb(p.id)}'" />
+      ${fotoAlt ? `<img class="product-card__img product-card__img--alt" src="${fotoAlt}" alt="" aria-hidden="true" loading="lazy" />` : ''}
     </div>
     <div class="product-card__info">
       <span class="product-card__cat">${catLabel}</span>

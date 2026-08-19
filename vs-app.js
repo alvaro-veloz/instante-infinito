@@ -76,6 +76,7 @@ function initVsWaLinks() {
 /* ── CARD DE SPLASH ── */
 function buildSplashCard(s, index = 0) {
   const foto = s.fotos?.[0] || fbVs(s.id);
+  const fotoAlt = s.fotos?.[1] || '';
   const waMsg = waVs(CONFIG_VS.whatsapp, `Hola, me interesa el Body Mist ${s.nombre} de Victoria's Secret. ¿Tienen disponibilidad?`);
 
   const badgeHTML = s.agotado ? `<span class="splash-card__badge splash-card__badge--soldout">Agotado</span>`
@@ -101,8 +102,14 @@ function buildSplashCard(s, index = 0) {
     <div class="splash-card__img-wrap" role="button" tabindex="0"
          aria-label="Ver detalles de ${s.nombre}">
       ${badgeHTML}
+      <button type="button" class="product-card__fav" data-fav-id="${s.id}" data-fav-type="splash" aria-label="Guardar en favoritos" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <path d="M12 20.5s-7.5-4.6-10-9.3C.4 7.8 2.2 4 6 4c2.1 0 3.6 1.2 4.6 2.7.3.4.9.4 1.2 0C12.8 5.2 14.3 4 16.4 4c3.8 0 5.6 3.8 4 7.2-2.5 4.7-10 9.3-10 9.3z"/>
+        </svg>
+      </button>
       <img class="splash-card__img" src="${foto}" alt="${s.nombre}"
            loading="lazy" onerror="this.onerror=null;this.src='${fbVs(index)}'" />
+      ${fotoAlt ? `<img class="splash-card__img splash-card__img--alt" src="${fotoAlt}" alt="" aria-hidden="true" loading="lazy" />` : ''}
     </div>
     <div class="splash-card__info">
       <span class="splash-card__type">Body Mist</span>

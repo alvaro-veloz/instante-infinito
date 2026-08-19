@@ -1,0 +1,609 @@
+/* Capa de arte adicional — carga después de styles.css/vs-styles.css */
+
+:root{
+  --accent-wine:      #5c1626;
+  --accent-wine-soft: rgba(92,22,38,.10);
+  --ease-editorial:   cubic-bezier(.16,1,.3,1);
+  --grain-opacity:    .045;
+}
+
+@media (prefers-reduced-motion: reduce){
+  :root{ --grain-opacity:.03; }
+}
+
+/* Selección / scrollbar */
+::selection{ background:var(--accent); color:#0d0d0d; }
+html{ scrollbar-width:thin; scrollbar-color:var(--accent-dark) transparent; }
+::-webkit-scrollbar{ width:8px; height:8px; }
+::-webkit-scrollbar-track{ background:transparent; }
+::-webkit-scrollbar-thumb{ background:var(--accent-dark); border-radius:99px; }
+::-webkit-scrollbar-thumb:hover{ background:var(--accent); }
+
+/* Tipografía — hero/CTA/page-hero en serif editorial, cifras en Bebas */
+:root{ --font-hero: 'Tenor Sans', Georgia, serif; }
+
+.hero__title,
+.cta-section__title,
+.page-hero__title,
+.footer__hero-title{
+  font-weight:400;
+  letter-spacing:.035em;
+}
+.hero__title em,
+.cta-section__title em,
+.page-hero__title em{
+  font-style:italic;
+  color:inherit;
+}
+
+.hero__eyebrow,
+.eyebrow{
+  letter-spacing:.28em;
+}
+
+.hero__counter,
+.product-card__price,
+.footer__hero-label{
+  font-family:'Bebas Neue', var(--font-hero);
+  letter-spacing:.08em;
+}
+
+.hero__eyebrow,
+.footer__hero-label,
+.cta-section .eyebrow{
+  color:rgba(255,255,255,.82);
+}
+.hero__eyebrow{
+  border-bottom-color:rgba(255,255,255,.55);
+}
+.hero__trust-item svg{ color:rgba(255,255,255,.75); }
+
+/* Grano de textura — secciones oscuras */
+.has-grain{ position:relative; isolation:isolate; }
+.has-grain::after{
+  content:'';
+  position:absolute; inset:0;
+  z-index:3; pointer-events:none;
+  opacity:var(--grain-opacity);
+  mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' fill='%23ffffff'/%3E%3C/svg%3E");
+  background-size:180px 180px;
+}
+
+/* Marquee de marcas — barrido */
+.brands-marquee__item{
+  background:linear-gradient(100deg, var(--text-muted) 38%, var(--accent) 50%, var(--text-muted) 62%);
+  background-size:260% 100%;
+  -webkit-background-clip:text; background-clip:text;
+  color:transparent; -webkit-text-fill-color:transparent;
+  animation:iiShimmer 7s linear infinite;
+}
+@keyframes iiShimmer{
+  0%   { background-position:220% 0; }
+  100% { background-position:-220% 0; }
+}
+@media (prefers-reduced-motion: reduce){
+  .brands-marquee__item{ animation:none; -webkit-text-fill-color:var(--text-muted); color:var(--text-muted); }
+}
+
+/* Divisor del footer */
+.footer__divider-line{
+  position:relative;
+  overflow:hidden;
+}
+.footer__divider-line::after{
+  content:'';
+  position:absolute; inset:0;
+  background:linear-gradient(90deg, transparent, var(--accent) 45%, transparent 55%, transparent);
+  background-size:200% 100%;
+  animation:iiDividerSweep 5s var(--ease-editorial) infinite;
+}
+@keyframes iiDividerSweep{
+  0%,15%{ background-position:200% 0; }
+  55%,100%{ background-position:-100% 0; }
+}
+
+/* Fondo ambiental del CTA (desactivado más abajo al pasar a blanco) */
+.cta-section{ position:relative; overflow:hidden; }
+.cta-section::before{
+  content:'';
+  position:absolute; inset:-20%;
+  z-index:0; pointer-events:none;
+  background:
+    radial-gradient(38% 45% at 18% 30%, var(--accent-glow), transparent 70%),
+    radial-gradient(30% 40% at 82% 70%, var(--accent-wine-soft), transparent 70%);
+  filter:blur(40px);
+  animation:iiDrift 22s var(--ease-editorial) infinite alternate;
+}
+.cta-section__inner{ position:relative; z-index:1; }
+@keyframes iiDrift{
+  0%  { transform:translate(0,0) scale(1); }
+  100%{ transform:translate(-3%,3%) scale(1.08); }
+}
+@media (prefers-reduced-motion: reduce){
+  .cta-section::before{ animation:none; }
+}
+
+/* Cards de producto — segunda foto en hover + tilt (product-card y splash-card) */
+.product-card,
+.splash-card{ perspective:900px; }
+.product-card__img-wrap,
+.splash-card__img-wrap{
+  position:relative; overflow:hidden;
+  transform-style:preserve-3d;
+  transition:transform .45s var(--ease-editorial);
+}
+.product-card__img,
+.splash-card__img{
+  transition:transform .6s var(--ease-editorial), opacity .5s var(--ease-editorial);
+}
+.product-card__img--alt,
+.splash-card__img--alt{
+  position:absolute; inset:0;
+  width:100%; height:100%; object-fit:cover;
+  opacity:0;
+}
+.product-card:hover .product-card__img--alt,
+.splash-card:hover .splash-card__img--alt{ opacity:1; }
+.product-card:hover .product-card__img:not(.product-card__img--alt),
+.splash-card:hover .splash-card__img:not(.splash-card__img--alt){ opacity:0; }
+
+/* Botones magnéticos — el tirón lo aplica steroids.js */
+[data-magnetic]{ transition:transform .5s var(--ease-editorial); }
+[data-magnetic].is-pulled{ transition:transform .12s linear; }
+
+/* Reveal editorial de títulos — solo activo si steroids.js confirmó arranque */
+html.ii-js [data-wipe]{
+  clip-path:inset(0 0 100% 0);
+  transform:translateY(14px);
+  opacity:0;
+  transition:
+    clip-path .9s var(--ease-editorial),
+    transform .9s var(--ease-editorial),
+    opacity .5s ease;
+}
+html.ii-js [data-wipe].is-wiped{
+  clip-path:inset(0 0 0% 0);
+  transform:translateY(0);
+  opacity:1;
+}
+
+/* Paleta blanco/negro + más aire entre secciones */
+.section-spacing{ padding-top:calc(var(--space-2xl) + var(--space-md)); padding-bottom:calc(var(--space-2xl) + var(--space-md)); }
+@media (max-width:768px){
+  .section-spacing{ padding-top:var(--space-2xl); padding-bottom:var(--space-2xl); }
+}
+
+.fpill--on{
+  background:#0d0d0d;
+  border-color:#0d0d0d;
+  color:#fff;
+}
+
+.product-card__badge--hot,
+.product-card__badge--offer,
+.product-card__badge--new{
+  background:#0d0d0d;
+  color:#fff;
+}
+
+.cta-section{
+  background:var(--bg);
+}
+.cta-section::before{ display:none; }
+.cta-section.has-grain::after{ display:none; }
+.cta-section__title,
+.cta-section__desc{
+  color:var(--text);
+}
+.cta-section__title em{ color:var(--accent); }
+.cta-section .eyebrow{ color:var(--text-muted); }
+
+.footer{
+  background:var(--bg);
+  color:var(--text);
+  border-top:1px solid var(--border-soft);
+}
+.footer.has-grain::after{ display:none; }
+.footer__hero::before{ display:none; }
+.footer__hero-label{ color:var(--text-muted); }
+.footer__hero-title{ color:var(--text); }
+.footer__hero-cta{
+  color:var(--text);
+  border-color:var(--border);
+}
+.footer__hero-cta:hover{
+  background:#0d0d0d;
+  border-color:#0d0d0d;
+  color:#fff;
+}
+.footer__divider-line{ background:var(--border-soft); }
+.footer__divider-line::after{ animation:none; background:none; }
+.footer__logo{ filter:none; opacity:1; }
+.footer__logo-text{ color:var(--text); }
+.footer__desc{ color:var(--text-muted); }
+.footer__social-link{
+  color:var(--text);
+  border-color:var(--border);
+}
+.footer__social-link:hover{
+  background:#0d0d0d;
+  border-color:#0d0d0d;
+  color:#fff;
+}
+.footer__col-title{ color:var(--text-muted); }
+.footer__pagos-title{
+  color:var(--text-muted);
+  border-bottom-color:var(--border-soft);
+}
+.footer__link{ color:var(--text-soft); }
+.footer__link:hover{ color:var(--text); }
+.footer__link::before{ background:var(--accent); }
+.footer__pago-badge{
+  color:var(--text-muted);
+  background:var(--bg-card);
+  border-color:var(--border-soft);
+}
+.footer__bottom{ border-top:1px solid var(--border-soft); }
+.footer__copy,
+.footer__credit{ color:var(--text-muted); }
+.footer__credit-link{ color:var(--text-soft); }
+.footer__credit-link:hover{ color:var(--accent); }
+
+.has-grain::after{ opacity:calc(var(--grain-opacity) * .6); }
+
+/* Preloader */
+#iiPreloader{
+  position:fixed; inset:0; z-index:9999;
+  background:var(--bg-dark);
+  display:flex; align-items:center; justify-content:center;
+  transition:opacity .7s var(--ease-editorial), visibility .7s;
+  animation:iiForceHide 0s 4.5s forwards;
+}
+@keyframes iiForceHide{ to{ opacity:0; visibility:hidden; } }
+#iiPreloader__word{
+  font-family:var(--font-hero);
+  font-size:clamp(1.1rem, 3.6vw, 1.9rem);
+  letter-spacing:.4em;
+  text-transform:uppercase;
+  color:var(--text-inv);
+  display:flex; overflow:hidden;
+  padding-left:.4em;
+}
+#iiPreloader__word span{
+  display:inline-block;
+  opacity:0; transform:translateY(70%);
+  animation:iiPreIn .6s var(--ease-editorial) forwards;
+}
+#iiPreloader__line{
+  position:absolute; top:56%; left:50%;
+  width:0; height:1px; background:var(--accent);
+  transform:translateX(-50%);
+  animation:iiPreLine 1s var(--ease-editorial) .45s forwards;
+}
+@keyframes iiPreIn{ to{ opacity:1; transform:none; } }
+@keyframes iiPreLine{ to{ width:96px; } }
+
+html.ii-loaded #iiPreloader{ opacity:0; visibility:hidden; }
+html:not(.ii-loaded) body{ overflow:hidden; }
+
+@media (prefers-reduced-motion: reduce){
+  #iiPreloader{ transition:opacity .3s linear, visibility .3s; }
+  #iiPreloader__word span{ animation:none; opacity:1; transform:none; }
+  #iiPreloader__line{ animation:none; width:96px; }
+}
+
+/* Video del hero — opcional, ver img/hero/*.mp4 */
+.hero__slide-video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  opacity:0;
+  transition:opacity .8s var(--ease-editorial);
+  pointer-events:none;
+}
+.hero__slide-video.is-ready{ opacity:1; }
+@media (prefers-reduced-motion: reduce){
+  .hero__slide-video{ display:none; }
+}
+
+/* CTA — banner plano sin caja oscura interna */
+.cta-section__inner{
+  background:transparent;
+  border-radius:0;
+  border-top:1px solid var(--border-soft);
+  border-bottom:1px solid var(--border-soft);
+  padding:var(--space-2xl) 0;
+}
+.cta-section__inner::before,
+.cta-section__inner::after{ display:none; }
+
+.cta-section__title{
+  color:var(--text);
+  text-transform:none;
+}
+.cta-section__title em{
+  color:var(--text-muted);
+}
+.cta-section__text{
+  color:var(--text-muted);
+}
+.cta-section__note{
+  color:var(--text-muted);
+}
+.cta-section .eyebrow{
+  color:var(--text-muted);
+}
+.cta-section .btn--wa-lg{
+  box-shadow:none;
+}
+
+@media (max-width:768px){
+  .cta-section__inner{ padding:var(--space-xl) 0; }
+}
+
+/* Familia tipográfica — Fraunces + Instrument Sans; nombre de producto queda en Tenor Sans */
+:root{
+  --font-hero:    'Fraunces', Georgia, serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-ui:      'Instrument Sans', -apple-system, sans-serif;
+}
+
+.product-card__name,
+.modal__name,
+.splash-card__name,
+.splash-modal__name{
+  font-family:'Tenor Sans', Georgia, serif;
+}
+
+.hero__title em,
+.cta-section__title em,
+.page-hero__title em{
+  font-optical-sizing:auto;
+}
+
+/* Contacto — mismo sistema plano que el resto del sitio */
+.contact-wa-card{
+  border-radius:0;
+  box-shadow:none;
+  border-color:var(--border);
+}
+.contact-wa-card:hover{
+  box-shadow:0 8px 24px rgba(13,13,13,0.06);
+  transform:none;
+}
+.contact-wa-card::before{ opacity:1; background:var(--border); height:1px; }
+
+.channels-grid{ gap:var(--space-lg); }
+.channel-card{
+  border-radius:0;
+  padding:var(--space-xl) var(--space-lg);
+}
+.channel-card--active{ border-color:var(--text); box-shadow:none; }
+.channel-card:hover{ box-shadow:0 8px 24px rgba(13,13,13,0.06); }
+
+.channel-card__icon,
+.contact-wa-card__icon,
+.promise-item__icon{
+  border-radius:0;
+  border:none;
+  border-left:2px solid currentColor;
+  background:var(--bg-off);
+}
+.channel-card__icon--wa{ color:var(--wa); }
+.channel-card__icon--ig{ color:#e1306c; }
+.channel-card__icon--tt{ color:var(--text); }
+.contact-wa-card__icon{ color:var(--wa); margin-left:auto; margin-right:auto; }
+
+.promises-grid{ gap:var(--space-md); }
+.promise-item{
+  border-radius:0;
+  border:1px solid transparent;
+}
+.promise-item:hover{
+  background:transparent;
+  border-color:var(--border-soft);
+}
+.promise-item__icon{
+  border-radius:0;
+  color:var(--text);
+}
+.promise-item:hover .promise-item__icon{
+  background:var(--text);
+  border-left-color:var(--text);
+  color:#fff;
+  transform:none;
+}
+
+@media (max-width:768px){
+  .channels-grid{ grid-template-columns:1fr; gap:var(--space-md); }
+  .promises-grid{ grid-template-columns:repeat(2,1fr); }
+}
+
+/* Fondos con foto — rutas opcionales, ver notas en el chat del proyecto */
+.why-us{
+  position:relative;
+  background:
+    linear-gradient(rgba(255,255,255,.92), rgba(255,255,255,.92)),
+    url('img/why-us/bg.jpg') center/cover no-repeat,
+    var(--bg-off);
+}
+
+body.page-contacto{
+  position:relative;
+}
+body.page-contacto::before{
+  content:'';
+  position:fixed; inset:0;
+  z-index:-1;
+  background:
+    linear-gradient(rgba(255,255,255,.72), rgba(255,255,255,.9) 55%, var(--bg) 85%),
+    url('img/contacto/bg.jpg') center/cover no-repeat;
+}
+@media (max-width:900px){
+  body.page-contacto::before{ position:absolute; height:100%; }
+}
+body.page-contacto .page-hero{ background:transparent; border-bottom-color:transparent; }
+body.page-contacto .promises-section{ background:rgba(255,255,255,.85); border-color:var(--border-soft); }
+
+/* Cursor personalizado — solo desktop con mouse */
+@media (hover:hover) and (pointer:fine){
+  html.ii-cursor-ready, html.ii-cursor-ready *{ cursor:none !important; }
+  .ii-cursor{
+    position:fixed; top:0; left:0; z-index:10000;
+    width:10px; height:10px; border-radius:50%;
+    background:#0d0d0d;
+    pointer-events:none;
+    transform:translate(-50%,-50%);
+    transition:width .25s var(--ease-editorial), height .25s var(--ease-editorial),
+               background .25s var(--ease-editorial), opacity .2s ease;
+    will-change:transform;
+  }
+  .ii-cursor--view{
+    width:64px; height:64px;
+    background:transparent;
+    border:1px solid #0d0d0d;
+  }
+  .ii-cursor--view::after{
+    content:'VER';
+    position:absolute; inset:0;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-ui); font-size:.6rem; font-weight:600;
+    letter-spacing:.1em; color:#0d0d0d;
+  }
+  .ii-cursor--link{ width:16px; height:16px; }
+  .ii-cursor.is-hidden{ opacity:0; }
+}
+
+/* Transición entre páginas */
+#iiPageExit{
+  position:fixed; inset:0; z-index:9998;
+  background:var(--bg);
+  opacity:0; visibility:hidden; pointer-events:none;
+  transition:opacity .4s var(--ease-editorial);
+}
+#iiPageExit.is-active{ opacity:1; visibility:visible; }
+
+/* Fraunces es más ancha que Tenor Sans: el hero title se
+   partía en más líneas de las previstas y el bloque de texto
+   se salía por arriba, tapado por el header. Más ancho de caja
+   y tope de escala más conservador. */
+.hero__slide-content{
+  max-width:860px;
+  justify-content:center;
+}
+.hero__title{
+  font-size:clamp(2.75rem, 6vw, 6.25rem);
+}
+
+/* El centrado del hero era para desktop (evitar que el título
+   se escondiera bajo el header con Fraunces). En móvil el
+   título ya usa un tamaño más chico y no hace falta: mejor
+   volver a anclar abajo para no tapar el video/foto. */
+@media (max-width:768px){
+  .hero__slide-content{
+    justify-content:flex-end;
+  }
+}
+
+/* Ícono del crédito de Andina Web Studio */
+.footer__credit-link{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+}
+.footer-credit-icon{
+  width:13px; height:13px;
+  flex-shrink:0;
+  opacity:.75;
+  transition:opacity .25s var(--ease-editorial), transform .25s var(--ease-editorial);
+}
+.footer__credit-link:hover .footer-credit-icon{
+  opacity:1;
+  transform:rotate(-6deg);
+}
+
+/* Botón de favorito — esquina superior derecha de la card */
+.product-card__fav{
+  position:absolute;
+  top:var(--space-xs); right:var(--space-xs);
+  z-index:3;
+  width:32px; height:32px;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(255,255,255,.9);
+  border:1px solid var(--border-soft);
+  border-radius:50%;
+  color:var(--text);
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(-4px);
+  transition:opacity .25s var(--ease-editorial), transform .25s var(--ease-editorial),
+             background .2s ease, border-color .2s ease;
+}
+.product-card__fav svg{ width:16px; height:16px; }
+.product-card:hover .product-card__fav,
+.splash-card:hover .product-card__fav,
+.product-card__fav:focus-visible,
+.product-card__fav.is-fav{
+  opacity:1;
+  transform:translateY(0);
+}
+.product-card__fav:hover{
+  background:#0d0d0d;
+  border-color:#0d0d0d;
+  color:#fff;
+}
+.product-card__fav.is-fav{
+  color:#0d0d0d;
+}
+.product-card__fav.is-fav svg{
+  fill:#0d0d0d;
+}
+@media (hover:none){
+  .product-card__fav{ opacity:1; transform:none; background:rgba(255,255,255,.92); }
+}
+
+/* Skeleton loader — ya existía, solo se empareja al sistema plano */
+.card-skeleton{ border-radius:0; }
+
+/* Zoom táctil del modal — el :hover del CSS base no aplica en
+   touch; steroids.js alterna esta clase con un tap */
+@media (hover:none){
+  .modal__main-img-wrap.is-zoomed .modal__main-img{
+    transform:scale(1.75);
+  }
+  .splash-modal__img-wrap.is-zoomed .splash-modal__img{
+    transform:scale(1.65);
+  }
+}
+
+/* Separador del marquee — de rombo genérico a gota de perfume */
+.brands-marquee__sep{
+  display:inline-flex;
+  align-items:center;
+  color:var(--accent);
+  opacity:.45;
+}
+.brands-marquee__sep svg{
+  width:11px; height:11px;
+}
+
+/* Pop del corazón al marcar favorito */
+.product-card__fav.is-popping{
+  animation:iiFavPop .4s var(--ease-editorial);
+}
+@keyframes iiFavPop{
+  0%{ transform:scale(1); }
+  35%{ transform:scale(1.35); }
+  100%{ transform:scale(1); }
+}
+@media (prefers-reduced-motion: reduce){
+  .product-card__fav.is-popping{ animation:none; }
+}
+
+/* Parallax del hero — más vida en móvil, donde no hay
+   cursor ni tilt; el scale de la propia capa da margen para
+   que el desplazamiento nunca deje ver un borde vacío */
+.hero__slide-bg{
+  will-change:transform;
+}
