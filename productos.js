@@ -625,12 +625,11 @@ const PRODUCTOS = [
    Edita estos datos cuando cambien.
    ============================================================ */
 const CONFIG = {
-  whatsapp:   "593962277374",
+  whatsapp:   "593989565924",
   nombreTienda: "Instante Infinito",
   slogan:     "La Alquimia del Momento",
-  instagram:  "https://instagram.com/instanteinfinito",
-  facebook:   "https://facebook.com/instanteinfinito",
-  tiktok:     "https://tiktok.com/@instanteinfinito",
+  instagram:  "https://www.instagram.com/andinawebstudio/",
+  x:          "https://x.com/andinawebstudio",
   creditoUrl: "https://andinawebstudio.com",
 
   /* Hero carrusel — 3 slides */

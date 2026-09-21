@@ -160,7 +160,7 @@ Al inicio del archivo `productos.json` hay una sección `"config"`:
 
 ```json
 "config": {
-  "whatsapp": "593962277374",
+  "whatsapp": "593989565924",
   "instagram": "https://instagram.com/tupagina",
   "facebook": "https://facebook.com/tupagina",
   "tiktok": "https://tiktok.com/@tupagina",

@@ -28,13 +28,14 @@
       release();
       return;
     }
-    const minTime = new Promise(res => setTimeout(res, 1150));
+    /* La firma aparece, pero nunca bloquea la tienda más de lo necesario. */
+    const minTime = new Promise(res => setTimeout(res, 520));
     const loaded = new Promise(res => {
       if (document.readyState === 'complete') res();
       else window.addEventListener('load', res, { once: true });
     });
     Promise.all([minTime, loaded]).then(release);
-    setTimeout(release, 4000);
+    setTimeout(release, 1200);
   }
 
   function initWipeReveal() {
@@ -246,7 +247,8 @@
   }
 
   function boot() {
-    [initPreloader, initWipeReveal, initMagnetic, initCardTilt, initHeroVideo, initCursor, initPageTransitions, initFavorites, initTouchZoom, initHeroParallax].forEach(fn => {
+    /* El movimiento se concentra en fades, video y parallax. */
+    [initPreloader, initWipeReveal, initMagnetic, initHeroVideo, initPageTransitions, initFavorites, initTouchZoom, initHeroParallax].forEach(fn => {
       try { fn(); } catch (err) { console.error('[steroids]', fn.name, err); }
     });
   }

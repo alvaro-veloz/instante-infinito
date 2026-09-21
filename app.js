@@ -67,7 +67,7 @@ function unlockScroll() {
 
 async function init() {
   try {
-    const res  = await fetch('productos.json');
+    const res  = await fetch('productos.json?v=2');
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 

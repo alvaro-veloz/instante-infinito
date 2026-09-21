@@ -677,3 +677,387 @@
 .splash-modal__img-wrap {
   cursor: zoom-in;
 }
+
+/* ============================================================
+   VS 2026 — REDISEÑO EDITORIAL
+   ============================================================ */
+:root{
+  --vs-pink:#ef9fba;
+  --vs-pink-dark:#bd527a;
+  --vs-pink-pale:rgba(239,159,186,.12);
+  --vs-pink-mid:rgba(239,159,186,.28);
+  --vs-cream:#fff1f6;
+  --vs-cream-dark:#f9dce6;
+  --vs-ink:#2c1921;
+  --vs-paper:#fffafd;
+}
+
+/* Hero cinematográfico y contenido más contenido. */
+.vs-hero{
+  height:82dvh;
+  min-height:610px;
+  max-height:880px;
+  align-items:center;
+  background:#d98fac;
+  isolation:isolate;
+}
+.vs-hero::after{
+  content:'BODY MIST';
+  position:absolute;
+  right:-.03em;
+  bottom:-.13em;
+  z-index:1;
+  font-family:var(--font-hero);
+  font-size:clamp(7rem, 17vw, 15rem);
+  letter-spacing:-.055em;
+  color:rgba(255,255,255,.035);
+  pointer-events:none;
+  white-space:nowrap;
+}
+.vs-hero__bg{
+  background:none;
+}
+.vs-hero__bg-img{
+  opacity:.82;
+  mix-blend-mode:normal;
+  object-position:70% 28%;
+  filter:saturate(.72) contrast(1.05);
+  transform:scale(1.025);
+  transition:transform 7s var(--expo);
+}
+.vs-hero__video{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  filter:saturate(.9) contrast(.96);
+}
+.vs-hero:hover .vs-hero__bg-img{ transform:scale(1); }
+.vs-hero__overlay{
+  z-index:2;
+  background:
+    linear-gradient(90deg, rgba(63,25,42,.88) 0%, rgba(83,34,56,.68) 34%, rgba(179,86,125,.18) 64%, rgba(239,159,186,.05) 82%),
+    linear-gradient(0deg, rgba(55,22,37,.5), transparent 48%);
+}
+.vs-hero__content{
+  padding-top:72px;
+  padding-bottom:72px;
+  max-width:1200px;
+}
+.vs-hero__eyebrow{
+  border:0;
+  padding:0;
+  color:rgba(255,255,255,.62);
+  margin-bottom:22px;
+}
+.vs-hero__title{
+  max-width:560px;
+  font-size:clamp(3.6rem, 6.6vw, 6.4rem);
+  line-height:.86;
+  letter-spacing:-.025em;
+  margin-bottom:26px;
+}
+.vs-hero__title em{
+  color:#fff;
+  font-style:italic;
+  font-family:var(--font-display);
+  text-transform:none;
+  font-size:.82em;
+  letter-spacing:-.04em;
+}
+.vs-hero__subtitle{
+  max-width:390px;
+  color:rgba(255,255,255,.68);
+  font-size:.95rem;
+  margin-bottom:26px;
+}
+.vs-hero__cta{
+  display:inline-flex;
+  align-items:center;
+  gap:18px;
+  padding-bottom:7px;
+  border-bottom:1px solid rgba(255,255,255,.5);
+  color:#fff;
+  font-size:.65rem;
+  font-weight:600;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  transition:gap .25s var(--ease-editorial), border-color .25s;
+}
+.vs-hero__cta:hover{ gap:25px; border-color:#fff; }
+.vs-hero__pills{
+  margin-top:42px;
+  gap:0;
+}
+.vs-hero__pill{
+  padding:0 18px;
+  border:0;
+  border-right:1px solid rgba(255,255,255,.22);
+  background:none;
+  color:rgba(255,255,255,.5);
+}
+.vs-hero__pill:first-child{ padding-left:0; }
+.vs-hero__pill:last-child{ border-right:0; }
+
+/* Barra de filtros como navegación editorial. */
+.vs-page .vs-filter-bar{
+  position:sticky;
+  top:var(--header-h);
+  z-index:40;
+  background:rgba(251,249,249,.92);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-color:rgba(127,48,73,.12);
+}
+.vs-filter-bar .fpill{
+  border:0;
+  border-radius:0;
+  padding:12px 16px;
+  background:transparent;
+  border-bottom:1px solid transparent;
+}
+.vs-filter-bar .fpill--on,
+.vs-filter-bar .fpill--on:hover,
+.vs-filter-bar .fpill--on:focus,
+.vs-filter-bar .fpill--on:active{
+  color:var(--vs-ink) !important;
+  background:transparent !important;
+  border-color:var(--vs-ink) !important;
+}
+
+.vs-page .catalog-section{
+  background:var(--vs-paper);
+  padding-top:80px;
+}
+.products-grid--vs{ gap:22px; }
+
+/* Tarjetas de catálogo más limpias, similares a una campaña beauty. */
+.splash-card{
+  background:#fff;
+  box-shadow:none;
+  border:0;
+}
+.splash-card__img-wrap{
+  aspect-ratio:4 / 5;
+  background:#fff;
+}
+.splash-card__img{
+  object-fit:contain;
+  padding:18px;
+}
+@media (hover:hover) and (pointer:fine){
+  .splash-card:hover{
+    box-shadow:0 24px 70px rgba(56,21,33,.12);
+    transform:translateY(-6px);
+  }
+  .splash-card:hover .splash-card__img{ transform:scale(1.035); }
+}
+.splash-card__badge{
+  top:14px;
+  left:14px;
+  padding:6px 11px;
+  border-radius:0;
+  box-shadow:none;
+}
+.splash-card__badge--hot,
+.splash-card__badge--new,
+.splash-card__badge--offer{ background:var(--vs-pink-dark); }
+.splash-card__info{
+  padding:20px 18px 0;
+  gap:5px;
+}
+.splash-card__type{ color:var(--vs-pink-dark); }
+.splash-card__name{
+  font-size:1.08rem;
+  line-height:1.25;
+  letter-spacing:.03em;
+}
+.splash-card__ml{ color:#81777a; }
+.splash-card__price-row{ margin-top:13px; }
+.splash-card__price{
+  font-family:'Bebas Neue',var(--font-ui);
+  font-size:1.35rem;
+  letter-spacing:.04em;
+}
+.splash-card__actions{
+  padding:16px 18px 18px;
+  grid-template-columns:1fr 42px;
+  border-top:0;
+}
+.splash-card__btn-cart{
+  background:var(--vs-ink);
+  border-color:var(--vs-ink);
+}
+.splash-card__btn-cart:hover{ background:var(--vs-pink-dark); border-color:var(--vs-pink-dark); }
+
+/* Sección VS dentro del inicio: campaña beauty rosa, luminosa y femenina. */
+.vs-featured{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(circle at 92% 4%, rgba(255,255,255,.72), transparent 29%),
+    linear-gradient(135deg, #f8d6e2 0%, #f3b9cd 52%, #edabc3 100%);
+  border-top:1px solid rgba(189,82,122,.14);
+  border-bottom:1px solid rgba(189,82,122,.14);
+}
+.vs-featured::before{
+  content:'V / S';
+  position:absolute;
+  right:-.04em;
+  top:-.2em;
+  z-index:-1;
+  font-family:var(--font-hero);
+  font-size:clamp(10rem, 28vw, 25rem);
+  color:rgba(255,255,255,.2);
+  letter-spacing:-.1em;
+}
+.vs-featured .section-title{ color:var(--vs-ink); }
+.vs-featured .section-title em{ font-style:italic; color:#9b3f63; }
+.vs-featured .eyebrow{ color:#9b3f63; }
+.vs-featured .link-arrow,
+.vs-featured .vs-link-arrow{
+  color:rgba(44,25,33,.7);
+  border-color:rgba(44,25,33,.24);
+}
+.vs-featured .link-arrow:hover{ color:var(--vs-ink); border-color:var(--vs-ink); }
+.vs-featured .splash-card{ border:0; }
+.vs-featured .featured-cta-card{
+  border-color:rgba(44,25,33,.25);
+  background:rgba(255,255,255,.3);
+}
+.vs-featured .featured-cta-card__eyebrow{ color:#9b3f63; }
+.vs-featured .featured-cta-card__title{ color:var(--vs-ink); }
+.vs-featured .featured-cta-card__text{ color:rgba(44,25,33,.62); }
+.vs-featured .featured-cta-card__btn{ background:var(--vs-ink); color:#fff; border-color:var(--vs-ink); }
+.vs-featured .featured__dot{ background:rgba(44,25,33,.2); }
+.vs-featured .featured__dot--on{ background:var(--vs-ink); }
+
+/* Modal VS actualizado. */
+.splash-modal{
+  max-width:980px;
+  grid-template-columns:48% 52%;
+  background:#fff;
+}
+.splash-modal__gallery{ background:var(--vs-cream); }
+.splash-modal__img{ padding:34px; }
+.splash-modal__thumbs{ padding:10px; gap:7px; background:#fff; border-color:var(--border-soft); }
+.splash-modal__info{ padding:40px; gap:18px; }
+.splash-modal__type{ color:var(--vs-pink-dark); }
+.splash-modal__name{ font-size:2rem; line-height:1.08; }
+.splash-modal__price{ color:var(--vs-ink); font-size:2rem; }
+.splash-modal__meta-pill{ background:transparent; border-color:var(--border); color:var(--text-soft); }
+.splash-modal__actions{ padding:16px 40px 28px; }
+
+@media (max-width:768px){
+  .vs-hero{
+    height:78dvh;
+    min-height:640px;
+    align-items:flex-end;
+  }
+  .vs-hero::after{ font-size:30vw; bottom:.05em; }
+  .vs-hero__bg-img{ object-position:62% center; opacity:.75; }
+  .vs-hero__video{ object-position:58% center; }
+  .vs-hero__overlay{
+    background:linear-gradient(0deg, rgba(62,24,41,.9) 0%, rgba(124,52,82,.56) 48%, rgba(239,159,186,.06) 78%);
+  }
+  .vs-hero__content{ padding:0 16px 54px; }
+  .vs-hero__title{ font-size:clamp(3.35rem, 17vw, 4.8rem); max-width:350px; }
+  .vs-hero__subtitle{ max-width:330px; color:rgba(255,255,255,.72); }
+  .vs-hero__pills{ display:none; }
+  .vs-page .vs-filter-bar{ top:var(--header-h); }
+  .vs-filter-bar .filter-bar__inner{ gap:5px; }
+  .vs-filter-bar .filter-bar__pills{
+    width:100%;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    scrollbar-width:none;
+  }
+  .vs-filter-bar .filter-bar__pills::-webkit-scrollbar{ display:none; }
+  .vs-filter-bar .fpill{ flex:0 0 auto; padding:11px 13px; }
+  .vs-filter-bar .filter-bar__right{ display:none; }
+  .vs-page .catalog-section{ padding-top:48px; }
+  .products-grid--vs{ gap:10px !important; }
+  .products-grid--vs .splash-card__img-wrap{ aspect-ratio:1 / 1.25; }
+  .products-grid--vs .splash-card__img{ padding:9px; }
+  .products-grid--vs .splash-card__info{ padding:13px 11px 0; }
+  .products-grid--vs .splash-card__name{ font-size:.88rem; }
+  .products-grid--vs .splash-card__ml{ font-size:.66rem; }
+  .products-grid--vs .splash-card__actions{ padding:11px; grid-template-columns:1fr; }
+  .products-grid--vs .splash-card__btn-wa{ display:none; }
+
+  #vsHomeGrid .splash-card,
+  #vsHomeGrid .featured-cta-card{
+    flex:0 0 calc(100vw - 48px);
+    max-width:none;
+  }
+  #vsHomeGrid .splash-card__img-wrap{ aspect-ratio:1 / 1.08; }
+  #vsHomeGrid .splash-card__img{ padding:16px; }
+
+  .modal-overlay:has(.splash-modal){
+    align-items:stretch !important;
+    padding:0;
+    background:#fff;
+  }
+  .splash-modal{
+    width:100%;
+    height:100dvh;
+    max-width:none;
+    max-height:100dvh !important;
+    border-radius:0;
+    overflow-y:auto;
+    display:flex;
+    flex-direction:column;
+    transform:none;
+  }
+  .splash-modal__gallery{
+    height:auto;
+    max-height:none;
+    min-height:0;
+    flex:none;
+    background:var(--vs-cream);
+  }
+  .splash-modal__img-wrap{
+    height:46dvh;
+    min-height:330px;
+    max-height:480px;
+    flex:none;
+  }
+  .splash-modal__img{ padding:28px 34px 18px; }
+  .splash-modal__thumbs{
+    min-height:64px;
+    padding:8px 16px 10px;
+    overflow-x:auto;
+    flex-wrap:nowrap;
+    scrollbar-width:none;
+  }
+  .splash-modal__info{
+    flex:none;
+    overflow:visible;
+    padding:28px 20px 34px;
+    gap:18px;
+  }
+  .splash-modal__name{ font-size:clamp(1.9rem, 8vw, 2.35rem); padding-right:0; }
+  .splash-modal__price{ font-size:2.15rem; }
+  .splash-modal__dato{ align-items:flex-start; }
+  .splash-modal__desc{ font-size:.94rem; line-height:1.75; }
+  .splash-modal__actions{
+    position:sticky;
+    bottom:0;
+    z-index:915;
+    display:grid;
+    grid-template-columns:1fr 54px;
+    gap:8px;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(14px);
+    border-top:1px solid var(--border);
+    box-shadow:0 -10px 30px rgba(0,0,0,.07);
+  }
+  .splash-modal__actions .btn{ min-height:48px; padding:12px 10px; }
+  .splash-modal__actions .btn--wa{ font-size:0; padding:0; }
+  .splash-modal__actions .btn--wa svg{ width:22px; height:22px; margin:0; }
+}
