@@ -696,6 +696,41 @@ body.page-contacto .promises-section{ background:rgba(255,255,255,.85); border-c
   .why-us__item::after{ font-size:3rem; }
 }
 
+/* Hero móvil: composición de campaña más breve para que el video respire. */
+@media (max-width:600px){
+  .hero__slide-content{
+    padding:0 1rem 4.35rem;
+  }
+  .hero__eyebrow{
+    margin-bottom:.7rem;
+  }
+  .hero__title{
+    max-width:330px;
+    font-size:clamp(2.25rem, 10vw, 2.75rem);
+    line-height:.9;
+    margin-bottom:.95rem;
+  }
+  .hero__subtitle{
+    display:none;
+  }
+  .hero__btns{
+    flex-wrap:nowrap;
+  }
+  .hero__btns .btn{
+    width:auto;
+    min-height:0;
+    padding:10px 15px;
+    font-size:.56rem;
+    letter-spacing:.1em;
+  }
+  .hero__btns .btn--ghost{
+    display:none;
+  }
+  .hero__slide-overlay{
+    background:linear-gradient(0deg, rgba(8,8,8,.76) 0%, rgba(8,8,8,.34) 36%, rgba(8,8,8,.035) 66%);
+  }
+}
+
 @media (max-width:480px){
   .products-grid--featured .product-card,
   .products-grid--featured .featured-cta-card{ flex-basis:calc(100vw - 48px); }
